@@ -528,6 +528,7 @@
       "Alliance": "Alliance",
       "TrainerLevel": "Trainer Level",
       "Classes": "Classes",
+      "ClassesRestricted": "Restrict to Chosen Classes",
       "Features": "Features",
       "Edges": "Edges",
       "Skills": "Skills",
