@@ -38,12 +38,14 @@ class PTUTrainerActor extends PTUActor {
             maxLevel[game.settings.get("ptu", "variant.trainerAdvancement")] ?? 50
         );
         
-        const milestones = this.system.level.milestones;
-        const milestoneMultiplier = 2 + (2 * milestones);
+        // Training milestones are based on trainer level (every 5 levels = 1 milestone)
+        // Training milestones =/= milestones exp
+        const trainingMilestones = Math.floor(level / 5);
+        const milestoneMultiplier = 2 + (2 * trainingMilestones);
         
         return {
             level,
-            milestones,
+            milestones: trainingMilestones,
             milestoneMultiplier,
             expTrainingLevelCap: level * milestoneMultiplier
         };
