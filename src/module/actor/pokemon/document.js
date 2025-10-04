@@ -42,6 +42,19 @@ class PTUPokemonActor extends PTUActor {
         return game.actors.get(this.flags.ptu.party?.trainer) ?? null;
     }
 
+    /**
+     * Force refresh of level caps when trainer data changes
+     */
+    refreshPreparedData() {
+        // Force a full data preparation cycle
+        this.prepareData();
+        
+        // Update any rendered sheets
+        if (this.sheet?.rendered) {
+            this.sheet.render(false);
+        }
+    }
+
     /** @override */
     async createEmbeddedDocuments(embeddedName, data, options) {
         if (embeddedName === "Item") {
@@ -298,11 +311,18 @@ class PTUPokemonActor extends PTUActor {
 
         this.attributes.health.max = system.health.max;
 
-        const calcLevelCap = (friendship) => Math.ceil(5 + (1.58 * ((this.trainer?.system.level.current ?? 0) * (["data-revamp", "short-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? 2 : ["long-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? 0.5 : 1))) + ((4 / 3) * (friendship) * Math.pow(1 + (((this.trainer?.system.level.current ?? 0) * (["data-revamp", "short-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? 2 : ["long-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? 0.5 : 1)) / 34), 2)));
+        const calcLevelCap = (friendship) => {
+            const trainerLevel = this.trainer?.system.level.current ?? 0;
+            return Math.ceil(
+                5 + 
+                (79/50) * trainerLevel + 
+                (4/3) * friendship * Math.pow(1 + (trainerLevel/34), 2)
+            );
+        };
         
         // Calculate EXP Training Level Cap: Trainer Level × Milestone Multiplier
         // Milestone Multiplier = 2 + 2 × Milestones earned
-        const calcExpTrainingLevelCap = () => {
+        const calcExpTrainingCap = () => {
             try {
                 const trainer = this.trainer;
                 if (!trainer) {
@@ -328,7 +348,8 @@ class PTUPokemonActor extends PTUActor {
 
         this.attributes.level.cap = {
             current: calcLevelCap(system.friendship ?? 0),
-            training: calcExpTrainingLevelCap(),
+            training: calcLevelCap(0), // The EXP Training Level Cap is based on the Level Cap without Friendship, it's the max level a Pokémon can reach through EXP Training
+            amount: calcExpTrainingCap(), // The amount a Pokémon can gain from Daily EXP Training
         }
 
         /* The Corner of Exceptions */
