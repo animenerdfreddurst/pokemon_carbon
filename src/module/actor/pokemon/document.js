@@ -45,7 +45,7 @@ class PTUPokemonActor extends PTUActor {
     /**
      * Force refresh of level caps when trainer data changes
      */
-    refreshLevelCaps() {
+    refreshPreparedData() {
         // Force a full data preparation cycle
         this.prepareData();
         

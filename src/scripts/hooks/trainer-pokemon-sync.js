@@ -33,7 +33,7 @@ export const TrainerPokemonSync = {
           
           trainerPokemon.forEach(pokemon => {
               try {
-                  pokemon.refreshLevelCaps();
+                  pokemon.refreshPreparedData();
               } catch (error) {
                   console.error(`PTU | Error updating Pokemon ${pokemon.name}:`, error);
               }
@@ -53,7 +53,7 @@ export const TrainerPokemonSync = {
           const partyUpdated = foundry.utils.hasProperty(updateData, "flags.ptu.party");
           
           if (!partyUpdated) return;          
-          actor.refreshLevelCaps();
+          actor.refreshPreparedData();
       });
   }
 };
