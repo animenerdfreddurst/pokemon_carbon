@@ -4,7 +4,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![All Release Downloads](https://img.shields.io/github/downloads/dylanpiera/Foundry-Pokemon-Tabletop-United-System/total.svg)]()
+[![All Release Downloads](https://img.shields.io/github/downloads/animenerdfreddurst/pokemon_carbon/total.svg)]()
 
 # Pokemon Carbon
 Pokemon Carbon for Foundry VTT is a continuiation of the Pokemon Tabletop United system, with balance changes, expanded/new content, and utilizing resources for PTR1e created with FoundryVTT in mind.
@@ -41,5 +41,5 @@ No copyright or trademark infringement is intended in using Pokémon content for
 [forks-url]: https://github.com/animenerdfreddurst/pokemon_carbon/forks
 [stars-shield]: https://img.shields.io/github/stars/animenerdfreddurst/pokemon_carbon.svg
 [stars-url]: https://github.com/animenerdfreddurst/pokemon_carbon/stargazers
-[issues-shield]: https://img.shields.io/github/animenerdfreddurst/pokemon_carbon.svg
+[issues-shield]: https://img.shields.io/github/issues/animenerdfreddurst/pokemon_carbon.svg
 [issues-url]: https://github.com/animenerdfreddurst/pokemon_carbon/issues
