@@ -19,7 +19,7 @@ https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/sy
 ```
 
 ## Links & Recommendations
-- [Quick Insert](https://gitlab.com/fvtt-modules-lab/quick-insert) is an amazing addon that allows you to drag & drop all over the place even more easily. We 1000% recommend using their module in conjuncture with our system!
+- [Quick Insert](https://gitlab.com/fvtt-modules-lab/quick-insert) is borderline necessary to use as a GM, and honestly should just be baseline in Foundry. Get this.
 - ***OTHER RECOMMENDED MODULES HERE***
 - ***COMMODUS ARCHIPELAGO WORLD HERE***
 - ***DRIVE LINK TO CARBON DOCS HERE***
