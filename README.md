@@ -25,7 +25,7 @@ https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/sy
 - ***DRIVE LINK TO CARBON DOCS HERE***
 
 ## Special Thanks
-* [cswendrowski](https://github.com/cswendrowski) for starting this project!
+* [cswendrowski](https://github.com/cswendrowski) for starting Foundry
 * https://www.theworldofpokemon.com/ for their amazing pokedex entries 
 * The Amazing People and their amazing feedback, over at the [PTR Dev Server](https://discord.gg/ptrfvtt)
 * npaisley for doing a lot of the backend stuff; I am not a coder in any capacity, and having to work with abandonware was a daunting task that I could never have completed without their support.
@@ -38,8 +38,8 @@ No copyright or trademark infringement is intended in using Pokémon content for
 [foundry-shield-old]: https://img.shields.io/badge/Foundry-v11.314-success
 [foundry-url]: https://foundryvtt.com/
 [forks-shield]: https://img.shields.io/github/forks/dylanpiera/Foundry-Pokemon-Tabletop-United-System.svg
-[forks-url]: https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/network/members
+[forks-url]: https://github.com/animenerdfreddurst/pokemon_carbon/forks
 [stars-shield]: https://img.shields.io/github/stars/dylanpiera/Foundry-Pokemon-Tabletop-United-System.svg
-[stars-url]: https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/stargazers
+[stars-url]: https://github.com/animenerdfreddurst/pokemon_carbon/stargazers
 [issues-shield]: https://img.shields.io/github/issues/dylanpiera/Foundry-Pokemon-Tabletop-United-System.svg
-[issues-url]: https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/issues
+[issues-url]: https://github.com/animenerdfreddurst/pokemon_carbon/issues
