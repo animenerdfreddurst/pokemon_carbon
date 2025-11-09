@@ -27,7 +27,7 @@ https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/sy
 ## Special Thanks
 * [cswendrowski](https://github.com/cswendrowski) for starting Foundry
 * https://www.theworldofpokemon.com/ for their amazing pokedex entries 
-* The Amazing People and their amazing feedback, over at the [PTR Dev Server](https://discord.gg/ptrfvtt)
+* The amazing people and their amazing feedback, over at the [PTR Dev Server](https://discord.gg/ptrfvtt)
 * npaisley for doing a lot of the backend stuff; I am not a coder in any capacity, and having to work with abandonware was a daunting task that I could never have completed without their support.
 
 ## Copyright
