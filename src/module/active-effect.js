@@ -47,7 +47,7 @@ export class ActiveEffectPTU extends ActiveEffect {
                     }
                 }
             }
-            if(effect.id === "badly-poisoned" || effect.id === "flinch") {
+            if(effect.id === "toxified" || effect.id === "flinched") {
                 conditionData.system.value.isValued = true;
             }
             conditionsData.push(conditionData);

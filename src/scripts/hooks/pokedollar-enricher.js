@@ -22,12 +22,12 @@ export const PokeDollarEnricher = {
 
                     if(!item) {
                         data.inner = `<span>${amount}</span>`;
-                        data.title = `${amount} Poké`;
+                        data.title = `${amount} Poke`;
                         data.dataset = {amount};
                     }
                     else {
                         data.inner = `Purchase ${noname === undefined ? `${item.name} ` : ""}(<span>${item.system.cost}</span>)`;
-                        data.title = `Purchase ${item.name} (${item.system.cost} Poké)`;
+                        data.title = `Purchase ${item.name} (${item.system.cost} Poke)`;
                         data.dataset = {amount: item.system.cost, item: item.uuid};
                         data.cls.push("cost")
                     }
@@ -76,7 +76,7 @@ export const PokeDollarEnricher = {
                         if(!actor) return ui.notifications.error("No actor selected");
                         if(isNaN(Number(amount))) return ui.notifications.error("Invalid amount");
                         await actor.update({"system.money": actor.system.money + Number(amount)});
-                        ui.notifications.info(`${actor.name} Gained ${amount} Poké (New Total: ${actor.system.money})`);
+                        ui.notifications.info(`${actor.name} Gained ${amount} Poke (New Total: ${actor.system.money})`);
                     });
                 }
             }

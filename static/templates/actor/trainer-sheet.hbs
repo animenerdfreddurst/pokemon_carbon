@@ -37,7 +37,7 @@
                             {{#each actor.system.skills as |skill key|}}
                             <div class="d-flex flex-row {{key}} align-items-center w-100">
                                 <div class="skill {{key}} fb-25 bgcolor key type--{{skill.type}} align-self-center">
-                                    <label for="system.skills.{{key}}.label" class="resource-label" {{#if (is key "techEd")}}style="font-size:10px;"{{/if}}>{{skill.label}}</label>
+                                    <label for="system.skills.{{key}}.label" class="resource-label" {{#if (is key "engineering")}}style="font-size:10px;"{{/if}}>{{skill.label}}</label>
                                 </div>
                                 <div class="skill {{key}} fb-15 pl-1 pr-1 center-text center-self">
                                     {{> "systems/ptu/static/templates/partials/mod-field.hbs" 
@@ -590,23 +590,23 @@
                             </div>
                             <div class="swsh-header">
                                 <div class="d-flex w-100 mb-1 hp-guidelines" style="align-items: flex-end;">
-                                    <div class="col-sm-2">
-                                        <label for="1/16th">1/16th</label>
+                                    <div class="fb-15">
+                                        <label for="1/16th">6.25%</label>
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="1/10th">Tick<br>1/10th</label>
+                                    <div class="fb-15">
+                                        <label for="1/10th">10%</label>
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="1/8th">1/8th</label>
+                                    <div class="fb-15">
+                                        <label for="1/8th">12.5%</label>
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="3/10th">3/10th</label>
+                                    <div class="fb-15">
+                                        <label for="3/10th">30%</label>
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="1/4th">1/4th</label>
+                                    <div class="fb-15">
+                                        <label for="1/4th">25%</label>
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label for="1/2nd">1/2nd</label>
+                                    <div class="fb-15">
+                                        <label for="1/2nd">50%</label>
                                     </div>
                                 </div>
                             </div>

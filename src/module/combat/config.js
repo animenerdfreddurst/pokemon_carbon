@@ -22,7 +22,7 @@ export class PTUCombatTrackerConfig {
           <div class="form-fields">
             <input type="checkbox" name="ptu.leagueBattle" id="ptu-league-battle" ${leagueBattle ? 'checked' : ''}>
           </div>
-          <p class="hint">Sort player characters in inverted order before pokémon</p>
+          <p class="hint">Sort player characters in inverted order before pokemon</p>
         </div>
       `;
       

@@ -1,7 +1,7 @@
 import { sluggify } from "../../../../util/misc.js";
 import { CompendiumBrowserTab } from "./base.js";
 
-export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
+export class CompendiumBrowserEnhancementsTab extends CompendiumBrowserTab {
     constructor(browser) {
         super(browser);
 
@@ -14,11 +14,11 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
     }
 
     get tabName() {
-        return "pokeEdges"
+        return "enhancements"
     }
 
     get templatePath() {
-        return "systems/ptu/static/templates/apps/compendium-browser/partials/pokeEdges.hbs"
+        return "systems/ptu/static/templates/apps/compendium-browser/partials/enhancements.hbs"
     }
 
     async loadData() {
@@ -34,7 +34,7 @@ export class CompendiumBrowserPokeEdgesTab extends CompendiumBrowserTab {
             indexFields
         )) {
             for (const edgeData of index) {
-                if (edgeData.type !== "pokeedge") continue;
+                if (edgeData.type !== "enhancement") continue;
                 if (!this.hasAllIndexFields(edgeData, indexFields)) continue;
 
                 const source = edgeData.system.source?.value ?? "";

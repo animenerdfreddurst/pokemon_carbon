@@ -103,10 +103,10 @@
       "system": "ptu"
     },
     {
-      "label": "PTR Poke Edges",
+      "label": "PTR Enhancements",
       "type": "Item",
-      "name": "poke-edges",
-      "path": "packs/poke-edges.db",
+      "name": "enhancements",
+      "path": "packs/enhancements.db",
       "system": "ptu"
     },
     {
@@ -196,7 +196,7 @@
           "name": "Pokemon",
           "sorting": "a",
           "color": "#d26565",
-          "packs": ["poke-edges", "species", "spirit-actions"]
+          "packs": ["enhancements", "species", "spirit-actions"]
         }
       ]
     },

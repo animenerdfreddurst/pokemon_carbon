@@ -134,7 +134,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 				case 'capability':
 					capabilities.push(i);
 					break;
-				case 'pokeedge':
+				case 'enhancement':
 					edges.push(i);
 					break;
 				case 'effect':

@@ -84,7 +84,7 @@ export function registerSettings() {
 
     game.settings.register("ptu", "leagueBattle", {
         name: "League Battle Initiative",
-        hint: "Sort player characters in inverted order before pokémon in combat.",
+        hint: "Sort player characters in inverted order before pokemon in combat.",
         scope: "world",
         config: false,  // Don't show in normal settings menu
         type: Boolean,
@@ -232,7 +232,7 @@ export function registerSettings() {
 
     // // game.settings.register("ptu", "nonOwnerCanSeeTabs", {
     // //     name: "Non-owners can see Sheet Tabs",
-    // //     hint: "Allow players with Limited/Observer permissions to browse tabs in a Pokémon/Trainer's full sheet",
+    // //     hint: "Allow players with Limited/Observer permissions to browse tabs in a Pokemon/Trainer's full sheet",
     // //     scope: "world",
     // //     config: true,
     // //     type: Boolean,
@@ -249,7 +249,7 @@ export function registerSettings() {
     //     choices: {
     //         1: "Always ask",
     //         2: "Only ask for capture",
-    //         3: "Only ask for Pokéball throw",
+    //         3: "Only ask for Pokeball throw",
     //         4: "Never Ask"
     //     },
     //     default: 1,
@@ -268,15 +268,15 @@ export function registerSettings() {
 
     // game.settings.register("ptu", "move-effectiveness-visible", {
     //     name: "Move Effectiveness",
-    //     hint: "Whether the players will be able to see how effective their Pokémon's moves are",
+    //     hint: "Whether the players will be able to see how effective their Pokemon's moves are",
     //     scope: "world",
     //     config: true,
     //     type: Number,
     //     choices: {
     //         1: "Disable Effectiveness",
     //         2: "Visible to GMs Only",
-    //         3: "Visible on Seen Pokémon Only (Checks Pokédex)",
-    //         4: "Visible on owned Pokémon Only (Checks Pokédex)",
+    //         3: "Visible on Seen Pokemon Only (Checks Pokedex)",
+    //         4: "Visible on owned Pokemon Only (Checks Pokedex)",
     //         5: "Always Visible"
     //     },
     //     default: 1,
@@ -361,8 +361,8 @@ export function registerSettings() {
     // });
 
     // game.settings.register("ptu", "playPokemonCriesOnDrop", {
-    //     name: "Play Pokémon Cry when dragged from Dex and on turn start",
-    //     hint: "This will play a Pokémon's cry when it is drag-and-dropped from the pokedex compendium, and in combat at the start of a Pokemon's turn.",
+    //     name: "Play Pokemon Cry when dragged from Dex and on turn start",
+    //     hint: "This will play a Pokemon's cry when it is drag-and-dropped from the pokedex compendium, and in combat at the start of a Pokemon's turn.",
     //     scope: "world",
     //     config: true,
     //     type: Boolean,
@@ -371,8 +371,8 @@ export function registerSettings() {
     // });
 
     // game.settings.register("ptu", "PokemonShinySound", {
-    //     name: "Shiny Pokémon Sound Effect",
-    //     hint: "The sound effect that will play when a shiny Pokémon is encountered.",
+    //     name: "Shiny Pokemon Sound Effect",
+    //     hint: "The sound effect that will play when a shiny Pokemon is encountered.",
     //     scope: "world",
     //     config: true,
     //     type: String,
@@ -394,8 +394,8 @@ export function registerSettings() {
     // })
 
     // game.settings.register("ptu", "pokemonCryDirectory", {
-    //     name: "Pokémon Cry Directory",
-    //     hint: "The directory where the user can upload mp3 or wav files (named as the lowercase name of the pokémon).",
+    //     name: "Pokemon Cry Directory",
+    //     hint: "The directory where the user can upload mp3 or wav files (named as the lowercase name of the pokemon).",
     //     scope: "world",
     //     config: true,
     //     type: String,
@@ -445,7 +445,7 @@ export function registerSettings() {
     // })
 
     // game.settings.register("ptu", "usePokeballSoundsOnDragOut", {
-    //     name: "Enable Pokéball Sounds.",
+    //     name: "Enable Pokeball Sounds.",
     //     hint: "Enable/Disable pokeball related sounds like when you send out a pokemon",
     //     scope: "client",
     //     config: true,
@@ -480,8 +480,8 @@ export function registerSettings() {
     //         "Clear": "Clear",//"Clear Weather is the default weather, conferring no innate bonuses or penalties of any sort.",
     //         "Sunny": "Sunny",//"While Sunny, Fire-Type Attacks gain a +5 bonus to Damage Rolls, and Water-Type Attacks suffer a -5 Damage penalty.",
     //         "Rainy": "Rainy",//"While Rainy, Water-Type Attacks gain a +5 bonus to Damage Rolls, and Fire-Type Attacks suffer a -5 Damage penalty.",
-    //         "Hail": "Hail",//"While it is Hailing, all non-Ice Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
-    //         "Sandstorm": "Sandstorm"//"While it is Sandstorming, all non-Ground, Rock, or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
+    //         "Hail": "Hail",//"While it is Hailing, all non-Ice Type Pokemon lose a Tick of Hit Points at the beginning of their turn.",
+    //         "Sandstorm": "Sandstorm"//"While it is Sandstorming, all non-Ground, Rock, or Steel Type Pokemon lose a Tick of Hit Points at the beginning of their turn.",
     //     },
     //     default: "Clear",
     //     

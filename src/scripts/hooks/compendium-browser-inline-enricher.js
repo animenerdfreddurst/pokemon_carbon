@@ -163,7 +163,7 @@ export const CompendiumBrowserInlineEnricher = {
             htmlElement.querySelectorAll(`.compendium-link`).forEach(el => {
                 el.addEventListener("click", async (event) => {
                     let tabKey = el.getAttribute("compendium-link-tab")
-                    if (tabKey === "pokeedges") tabKey = "pokeEdges";
+                    if (tabKey === "enhancements") tabKey = "enhancements";
                     /** @type {CompendiumBrowserTab} */
                     const tab = game.ptu.compendiumBrowser.tabs[tabKey]
 

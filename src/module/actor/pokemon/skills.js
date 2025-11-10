@@ -15,9 +15,9 @@ function calculateSkills(skills, speciesData, background, bonus = 0) {
     };
 
     for (let [key, skill] of Object.entries(speciesSkills)) {
-        if (key == "TechEd") {
-            skills["techEd"].value.value = skill.Dice;
-            skills["techEd"].modifier.value = skill.Mod;
+        if (key == "engineering") {
+            skills["engineering"].value.value = skill.Dice;
+            skills["engineering"].modifier.value = skill.Mod;
         } else {
             skills[key.toLowerCase()].value.value = skill.Dice;
             skills[key.toLowerCase()].modifier.value = skill.Mod;

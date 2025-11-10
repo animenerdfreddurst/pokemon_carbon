@@ -72,7 +72,7 @@ class PTUMoveDamage {
                 }
             }
             else if(domains.includes("special-damage")) {
-                const specialAttackModValue = actor.system.stats.spatk.total;
+                const specialAttackModValue = actor.system.stats.spa.total;
                 const modifier = new PTUModifier({
                     slug: "special-damage",
                     label: "Special Attack Stat",

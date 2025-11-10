@@ -156,7 +156,7 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
                 const item = await fromUuid(data.data.item);
                 if (!item) return ui.notifications.error("Invalid item dropped");
 
-                if ((actor.system.money ?? 0) < amount) return ui.notifications.error(`${actor.name} does not have enough money to pay for ${item.name} (Cost: ${amount} Poké, Current: ${actor.system.money})`);
+                if ((actor.system.money ?? 0) < amount) return ui.notifications.error(`${actor.name} does not have enough money to pay for ${item.name} (Cost: ${amount} Poke, Current: ${actor.system.money})`);
                 await actor.update({
                     "system.money": actor.system.money - amount,
                 });
@@ -169,12 +169,12 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
                 else {
                     await Item.create(item.toObject(), { parent: actor });
                 }
-                return ui.notifications.info(`${actor.name} Paid ${amount} Poké for ${item.name} (New Total: ${actor.system.money})`);
+                return ui.notifications.info(`${actor.name} Paid ${amount} Poke for ${item.name} (New Total: ${actor.system.money})`);
             }
             await actor.update({
                 "system.money": actor.system.money + amount
             });
-            return ui.notifications.info(`${actor.name} Gained ${amount} Poké (New Total: ${actor.system.money})`);
+            return ui.notifications.info(`${actor.name} Gained ${amount} Poke (New Total: ${actor.system.money})`);
         }
         // Case 2 - Items (including effects and conditions)
         else if (data.type === "Item" && data.uuid) {

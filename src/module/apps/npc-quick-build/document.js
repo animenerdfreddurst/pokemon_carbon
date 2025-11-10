@@ -24,22 +24,6 @@ function parseIntA(s) {
     return Number.NaN;
 }
 
-function simplifyString(s) {
-    const replacements = {
-        "pokémon": "pokemon",
-        "general education": "general",
-        "tech education": "technology",
-        "technology education": "technology",
-        "medicine education": "medicine",
-        "medicine edu": "medicine",
-        "pokemon education": "pokemon",
-        "occult education": "occult",
-        "intimidation": "intimidate",
-    };
-    return Object.keys(replacements).reduce(((a, b)=>a?.replaceAll(b, replacements[b])), s?.toLowerCase());
-}
-
-
 function chooseFrom(list) {
     return list[Math.random() * list.length | 0];
 }

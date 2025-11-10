@@ -7,12 +7,12 @@ function calcBaseStats(stats, speciesData, nature, baseStatModifier, ignoreStage
     newStats.atk.value = (baseStatModifier?.atk.total ?? 0) + newStats.atk.base;
     newStats.def.base = _calcBaseStat(speciesData, nature, "Defense", ignoreStages);
     newStats.def.value = (baseStatModifier?.def.total ?? 0) + newStats.def.base;
-    newStats.spatk.base = _calcBaseStat(speciesData, nature, "Special Attack", ignoreStages);
-    newStats.spatk.value = (baseStatModifier?.spatk.total ?? 0) + newStats.spatk.base;
-    newStats.spdef.base = _calcBaseStat(speciesData, nature, "Special Defense", ignoreStages);
-    newStats.spdef.value = (baseStatModifier?.spdef.total ?? 0) + newStats.spdef.base;
-    newStats.spd.base = _calcBaseStat(speciesData, nature, "Speed", ignoreStages);
+    newStats.spa.base = _calcBaseStat(speciesData, nature, "Special Attack", ignoreStages);
+    newStats.spa.value = (baseStatModifier?.spa.total ?? 0) + newStats.spa.base;
+    newStats.spd.base = _calcBaseStat(speciesData, nature, "Special Defense", ignoreStages);
     newStats.spd.value = (baseStatModifier?.spd.total ?? 0) + newStats.spd.base;
+    newStats.spe.base = _calcBaseStat(speciesData, nature, "Speed", ignoreStages);
+    newStats.spe.value = (baseStatModifier?.spe.total ?? 0) + newStats.spe.base;
 
     return newStats;
 }
@@ -59,10 +59,10 @@ function calculateOldStatTotal(levelUpPoints, stats, { twistedPower, ignoreStage
 
     if (twistedPower) {
         let atkTotal = stats.atk.total;
-        let spatkTotal = stats.spatk.total;
-        //if(Math.abs(atkTotal - spatkTotal) <= 5 ) {
-        stats.atk.total += Math.floor(spatkTotal / 2);
-        stats.spatk.total += Math.floor(atkTotal / 2);
+        let spaTotal = stats.spa.total;
+        //if(Math.abs(atkTotal - spaTotal) <= 5 ) {
+        stats.atk.total += Math.floor(spaTotal / 2);
+        stats.spa.total += Math.floor(atkTotal / 2);
         //}
     }
 
@@ -158,9 +158,9 @@ function calculateStatTotal({ level, actorStats, nature, isTrainer, twistedPower
         "HP": "hp",
         "Attack": "atk",
         "Defense": "def",
-        "Special Attack": "spatk",
-        "Special Defense": "spdef",
-        "Speed": "spd"
+        "Special Attack": "spa",
+        "Special Defense": "spd",
+        "Speed": "spe"
     }
 
     let levelUpPointsSpend = 0;
@@ -197,17 +197,17 @@ function calculateStatTotal({ level, actorStats, nature, isTrainer, twistedPower
 
     if (twistedPower) {
         const atkTotal = foundry.utils.duplicate(stats.atk.total);
-        const spatkTotal = foundry.utils.duplicate(stats.spatk.total);
+        const spaTotal = foundry.utils.duplicate(stats.spa.total);
 
-        stats.atk.total += Math.floor(spatkTotal / 3);
-        stats.spatk.total += Math.floor(atkTotal / 3);
+        stats.atk.total += Math.floor(spaTotal / 3);
+        stats.spa.total += Math.floor(atkTotal / 3);
     }
     if (hybridArmor) {
         const defTotal = foundry.utils.duplicate(stats.def.total);
-        const spdefTotal = foundry.utils.duplicate(stats.spdef.total);
+        const spdTotal = foundry.utils.duplicate(stats.spd.total);
 
-        stats.def.total += Math.floor(spdefTotal / 3);
-        stats.spdef.total += Math.floor(defTotal / 3);
+        stats.def.total += Math.floor(spdTotal / 3);
+        stats.spd.total += Math.floor(defTotal / 3);
     }
 
     const playtestStats = game.settings.get("ptu", "variant.improvedStatsRework");
@@ -260,9 +260,9 @@ function calculatePTStatTotal(levelUpPoints, level, stats, { twistedPower, ignor
         "HP": "hp",
         "Attack": "atk",
         "Defense": "def",
-        "Special Attack": "spatk",
-        "Special Defense": "spdef",
-        "Speed": "spd"
+        "Special Attack": "spa",
+        "Special Defense": "spd",
+        "Speed": "spe"
     }
 
 
@@ -300,18 +300,18 @@ function calculatePTStatTotal(levelUpPoints, level, stats, { twistedPower, ignor
 
     if (twistedPower) {
         let atkTotal = stats.atk.total;
-        let spatkTotal = stats.spatk.total;
-        //if(Math.abs(atkTotal - spatkTotal) <= 5 ) {
-        stats.atk.total += Math.floor(spatkTotal / 3);
-        stats.spatk.total += Math.floor(atkTotal / 3);
+        let spaTotal = stats.spa.total;
+        //if(Math.abs(atkTotal - spaTotal) <= 5 ) {
+        stats.atk.total += Math.floor(spaTotal / 3);
+        stats.spa.total += Math.floor(atkTotal / 3);
         //}
     }
     if (hybridArmor) {
         let defTotal = stats.def.total;
-        let spdefTotal = stats.spdef.total;
+        let spdTotal = stats.spd.total;
 
-        stats.def.total += Math.floor(spdefTotal / 3);
-        stats.spdef.total += Math.floor(defTotal / 3);
+        stats.def.total += Math.floor(spdTotal / 3);
+        stats.spd.total += Math.floor(defTotal / 3);
     }
 
     //apply mods and stages last
@@ -356,11 +356,11 @@ function calculateEvasions(data, ptuFlags, actor_items) {
 
     let evasion = {
         "physical": Math.clamp(Math.min(Math.floor(data.stats.def.total / 5), 6) + data.modifiers.evasion.physical.total + tangled_feet_modifier, 0, evasionLimit),
-        "special": Math.clamp(Math.min(Math.floor(data.stats.spdef.total / 5), 6) + data.modifiers.evasion.special.total + tangled_feet_modifier, 0, evasionLimit),
-        "speed": Math.clamp(Math.min(Math.floor(data.stats.spd.total / 5), 6) + data.modifiers.evasion.speed.total + tangled_feet_modifier, 0, evasionLimit)
+        "special": Math.clamp(Math.min(Math.floor(data.stats.spd.total / 5), 6) + data.modifiers.evasion.special.total + tangled_feet_modifier, 0, evasionLimit),
+        "speed": Math.clamp(Math.min(Math.floor(data.stats.spe.total / 5), 6) + data.modifiers.evasion.speed.total + tangled_feet_modifier, 0, evasionLimit)
     };
 
-    if (ptuFlags?.is_stuck) evasion.speed = 0;
+    if (ptuFlags?.is_immobilized) evasion.speed = 0;
 
     return evasion;
 }

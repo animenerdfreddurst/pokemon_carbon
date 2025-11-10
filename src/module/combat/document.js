@@ -21,9 +21,9 @@ class PTUCombat extends Combat {
         const resolveTie = () => {
             const [priorityA, priorityB] = [a, b].map(
                 (combatant) => ({
-                    one: combatant.actor.system.stats.spd.total,
-                    two: combatant.actor.system.stats.spd.levelUp,
-                    three: combatant.actor.system.stats.spd.value,
+                    one: combatant.actor.system.stats.spe.total,
+                    two: combatant.actor.system.stats.spe.levelUp,
+                    three: combatant.actor.system.stats.spe.value,
                     four: combatant.actor.system.level.current
                 }));
 

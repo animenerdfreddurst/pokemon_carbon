@@ -133,7 +133,7 @@ export const V11EmbedCompatability = {
             //                 if (!actor) return ui.notifications.error("No actor selected");
             //                 if (isNaN(Number(amount))) return ui.notifications.error("Invalid amount");
             //                 await actor.update({ "system.money": actor.system.money + Number(amount) });
-            //                 ui.notifications.info(`${actor.name} Gained ${amount} Poké (New Total: ${actor.system.money})`);
+            //                 ui.notifications.info(`${actor.name} Gained ${amount} Poke (New Total: ${actor.system.money})`);
             //             });
             //         }
             //     }

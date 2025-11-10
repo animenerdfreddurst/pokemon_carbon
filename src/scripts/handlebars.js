@@ -127,7 +127,7 @@ function _registerPTUHelpers() {
         const dbString = CONFIG.PTU.data.dbData[realDb];
 
         if (!actor) return dbString;
-        const bonus = item.system.category === "Physical" ? actor.system.stats.atk.total + (actor.system.modifiers.damageBonus?.physical?.total ?? 0) : actor.system.stats.spatk.total + (actor.system.modifiers.damageBonus?.special?.total ?? 0);
+        const bonus = item.system.category === "Physical" ? actor.system.stats.atk.total + (actor.system.modifiers.damageBonus?.physical?.total ?? 0) : actor.system.stats.spa.total + (actor.system.modifiers.damageBonus?.special?.total ?? 0);
 
         return dbString + " + " + bonus;
     });
@@ -192,9 +192,9 @@ function _registerPTUHelpers() {
             case "hp": return "HP";
             case "atk": return "Attack";
             case "def": return "Defense";
-            case "spatk": return "Special Attack";
-            case "spdef": return "Special Defense";
-            case "spd": return "Speed";
+            case "spa": return "Special Attack";
+            case "spd": return "Special Defense";
+            case "spe": return "Speed";
         }
     }
 
@@ -267,9 +267,9 @@ function _registerPTUHelpers() {
     //             "hp": "HP",
     //             "atk": "Attack",
     //             "def": "Defense",
-    //             "spatk": "Special Attack",
-    //             "spdef": "Special Defense",
-    //             "spd": "Speed"
+    //             "spa": "Special Attack",
+    //             "spd": "Special Defense",
+    //             "spe": "Speed"
     //         };
 
     //         let key = renamingDict[statKey];
@@ -305,7 +305,7 @@ function _registerPTUHelpers() {
         const bonus = parseInt((owner ? (
             move.system.category === "Physical" ?
                 owner.system.stats.atk.total + (owner.system.modifiers.damageBonus?.physical?.total ?? 0) :
-                owner.system.stats.spatk.total + (owner.system.modifiers.damageBonus?.special?.total ?? 0)
+                owner.system.stats.spa.total + (owner.system.modifiers.damageBonus?.special?.total ?? 0)
         ) : 0) + move.system.damageBonus ?? 0);
 
         if (move.system.damageBase.toString().match(/^[0-9]+$/) != null) {

@@ -6,7 +6,7 @@ const MetagameSettingsConfig = {
         hint: "PTU.Settings.Metagame.DexPermissions.Hint",
         type: Number,
         choices: {
-            1: "Disable Pokédex",
+            1: "Disable Pokedex",
             2: "Dexentry description only (Basic description and details only)",
             3: "Full details on owned Tokens",
             4: "Full details on owned Mons (checks trainer's dex tab)",

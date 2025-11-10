@@ -1100,7 +1100,7 @@ a.pokedollar span {
 }
 a.pokedollar span::before {
   content: "";
-  background: url(/systems/ptu/static/css/images/Pokémon_Dollar_sign.svg);
+  background: url(/systems/ptu/static/css/images/Pokemon_Dollar_sign.svg);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -4184,12 +4184,12 @@ a.content-link img {
 }
 .ptu.level-up form .stats.hp,
 .ptu.level-up form .stats.def,
-.ptu.level-up form .stats.spdef {
+.ptu.level-up form .stats.spd {
   background: #fefefe;
 }
 .ptu.level-up form .stats.atk,
-.ptu.level-up form .stats.spatk,
-.ptu.level-up form .stats.spd {
+.ptu.level-up form .stats.spa,
+.ptu.level-up form .stats.spe {
   background: #e1ecf2;
 }
 .ptu.level-up form .stats-keys {
@@ -4263,7 +4263,7 @@ a.content-link img {
   main.sheet-body
   .stats
   .swsh-box.stats-box
-  .flex-row.spdef {
+  .flex-row.spd {
   background: #fefefe;
 }
 .ptu.sheet.gen8.actor.compact
@@ -4275,12 +4275,12 @@ a.content-link img {
   main.sheet-body
   .stats
   .swsh-box.stats-box
-  .flex-row.spatk,
+  .flex-row.spa,
 .ptu.sheet.gen8.actor.compact
   main.sheet-body
   .stats
   .swsh-box.stats-box
-  .flex-row.spd {
+  .flex-row.spe {
   background: #e1ecf2;
 }
 .ptu.sheet.gen8.actor.compact main.sheet-body .stats .other {
@@ -4412,12 +4412,12 @@ a.content-link img {
 }
 .ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.hp,
 .ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.def,
-.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spdef {
+.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spd {
   background: #fefefe;
 }
 .ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.atk,
-.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spatk,
-.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spd {
+.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spa,
+.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spe {
   background: #e1ecf2;
 }
 .ptu.sheet.gen8.actor.compact main.sheet-body .extra .stats {
@@ -4612,12 +4612,12 @@ a.content-link img {
 }
 .ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.hp,
 .ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.def,
-.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spdef {
+.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spd {
   background: #fefefe;
 }
 .ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.atk,
-.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spatk,
-.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spd {
+.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spa,
+.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spe {
   background: #e1ecf2;
 }
 .ptu.sheet.gen8.actor

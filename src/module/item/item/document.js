@@ -73,7 +73,7 @@ class PTUItemItem extends PTUItem {
 
         const amount = this.system.cost;
         
-        if ((actor.system.money ?? 0) < amount) return ui.notifications.error(`${actor.name} does not have enough money to pay for ${this.name} (Cost: ${amount} Poké, Current: ${actor.system.money})`);
+        if ((actor.system.money ?? 0) < amount) return ui.notifications.error(`${actor.name} does not have enough money to pay for ${this.name} (Cost: ${amount} Poke, Current: ${actor.system.money})`);
         await actor.update({
             "system.money": actor.system.money - amount,
         });
@@ -87,7 +87,7 @@ class PTUItemItem extends PTUItem {
         else {
             await Item.create(this.toObject(), {parent: actor});
         }
-        return ui.notifications.info(`${actor.name} Paid ${amount} Poké for ${this.name} (New Total: ${actor.system.money})`);
+        return ui.notifications.info(`${actor.name} Paid ${amount} Poke for ${this.name} (New Total: ${actor.system.money})`);
     }
 }
 

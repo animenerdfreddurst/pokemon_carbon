@@ -66,9 +66,9 @@
             </div>
 
             <div class="setting-section">
-                <h3>{{localize "PTU.CompendiumBrowser.Tabs.PokeEdges"}}</h3>
+                <h3>{{localize "PTU.CompendiumBrowser.Tabs.Enhancements"}}</h3>
                 <dl>
-                    {{#each settings.pokeEdges as |conf pack|}}
+                    {{#each settings.enhancements as |conf pack|}}
                         <label><dt><input type="checkbox" name="{{pack}}" {{checked conf.load}}></dt><dd>{{conf.name}}</dd></label>
                     {{/each}}
                 </dl>

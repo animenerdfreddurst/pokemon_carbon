@@ -32,7 +32,7 @@ jobs:
           fvtt package unpack items
           fvtt package unpack macros
           fvtt package unpack moves
-          fvtt package unpack poke-edges
+          fvtt package unpack enhancements
           fvtt package unpack references
           fvtt package unpack species
           fvtt package unpack spirit-actions
