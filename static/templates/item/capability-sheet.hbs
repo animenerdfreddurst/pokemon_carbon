@@ -39,14 +39,58 @@
                     <div class="move-info-row">
                         <div class="move-info-col">
                             <div class="move-other-info mt-2">
+                                <span style="flex: 0 0 100%">
+                                    Frequency 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.frequency}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%">
+                                    Range 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.range}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%">
+                                    AC 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.AC}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
                                 <span class="d-flex justify-content-between" style="flex: 0 0 100%">
-                                    KEYWORDS 
+                                    Keywords 
                                     <input 
                                         type="text" 
                                         class="ptu-tagify system-keywords" 
                                         name="" 
                                         value="{{json item.system.keywords}}" 
                                         data-dtype="JSON"
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%">
+                                    Trigger 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.trigger}}"
+                                        placeholder=""
                                         disabled
                                     />
                                 </span>
@@ -61,8 +105,24 @@
         </div>
         <div class="tab details h-100" data-group="primary" data-tab="details">
             <div class="item-row">
+                <label for="system.frequency">{{localize "ITEM.Frequency"}}</label>
+                <input class="ml-1 mr-1" name="system.frequency" type="text" value="{{item.system.frequency}}" placeholder="{{localize "ITEM.Frequency"}}"/>
+            </div>
+            <div class="item-row">
+                <label for="system.range">{{localize "ITEM.Range"}}</label>
+                <input class="ml-1 mr-1" name="system.range" type="text" value="{{item.system.range}}" placeholder="{{localize "ITEM.Range"}}"/>
+            </div>
+            <div class="item-row">
+                <label for="system.ac">{{localize "ITEM.AC"}}</label>
+                <input class="ml-1 mr-1" name="system.ac" type="text" value="{{item.system.ac}}" placeholder="0"/>
+            </div>
+            <div class="item-row">
                 <label for="system.keywords">{{localize "ITEM.Keywords"}}</label>
                 <input type="text" class="ptu-tagify system-keywords" name="system.keywords" value="{{json item.system.keywords}}" data-dtype="JSON"/>
+            </div>
+            <div class="item-row">
+                <label for="system.trigger">{{localize "ITEM.TRigger"}}</label>
+                <input class="ml-1 mr-1" name="system.trigger" type="text" value="{{item.system.trigger}}" placeholder="0"/>
             </div>
             <div class="item-row">
                 <label for="system.effect">{{localize "ITEM.Effect"}}</label>
