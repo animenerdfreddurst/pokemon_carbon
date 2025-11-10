@@ -40,6 +40,95 @@
                     <div class="move-info-row">
                         <div class="move-info-col">
                             <div class="move-other-info mt-2">
+                                <span style="flex: 0 0 100%;">
+                                    Prerequisites 
+                                    <input 
+                                        type="text" 
+                                        class="ptu-tagify system-prerequisites" 
+                                        name="" 
+                                        value="{{json item.system.prerequisites}}" 
+                                        data-dtype="JSON"
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%;">
+                                    Slots 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.slots}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%;">
+                                    Frequency 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.frequency}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
+                                <span>
+                                    AC 
+                                    <input
+                                        class="ml-1 mr-1"
+                                        type="text"
+                                        value="{{item.system.ac}}"
+                                        disabled
+                                    />
+                                </span>
+                                <span>
+                                    DB 
+                                    <input
+                                        class="ml-1 mr-1"
+                                        type="text"
+                                        value="{{item.system.damageBase}}"
+                                        disabled
+                                    />
+                                </span>
+                                <span>
+                                    {{#if (bigger item.system.damageBase 0)}}
+                                        <span>
+                                            {{getDb (calcDb item.system)}}
+                                        </span>
+                                        +
+                                        <input
+                                            class="ml-1 mr-1"
+                                            type="number"
+                                            value="{{item.system.damageBonus}}"
+                                            disabled
+                                        />
+                                    {{else}}
+                                        
+                                    {{/if}}
+                                </span>
+                                <span class="d-flex justify-content-between" style="flex: 0 0 100%">
+                                    Keywords 
+                                    <input 
+                                        type="text" 
+                                        class="ptu-tagify system-keywords" 
+                                        name="" 
+                                        value="{{json item.system.keywords}}" 
+                                        data-dtype="JSON"
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%;">
+                                    Trigger 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.trigger}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
                                 <span class="d-flex justify-content-between" style="flex: 0 0 100%;">
                                     <span>Quantity</span> 
                                     <input
@@ -81,17 +170,6 @@
                                     />
                                 </span>
                                 {{/if}}
-                                <span class="d-flex justify-content-between" style="flex: 0 0 100%">
-                                    KEYWORDS 
-                                    <input 
-                                        type="text" 
-                                        class="ptu-tagify system-keywords" 
-                                        name="" 
-                                        value="{{json item.system.keywords}}" 
-                                        data-dtype="JSON"
-                                        disabled
-                                    />
-                                </span>
                             </div>
                         </div>
                     </div>
@@ -103,6 +181,44 @@
         </div>
         <div class="tab details h-100" data-group="primary" data-tab="details">
             <div class="item-row">
+                <label for="system.prerequisites">{{localize "ITEM.Prerequisites"}}</label>
+                <input type="text" class="ptu-tagify system-prerequisites" name="system.prerequisites" value="{{json item.system.prerequisites}}" data-dtype="JSON"/>
+            </div>
+            <div class="item-row">
+                <label for="system.slots">{{localize "ITEM.Slots"}}</label>
+                <input class="ml-1 mr-1" name="system.slots" type="text" value="{{item.system.slots}}" placeholder="{{localize "ITEM.Slots"}}"/>
+            </div>
+            <div class="item-row">
+                <label for="system.frequency">{{localize "ITEM.Frequency"}}</label>
+                <input class="ml-1 mr-1" name="system.frequency" type="text" value="{{item.system.frequency}}" placeholder="{{localize "ITEM.Frequency"}}"/>
+            </div>
+            <div class="item-row">
+                <label for="system.range">{{localize "ITEM.Range"}}</label>
+                <input class="ml-1 mr-1" name="system.range" type="text" value="{{item.system.range}}" placeholder="{{localize "ITEM.Range"}}"/>
+            </div>
+            <div class="item-row">
+                <label for="system.ac">{{localize "ITEM.AC"}}</label>
+                <input class="ml-1 mr-1" name="system.ac" type="text" value="{{item.system.ac}}" placeholder="0"/>
+            </div>
+            {{#unless (is item.system.category "Status")}}
+            <div class="item-row">
+                <label for="system.damageBase">{{localize "ITEM.DB"}}</label>
+                <input class="ml-1 mr-1" name="system.damageBase" type="text" value="{{item.system.damageBase}}" placeholder="0"/>
+            </div>
+            <div class="item-row">
+                <label for="system.damageBonus">{{localize "ITEM.DamageBonus"}}</label>
+                <input class="ml-1 mr-1" name="system.damageBonus" type="number" value="{{item.system.damageBonus}}" placeholder="0"/>
+            </div>
+            {{/unless}}
+            <div class="item-row">
+                <label for="system.keywords">{{localize "ITEM.Keywords"}}</label>
+                <input type="text" class="ptu-tagify system-keywords" name="system.keywords" value="{{json item.system.keywords}}" data-dtype="JSON"/>
+            </div>
+            <div class="item-row">
+                <label for="system.trigger">{{localize "ITEM.Trigger"}}</label>
+                <input class="ml-1 mr-1" name="system.trigger" type="text" value="{{item.system.trigger}}" placeholder="{{localize "ITEM.Trigger"}}"/>
+            </div>
+            <div class="item-row">
                 <label for="system.quantity">{{localize "ITEM.Quantity"}}</label>
                 <input class="ml-1 mr-1" name="system.quantity" type="text" value="{{item.system.quantity}}" placeholder="{{localize "ITEM.Quantity"}}"/>
             </div>
@@ -113,10 +229,6 @@
             <div class="item-row">
                 <label for="system.category">{{localize "ITEM.Category"}}</label>
                 <input class="ml-1 mr-1" name="system.category" type="text" value="{{item.system.category}}" placeholder="{{localize "ITEM.Category"}}"/>
-            </div>
-            <div class="item-row">
-                <label for="system.keywords">{{localize "ITEM.Keywords"}}</label>
-                <input type="text" class="ptu-tagify system-keywords" name="system.keywords" value="{{json item.system.keywords}}" data-dtype="JSON"/>
             </div>
             {{#if (is item.system.subtype "pokeball")}}
                 <div class="item-row">
