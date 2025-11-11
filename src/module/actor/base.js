@@ -1849,17 +1849,17 @@ class PTUActor extends Actor {
                             value: -this.system.stats.def.levelUp,
                         },
                         6: {
-                            source: "SP.ATK Stat",
+                            source: "SPA Stat",
                             mode: "add",
                             value: -this.system.stats.spa.levelUp,
                         },
                         7: {
-                            source: "SP.DEF Stat",
+                            source: "SPD Stat",
                             mode: "add",
                             value: -this.system.stats.spd.levelUp,
                         },
                         8: {
-                            source: "spe Stat",
+                            source: "SPE Stat",
                             mode: "add",
                             value: -this.system.stats.spe.levelUp,
                         },
@@ -1884,7 +1884,7 @@ class PTUActor extends Actor {
                         },
                         special: {
                             1: {
-                                source: "SP.DEF Stat / 5 (max 6)",
+                                source: "SPD Stat / 5 (max 6)",
                                 mode: "add",
                                 value: Math.min(Math.floor(this.system.stats.spd.total / 5), 6),
                             },

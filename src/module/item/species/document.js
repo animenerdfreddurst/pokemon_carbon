@@ -28,9 +28,6 @@ class PTUSpecies extends PTUItem {
         if (data.system.slug.includes("galarian")) {
             data.system.form = "galarian";
         }
-        if (data.system.slug.includes("Hisuian")) {
-            data.system.form = "hisuian";
-        }
 
         data.system.stats = {
             hp: speciesData["Base Stats"]["HP"],

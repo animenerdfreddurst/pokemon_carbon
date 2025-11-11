@@ -1,6 +1,6 @@
 export const natureData = {
     "Cuddly": ["HP", "Attack"],
-    "Distracted": ["HP", "Defense"],
+    "Inattentive": ["HP", "Defense"],
     "Proud": ["HP", "Special Attack"],
     "Decisive": ["HP", "Special Defense"],
     "Patient": ["HP", "Speed"],

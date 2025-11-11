@@ -142,7 +142,7 @@
               "value": 2,
               "mod": 0
             },
-            "label": "Medicine Ed",
+            "label": "Biochemistry",
             "modifier": {
               "value": 0,
               "mod": 0
@@ -190,7 +190,7 @@
               "value": 2,
               "mod": 0
             },
-            "label": "General Ed",
+            "label": "Education",
             "modifier": {
               "value": 0,
               "mod": 0
@@ -202,7 +202,7 @@
               "value": 2,
               "mod": 0
             },
-            "label": "Technology Ed",
+            "label": "Engineering",
             "modifier": {
               "value": 0,
               "mod": 0
@@ -250,7 +250,7 @@
               "value": 2,
               "mod": 0
             },
-            "label": "Occult Ed",
+            "label": "Occultism",
             "modifier": {
               "value": 0,
               "mod": 0
@@ -310,7 +310,7 @@
               "value": 2,
               "mod": 0
             },
-            "label": "Pokemon Ed",
+            "label": "Zoology",
             "modifier": {
               "value": 0,
               "mod": 0
