@@ -30,19 +30,19 @@ const GenerationSettingsConfig = {
         name: "PTU.Settings.Generation.DefaultDexDragInLevelMin.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInLevelMin.Hint",
         type: Number,
-        default: 10
+        default: 2
     },
     "defaultDexDragInLevelMax": {
         name: "PTU.Settings.Generation.DefaultDexDragInLevelMax.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInLevelMax.Hint",
         type: Number,
-        default: 10,
+        default: 70,
     },
     "defaultDexDragInShinyChance": {
         name: "PTU.Settings.Generation.DefaultDexDragInShinyChance.Name",
         hint: "PTU.Settings.Generation.DefaultDexDragInShinyChance.Hint",
         type: Number,
-        default: 2
+        default: 1
     },
     "defaultDexDragInStatRandomness": {
         name: "PTU.Settings.Generation.DefaultDexDragInStatRandomness.Name",

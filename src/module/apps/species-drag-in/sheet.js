@@ -34,8 +34,8 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
             ...data,
             levelMinDefault: game.settings.get("ptu", "generation.defaultDexDragInLevelMin"),
             levelMaxDefault: game.settings.get("ptu", "generation.defaultDexDragInLevelMax"),
-            shinyChanceDefault: shinyChanceDefault > 1 ? shinyChanceDefault / 100 : shinyChanceDefault,
-            statRandomnessDefault: statRandomnessDefault > 1 ? statRandomnessDefault / 100 : statRandomnessDefault,
+            shinyChanceDefault: shinyChanceDefault > 1 ? shinyChanceDefault : shinyChanceDefault, //old version: shinyChanceDefault: shinyChanceDefault > 1 ? shinyChanceDefault / 100 : shinyChanceDefault,
+            statRandomnessDefault: statRandomnessDefault > 1 ? statRandomnessDefault : statRandomnessDefault, //old version: statRandomnessDefault: statRandomnessDefault > 1 ? statRandomnessDefault / 100 : statRandomnessDefault,
             preventDefault: game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
             species: this.species.name
         }
