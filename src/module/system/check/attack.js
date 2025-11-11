@@ -166,19 +166,19 @@ class PTUAttackCheck extends PTUDiceCheck {
                     }));
                 }
                 else {
-                    const immobilized = (context.options.has("target:condition:immobilized") && !context.options.has("target:types:ghost"));
+                    const stuck = (context.options.has("target:condition:stuck") && !context.options.has("target:types:ghost"));
                     switch (this.item?.system.category) {
                         case "Status": {
                             target.statistic.push(new PTUModifier({
                                 slug: "speed-evasion",
                                 label: "Speed Evasion",
-                                modifier: immobilized ? 0 : (context.actor.system.evasion.speed ?? 0)
+                                modifier: stuck ? 0 : (context.actor.system.evasion.speed ?? 0)
                             }));
                             break;
                         }
                         case "Physical": {
                             const { physical, speed } = context.actor.system.evasion;
-                            if (immobilized ? true : physical > speed) {
+                            if (stuck ? true : physical > speed) {
                                 target.statistic.push(new PTUModifier({
                                     slug: "physical-evasion",
                                     label: "Physical Evasion",
@@ -196,7 +196,7 @@ class PTUAttackCheck extends PTUDiceCheck {
                         }
                         case "Special": {
                             const { special, speed } = context.actor.system.evasion;
-                            if (immobilized ? true : special > speed) {
+                            if (stuck ? true : special > speed) {
                                 target.statistic.push(new PTUModifier({
                                     slug: "special-evasion",
                                     label: "Special Evasion",
@@ -361,12 +361,12 @@ class PTUAttackCheck extends PTUDiceCheck {
             ui.notifications.warn("PTU.Action.MoveWhileFrozen", { localize: true });
             return false;
         }
-        if (this.conditionOptions.has("condition:asleep") && !this.options.has("self:ignore:asleep")) {
-            ui.notifications.warn("PTU.Action.MoveWhileAsleep", { localize: true });
+        if (this.conditionOptions.has("condition:sleep") && !this.options.has("self:ignore:sleep")) {
+            ui.notifications.warn("PTU.Action.MoveWhileSleeping", { localize: true });
             return false;
         }
-        if (this.conditionOptions.has("condition:enraged") && this.selectors.includes("status-attack")) {
-            ui.notifications.warn("PTU.Action.StatusAttackWhileEnraged", { localize: true });
+        if (this.conditionOptions.has("condition:rage") && this.selectors.includes("status-attack")) {
+            ui.notifications.warn("PTU.Action.StatusAttackWhileRaging", { localize: true });
             return false;
         }
         if (this.conditionOptions.has("condition:disabled") && this.options.has(`condition:disabled:${this.item.slug}`)) {

@@ -539,7 +539,7 @@ class PTUActor extends Actor {
             }
 
             if (item?.system.category == "Physical") return this.system.stats.def.total;
-            if (item?.system.category == "Special") return this.system.stats.spd.total;
+            if (item?.system.category == "Special") return this.system.stats.spdef.total;
             return 0;
         })();
         const damageAbsorbedByDefense = currentDamage > 0 ? Math.min(currentDamage, defense) : 0;
@@ -1050,7 +1050,7 @@ class PTUActor extends Actor {
                     const ptuFlags = typeRule ? { grantedBy: { id: typeRule.item.id, onDelete: 'detach' } } : {};
 
                     // Cover for telekinetic
-                    const range = localType === "normal" ? `${this.system.skills?.willpower?.value?.total ?? 1}` : "Melee"
+                    const range = localType === "normal" ? `${this.system.skills?.focus?.value?.total ?? 1}` : "Melee"
                     arr.push(constructStruggleItem(type, "Physical", `${range}, 1 Target`, ptuFlags))
                     arr.push(constructStruggleItem(type, "Special", `${range}, 1 Target`, ptuFlags))
                     return arr;
@@ -1338,7 +1338,7 @@ class PTUActor extends Actor {
                 new PTUModifier({
                     slug: "speed-stat",
                     label: "Speed Stat",
-                    modifier: this.system.stats.spe.total
+                    modifier: this.system.stats.spd.total
                 }),
                 ...check.modifiers,
             ]
@@ -1352,10 +1352,10 @@ class PTUActor extends Actor {
 
             check.prepareStatistic("initiative")
 
-            if (check.conditionOptions.has("condition:paralyzed")) {
+            if (check.conditionOptions.has("condition:paralysis")) {
                 check.statistic.push(new PTUModifier({
-                    slug: "paralyzed",
-                    label: "Paralyzed",
+                    slug: "paralysis",
+                    label: "Paralysis",
                     modifier: -Math.ceil(Math.abs(check.statistic.totalModifier * 0.5))
                 }))
             }
@@ -1562,18 +1562,18 @@ class PTUActor extends Actor {
                     value: 0,
                 }
             }
-            const immobilized = (context.options.has("target:condition:immobilized") && !context.options.has("target:types:ghost"));
+            const stuck = (context.options.has("target:condition:stuck") && !context.options.has("target:types:ghost"));
 
             switch (category) {
                 case "Status": return targetActor?.system?.evasion?.speed !== undefined ? {
                     slug: "speed-evasion",
-                    value: immobilized ? 0 : targetActor.system.evasion.speed,
+                    value: stuck ? 0 : targetActor.system.evasion.speed,
                 } : null;
                 case "Physical": {
                     const { physical, speed } = targetActor?.system?.evasion ?? {};
                     if (physical === undefined || speed === undefined) return null;
 
-                    return (immobilized ? true : physical > speed) ? {
+                    return (stuck ? true : physical > speed) ? {
                         slug: "physical-evasion",
                         value: physical,
                     } : {
@@ -1585,7 +1585,7 @@ class PTUActor extends Actor {
                     const { special, speed } = targetActor?.system?.evasion ?? {};
                     if (special === undefined || speed === undefined) return null;
 
-                    return (immobilized ? true : special > speed) ? {
+                    return (stuck ? true : special > speed) ? {
                         slug: "special-evasion",
                         value: special,
                     } : {
@@ -1849,19 +1849,19 @@ class PTUActor extends Actor {
                             value: -this.system.stats.def.levelUp,
                         },
                         6: {
-                            source: "SPA Stat",
+                            source: "SP.ATK Stat",
                             mode: "add",
-                            value: -this.system.stats.spa.levelUp,
+                            value: -this.system.stats.spatk.levelUp,
                         },
                         7: {
+                            source: "SP.DEF Stat",
+                            mode: "add",
+                            value: -this.system.stats.spdef.levelUp,
+                        },
+                        8: {
                             source: "SPD Stat",
                             mode: "add",
                             value: -this.system.stats.spd.levelUp,
-                        },
-                        8: {
-                            source: "SPE Stat",
-                            mode: "add",
-                            value: -this.system.stats.spe.levelUp,
                         },
                         9: {
                             source: "Stat Point Modifier",
@@ -1884,9 +1884,9 @@ class PTUActor extends Actor {
                         },
                         special: {
                             1: {
-                                source: "SPD Stat / 5 (max 6)",
+                                source: "SP.DEF Stat / 5 (max 6)",
                                 mode: "add",
-                                value: Math.min(Math.floor(this.system.stats.spd.total / 5), 6),
+                                value: Math.min(Math.floor(this.system.stats.spdef.total / 5), 6),
                             },
                             2: {
                                 source: "Special Evasion Mod",
@@ -1896,9 +1896,9 @@ class PTUActor extends Actor {
                         },
                         speed: {
                             1: {
-                                source: "SPE Stat / 5 (max 6)",
+                                source: "SPD Stat / 5 (max 6)",
                                 mode: "add",
-                                value: Math.min(Math.floor(this.system.stats.spe.total / 5), 6),
+                                value: Math.min(Math.floor(this.system.stats.spd.total / 5), 6),
                             },
                             2: {
                                 source: "Speed Evasion Mod",

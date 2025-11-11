@@ -8,7 +8,7 @@
         <a data-tab="feats" class="{{#if (is tab "feats")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Feats"}}</a>
         <a data-tab="items" class="{{#if (is tab "items")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Items"}}</a>
         <a data-tab="moves" class="{{#if (is tab "moves")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Moves"}}</a>
-        <a data-tab="enhancements" class="{{#if (is tab "enhancements")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Enhancements"}}</a>
+        <a data-tab="pokeEdges" class="{{#if (is tab "pokeEdges")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.PokeEdges"}}</a>
         <a data-tab="species" class="{{#if (is tab "species")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Species"}}</a>
         <a data-tab="effects" class="{{#if (is tab "effects")}}active{{/if}}">{{localize "PTU.CompendiumBrowser.Tabs.Effects"}}</a>
         {{#if user.isGM}}
@@ -65,8 +65,8 @@
             </div>
         {{/with}}
 
-        {{#with enhancements}}
-            <div class="tab browser" data-group="primary" data-tab="enhancements">
+        {{#with pokeEdges}}
+            <div class="tab browser" data-group="primary" data-tab="pokeEdges">
                 <div class="content-grid"> 
                     {{> "systems/ptu/static/templates/apps/compendium-browser/filters.hbs"}}
                     <ul class="item-list result-list"></ul>

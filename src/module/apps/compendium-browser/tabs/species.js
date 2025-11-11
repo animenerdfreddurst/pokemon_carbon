@@ -1,7 +1,7 @@
 import { sluggify } from "../../../../util/misc.js";
 import { CompendiumBrowserTab } from "./base.js";
 
-const FILTERABLE_CAPABILITIES = ["overland", "sky", "swim", "hover", "burrow", "highJump", "longJump", "power"]
+const FILTERABLE_CAPABILITIES = ["overland", "sky", "swim", "levitate", "burrow", "highJump", "longJump", "power"]
 
 export class CompendiumBrowserSpeciesTab extends CompendiumBrowserTab {
     constructor(browser) {
@@ -296,9 +296,9 @@ export class CompendiumBrowserSpeciesTab extends CompendiumBrowserTab {
                     label: "swim",
                     values: {},
                 },
-                hover: {
+                levitate: {
                     isExpanded: false,
-                    label: "hover",
+                    label: "levitate",
                     values: {},
                 },
                 burrow: {

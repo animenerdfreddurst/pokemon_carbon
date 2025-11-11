@@ -118,7 +118,7 @@ class PTUDamageCheck extends PTUDiceCheck {
                 modifiers.push(new PTUModifier({
                     slug: "special-damage",
                     label: "Attack Stat",
-                    modifier: this.actor.system.stats.spa.total,
+                    modifier: this.actor.system.stats.spatk.total,
                 }));
                 if (this.actor.system.modifiers.damageBonus.special?.total != 0) {
                     modifiers.push(new PTUModifier({

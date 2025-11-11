@@ -197,7 +197,7 @@ class CompendiumBrowser extends Application {
             feats: new browserTabs.Feats(this),
             items: new browserTabs.Items(this),
             moves: new browserTabs.Moves(this),
-            enhancements: new browserTabs.Enhancements(this),
+            pokeEdges: new browserTabs.PokeEdges(this),
             species: new browserTabs.Species(this),
             effects: new browserTabs.Effects(this),
         }
@@ -258,7 +258,7 @@ class CompendiumBrowser extends Application {
             feats: {},
             items: {},
             moves: {},
-            enhancements: {},
+            pokeEdges: {},
             species: {}
         }
 
@@ -270,7 +270,7 @@ class CompendiumBrowser extends Application {
             "ptu.feats": true,
             "ptu.items": true,
             "ptu.moves": true,
-            "ptu.enhancements": true,
+            "ptu.poke-edges": true,
             "ptu.species": true
         }
 
@@ -306,9 +306,9 @@ class CompendiumBrowser extends Application {
                 const load = this.settings.moves?.[pack.collection]?.load ?? !!loadDefault[pack.collection];
                 settings.moves[pack.collection] = { load, name: pack.metadata.label };
             }
-            if (types.has("enhancement")) {
-                const load = this.settings.enhancements?.[pack.collection]?.load ?? !!loadDefault[pack.collection]
-                settings.enhancements[pack.collection] = { load, name: pack.metadata.label };
+            if (types.has("pokeedge")) {
+                const load = this.settings.pokeEdges?.[pack.collection]?.load ?? !!loadDefault[pack.collection]
+                settings.pokeEdges[pack.collection] = { load, name: pack.metadata.label };
             }
             if (types.has("species")) {
                 const load = this.settings.species?.[pack.collection]?.load ?? !!loadDefault[pack.collection];
@@ -897,7 +897,7 @@ class CompendiumBrowser extends Application {
 
     /**
      * @typedef TabName
-     * @type {"abilities" | "capabilities" | "edges" | "effects" | "feats" | "items" | "moves" | "enhancements" | "species" | "settings"} 
+     * @type {"abilities" | "capabilities" | "edges" | "effects" | "feats" | "items" | "moves" | "pokeEdges" | "species" | "settings"} 
      */
 
     /**

@@ -122,8 +122,6 @@ export class PTUPokemonSheet extends PTUActorSheet {
 		const contestmoves = [];
 		const spiritactions = [];
 
-		//Convert spiritactions into enhancements? It might be that edges were intended to cover both Edge and PokeEdge.
-
 		// Iterate through items, allocating to containers
 		// let totalWeight = 0;
 		for (let i of this.actor.items.contents.sort((a, b) => (a.sort || 0) - (b.sort || 0))) {
@@ -136,7 +134,7 @@ export class PTUPokemonSheet extends PTUActorSheet {
 				case 'capability':
 					capabilities.push(i);
 					break;
-				case 'enhancement':
+				case 'pokeedge':
 					edges.push(i);
 					break;
 				case 'effect':

@@ -116,7 +116,7 @@ class PTUTrainerActor extends PTUActor {
         // Prepare data with Mods
         for (let [key, mod] of Object.entries(system.modifiers)) {
             // Skip these modifiers
-            if (["hardened", "flinched_count", "immuneToEffectDamage", "typeOverwrite", "capabilities"].includes(key)) continue;
+            if (["hardened", "flinch_count", "immuneToEffectDamage", "typeOverwrite", "capabilities"].includes(key)) continue;
 
             // If the modifier is an object, it has subkeys that need to be calculated
             if (mod[Object.keys(mod)[0]]?.value !== undefined) {
@@ -207,7 +207,7 @@ class PTUTrainerActor extends PTUActor {
         system.health.tick = Math.floor(system.health.total / 10);
 
         system.evasion = calculateEvasions(system, this.flags?.ptu, this.items);
-        system.capabilities = calculateTrainerCapabilities(system.skills, this.items, (system.stats.spe.stage.value + system.stats.spe.stage.mod), system.modifiers.capabilities, this.rollOptions.conditions?.["slowed"]);
+        system.capabilities = calculateTrainerCapabilities(system.skills, this.items, (system.stats.spd.stage.value + system.stats.spd.stage.mod), system.modifiers.capabilities, this.rollOptions.conditions?.["slowed"]);
 
         system.feats = {
             total: this.items.filter(x => x.type == "feat" && !x.system.free).length,
@@ -292,7 +292,7 @@ class PTUTrainerActor extends PTUActor {
         system.ap.drained = Number(this.synthetics.apAdjustments.drained.map(d => d.value).reduce((a, b) => a + b, 0)) || 0
         system.ap.max = this.baseMaxAp - system.ap.bound - system.ap.drained
 
-        system.initiative = { value: system.stats.spe.total + system.modifiers.initiative.total };
+        system.initiative = { value: system.stats.spd.total + system.modifiers.initiative.total };
 
         // Contests
         // This is to force the order of the stats to be the same as the order in the sheet
@@ -308,9 +308,9 @@ class PTUTrainerActor extends PTUActor {
                 switch (stat) {
                     case "cool": return "atk";
                     case "tough": return "def";
-                    case "beauty": return "spa";
-                    case "smart": return "spd";
-                    case "cute": return "spe";
+                    case "beauty": return "spatk";
+                    case "smart": return "spdef";
+                    case "cute": return "spd";
                 }
             })();
             system.contests.stats[stat].stats.value = Math.min(Math.floor(system.stats[combatStat].total / 10), 3);

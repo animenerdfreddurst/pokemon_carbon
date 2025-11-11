@@ -50,25 +50,6 @@
                                         disabled
                                     />
                                 </span>
-                                <span style="flex: 0 0 100%">
-                                    NOTES 
-                                    <input
-                                        class="ml-3"
-                                        name=""
-                                        type="text"
-                                        value="{{item.system.notes}}"
-                                        placeholder=""
-                                        disabled
-                                    />
-                                </span>
-                                <span style="flex: 0 0 100%;">
-                                    FREE EDGE
-                                    <input
-                                        class="ml-2 mr-2"
-                                        type="checkbox" {{checked item.system.free}}
-                                        disabled
-                                    />
-                                </span>
                                 <span class="d-flex justify-content-between" style="flex: 0 0 100%">
                                     KEYWORDS 
                                     <input 
@@ -95,16 +76,8 @@
                 <input type="text" class="ptu-tagify system-prerequisites" name="system.prerequisites" value="{{json item.system.prerequisites}}" data-dtype="JSON"/>
             </div>
             <div class="item-row">
-                <label for="system.notes">{{localize "ITEM.Notes"}}</label>
-                <input class="ml-1 mr-1" name="system.notes" type="text" value="{{item.system.notes}}" placeholder="{{localize "ITEM.Notes"}}"/>
-            </div>
-            <div class="item-row">
                 <label for="system.keywords">{{localize "ITEM.Keywords"}}</label>
                 <input type="text" class="ptu-tagify system-keywords" name="system.keywords" value="{{json item.system.keywords}}" data-dtype="JSON"/>
-            </div>
-            <div class="item-row">
-                <label for="system.referenceEffect">{{localize "ITEM.ReferenceEffect"}}</label>
-                <span class="ml-1 mr-1 effect">{{#if referenceEffect}}{{{referenceEffect}}}{{else}}None{{/if}}</span>
             </div>
             <div class="item-row">
                 <label for="system.effect">{{localize "ITEM.Effect"}}</label>
@@ -113,10 +86,6 @@
             <div class="item-row">
                 <label for="system.snippet">{{localize "ITEM.Snippet"}}</label>
                 <textarea class="ml-1 mr-1" name="system.snippet">{{item.system.snippet}}</textarea>
-            </div>
-            <div class="item-row" style="justify-content: flex-start;">
-                <label for="system.free">{{localize "ITEM.FreeEdge"}}</label>
-                <input class="ml-1 mr-1" name="system.free" type="checkbox" {{checked item.system.free}}/>
             </div>
         </div>
         <div class="tab rules h-100" data-group="primary" data-tab="rules">

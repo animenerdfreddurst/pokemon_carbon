@@ -327,7 +327,7 @@ class PTUCondition extends BaseEffectPTU {
             const damage = (() => {
                 switch (move.system.category) {
                     case "Physical": return Math.floor(actor.system.stats.atk.total / 2);
-                    case "Special": return Math.floor(actor.system.stats.spa.total / 2);
+                    case "Special": return Math.floor(actor.system.stats.spatk.total / 2);
                     default: return actor.system.health.tick * 2;
                 }
             })();

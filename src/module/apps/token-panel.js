@@ -104,7 +104,7 @@ export class TokenPanel extends Application {
             {name: "Overland", value: actor.system.capabilities?.overland ?? 0, icon: "fas fa-shoe-prints"},
             {name: "Swim", value: actor.system.capabilities?.swim ?? 0, icon: "fas fa-swimmer"},
             {name: "Burrow", value: actor.system.capabilities?.burrow ?? 0, icon: "fas fa-mountain"},
-            {name: "Hover", value: actor.system.capabilities?.hover ?? 0, icon: "fas fa-feather"},
+            {name: "Levitate", value: actor.system.capabilities?.levitate ?? 0, icon: "fas fa-feather"},
             {name: "Sky", value: actor.system.capabilities?.sky ?? 0, icon: "fab fa-fly"},
             {name: "Teleporter", value: actor.system.capabilities?.teleporter ?? 0, icon: "fas fa-people-arrows"},
             {name: "Throwing", value: actor.system.capabilities?.throwingRange ?? 0, icon: "fas fa-baseball-ball"},

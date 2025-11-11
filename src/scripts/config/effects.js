@@ -57,9 +57,9 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "paralyzed",
-        "name": "PTU.ConditionParalyzed",
-        "img": "systems/ptu/static/images/conditions/Paralyzed.svg",
+        "id": "paralysis",
+        "name": "PTU.ConditionParalysis",
+        "img": "systems/ptu/static/images/conditions/Paralysis.svg",
         "changes": [
             {
                 "key": "flags.ptu.is_paralyzed",
@@ -83,9 +83,9 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "toxified",
-        "name": "PTU.ConditionToxified",
-        "img": "systems/ptu/static/images/conditions/Toxified.svg",
+        "id": "badly-poisoned",
+        "name": "PTU.ConditionBadlyPoisoned",
+        "img": "systems/ptu/static/images/conditions/Badly-Poisoned.svg",
         "changes": [
             {
                 "key": "flags.ptu.is_poisoned",
@@ -94,7 +94,7 @@ export const statusEffects = [
                 "priority": 50
             },
             {
-                "key": "flags.ptu.is_toxified",
+                "key": "flags.ptu.is_badly_poisoned",
                 "value": true,
                 "mode": 5,
                 "priority": 50
@@ -141,8 +141,8 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "flinched",
-        "name": "PTU.ConditionFlinched",
+        "id": "flinch",
+        "name": "PTU.ConditionFlinch",
         "img": "systems/ptu/static/images/conditions/Flinched.svg",
         "changes": [
             {
@@ -160,8 +160,8 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "infatuated",
-        "name": "PTU.ConditionInfatuated",
+        "id": "infatuation",
+        "name": "PTU.ConditionInfatuation",
         "img": "systems/ptu/static/images/conditions/Infatuated.svg",
         "changes": [
             {
@@ -173,12 +173,12 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "enraged",
-        "name": "PTU.ConditionEnraged",
-        "img": "systems/ptu/static/images/conditions/Enraged.svg",
+        "id": "rage",
+        "name": "PTU.ConditionRage",
+        "img": "systems/ptu/static/images/conditions/Rage.svg",
         "changes": [
             {
-                "key": "flags.ptu.is_enraged",
+                "key": "flags.ptu.is_raging",
                 "value": true,
                 "mode": 5,
                 "priority": 50
@@ -186,12 +186,12 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "asleep",
-        "name": "PTU.ConditionAsleep",
-        "img": "systems/ptu/static/images/conditions/Asleep.svg",
+        "id": "sleep",
+        "name": "PTU.ConditionSleep",
+        "img": "systems/ptu/static/images/conditions/Sleep.svg",
         "changes": [
             {
-                "key": "flags.ptu.is_asleep",
+                "key": "flags.ptu.is_sleeping",
                 "value": true,
                 "mode": 5,
                 "priority": 50
@@ -205,12 +205,12 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "haunted",
-        "name": "PTU.ConditionHaunted",
-        "img": "systems/ptu/static/images/conditions/Haunted.svg",
+        "id": "bad-sleep",
+        "name": "PTU.ConditionBadSleep",
+        "img": "systems/ptu/static/images/conditions/Bad-Sleep.svg",
         "changes": [
             {
-                "key": "flags.ptu.is_haunted",
+                "key": "flags.ptu.is_badly_sleeping",
                 "value": true,
                 "mode": 5,
                 "priority": 50
@@ -231,12 +231,12 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "dimmed",
-        "name": "PTU.ConditionDimmed",
-        "img": "systems/ptu/static/images/conditions/Dimmed.svg",
+        "id": "blindness",
+        "name": "PTU.ConditionBlindness",
+        "img": "systems/ptu/static/images/conditions/Blindness.svg",
         "changes": [
             {
-                "key": "flags.ptu.is_dimmed",
+                "key": "flags.ptu.is_blind",
                 "value": true,
                 "mode": 5,
                 "priority": 50
@@ -256,18 +256,18 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "blinded",
-        "name": "PTU.ConditionBlinded",
-        "img": "systems/ptu/static/images/conditions/Blinded.svg",
+        "id": "total-blindness",
+        "name": "PTU.ConditionTotalBlindness",
+        "img": "systems/ptu/static/images/conditions/Total-Blindness.svg",
         "changes": [
             {
-                "key": "flags.ptu.is_dimmed",
+                "key": "flags.ptu.is_blind",
                 "value": true,
                 "mode": 5,
                 "priority": 50
             },
             {
-                "key": "flags.ptu.is_blinded",
+                "key": "flags.ptu.is_totally_blind",
                 "value": true,
                 "mode": 5,
                 "priority": 50
@@ -300,12 +300,12 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "immobilized",
-        "name": "PTU.ConditionImmobilized",
-        "img": "systems/ptu/static/images/conditions/Immobilized.svg",
+        "id": "stuck",
+        "name": "PTU.ConditionStuck",
+        "img": "systems/ptu/static/images/conditions/Stuck.svg",
         "changes": [
             {
-                "key": "flags.ptu.is_immobilized",
+                "key": "flags.ptu.is_stuck",
                 "value": true,
                 "mode": 5,
                 "priority": 50
@@ -326,12 +326,12 @@ export const statusEffects = [
         ]
     },
     {
-        "id": "proned",
-        "name": "PTU.ConditionProned",
-        "img": "systems/ptu/static/images/conditions/Proned.svg",
+        "id": "tripped",
+        "name": "PTU.ConditionTripped",
+        "img": "systems/ptu/static/images/conditions/Tripped.svg",
         "changes": [
             {
-                "key": "flags.ptu.is_proned",
+                "key": "flags.ptu.is_tripped",
                 "value": true,
                 "mode": 5,
                 "priority": 50
@@ -422,6 +422,3 @@ export const statusEffects = [
         ]
     }
 ];
-
-//Need to add: silenced, dead, distracted (should be within the system already, just not as a status effect), grappled (again, exists but not as a status), injured and heavily injured (see the last 2), incapacitated (sort of covered by some status conditions, but should be formalized), unconsious (same as previous), suffocating (the suffocation mechanic exists, just want it as a status)
-//Need to modify: Disabled (its functionality is slightly different in Carbon vs PTU)

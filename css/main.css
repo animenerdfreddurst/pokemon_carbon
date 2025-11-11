@@ -727,12 +727,12 @@
 }
 .ptu.level-up form .stats.hp,
 .ptu.level-up form .stats.def,
-.ptu.level-up form .stats.spd {
+.ptu.level-up form .stats.spdef {
   background: #fefefe;
 }
 .ptu.level-up form .stats.atk,
-.ptu.level-up form .stats.spa,
-.ptu.level-up form .stats.spe {
+.ptu.level-up form .stats.spatk,
+.ptu.level-up form .stats.spd {
   background: #e1ecf2;
 }
 .ptu.level-up form .stats-keys {
@@ -806,7 +806,7 @@
   main.sheet-body
   .stats
   .swsh-box.stats-box
-  .flex-row.spd {
+  .flex-row.spdef {
   background: #fefefe;
 }
 .ptu.sheet.gen8.actor.compact
@@ -818,12 +818,12 @@
   main.sheet-body
   .stats
   .swsh-box.stats-box
-  .flex-row.spa,
+  .flex-row.spatk,
 .ptu.sheet.gen8.actor.compact
   main.sheet-body
   .stats
   .swsh-box.stats-box
-  .flex-row.spe {
+  .flex-row.spd {
   background: #e1ecf2;
 }
 .ptu.sheet.gen8.actor.compact main.sheet-body .stats .other {
@@ -955,12 +955,12 @@
 }
 .ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.hp,
 .ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.def,
-.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spd {
+.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spdef {
   background: #fefefe;
 }
 .ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.atk,
-.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spa,
-.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spe {
+.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spatk,
+.ptu.sheet.gen8.actor.compact main.sheet-body .extra .flex-row.spd {
   background: #e1ecf2;
 }
 .ptu.sheet.gen8.actor.compact main.sheet-body .extra .stats {
@@ -1492,12 +1492,12 @@
 }
 .ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.hp,
 .ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.def,
-.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spd {
+.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spdef {
   background: #fefefe;
 }
 .ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.atk,
-.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spa,
-.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spe {
+.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spatk,
+.ptu.sheet.gen8.actor main.sheet-body .combat .swsh-box .flex-row.spd {
   background: #e1ecf2;
 }
 .ptu.sheet.gen8.actor

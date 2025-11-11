@@ -28,14 +28,17 @@ class PTUSpecies extends PTUItem {
         if (data.system.slug.includes("galarian")) {
             data.system.form = "galarian";
         }
+        if (data.system.slug.includes("Hisuian")) {
+            data.system.form = "hisuian";
+        }
 
         data.system.stats = {
             hp: speciesData["Base Stats"]["HP"],
             atk: speciesData["Base Stats"]["Attack"],
             def: speciesData["Base Stats"]["Defense"],
-            spa: speciesData["Base Stats"]["Special Attack"],
-            spd: speciesData["Base Stats"]["Special Defense"],
-            spe: speciesData["Base Stats"]["Speed"]
+            spatk: speciesData["Base Stats"]["Special Attack"],
+            spdef: speciesData["Base Stats"]["Special Defense"],
+            spd: speciesData["Base Stats"]["Speed"]
         }
         data.system.types = speciesData.Type;
 

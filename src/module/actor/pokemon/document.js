@@ -22,7 +22,7 @@ class PTUPokemonActor extends PTUActor {
     }
 
     get allowedItemTypes() {
-        return ["species", "enhancement", "move", "contestmove", "ability", "capability", "effect", "condition", "spiritaction", "item"]
+        return ["species", "pokeedge", "move", "contestmove", "ability", "capability", "effect", "condition", "spiritaction", "item"]
     }
 
     get nature() {
@@ -170,7 +170,7 @@ class PTUPokemonActor extends PTUActor {
         // Prepare data with Mods
         for (let [key, mod] of Object.entries(system.modifiers)) {
             // Skip these modifiers
-            if (["hardened", "flinched_count", "immuneToEffectDamage", "typeOverwrite", "tp", "capabilities"].includes(key)) continue;
+            if (["hardened", "flinch_count", "immuneToEffectDamage", "typeOverwrite", "tp", "capabilities"].includes(key)) continue;
 
             // If the modifier is an object, it has subkeys that need to be calculated
             if (mod[Object.keys(mod)[0]]?.value !== undefined) {
@@ -246,15 +246,15 @@ class PTUPokemonActor extends PTUActor {
 
         system.health.tick = Math.floor(system.health.total / 10);
 
-        system.initiative = { value: system.stats.spe.total + system.modifiers.initiative.total };
+        system.initiative = { value: system.stats.spd.total + system.modifiers.initiative.total };
         if (this.flags?.ptu?.is_paralyzed) system.initiative.value = Math.floor(system.initiative.value * 0.5);
-        if (system.modifiers.flinched_count?.value > 0) {
-            system.initiative.value -= (system.modifiers.flinched_count.value * 5);
+        if (system.modifiers.flinch_count?.value > 0) {
+            system.initiative.value -= (system.modifiers.flinch_count.value * 5);
         }
         Hooks.call("updateInitiative", this);
 
         system.tp.max = (system.level.current > 0 ? Math.floor(system.level.current / 5) : 0) + 1 + (system.modifiers.tp ?? 0);
-        system.tp.pep.value = this.items.filter(x => x.type == "enhancement" && x.system.origin?.toLowerCase() != "pusher").length;
+        system.tp.pep.value = this.items.filter(x => x.type == "pokeedge" && x.system.origin?.toLowerCase() != "pusher").length;
         system.tp.pep.max = system.level.current > 0 ? Math.floor(system.level.current / 10) + 1 : 1;
 
         system.evasion = this._calcEvasion();
@@ -289,9 +289,9 @@ class PTUPokemonActor extends PTUActor {
                 switch (stat) {
                     case "cool": return "atk";
                     case "tough": return "def";
-                    case "beauty": return "spa";
-                    case "smart": return "spd";
-                    case "cute": return "spe";
+                    case "beauty": return "spatk";
+                    case "smart": return "spdef";
+                    case "cute": return "spd";
                 }
             })();
             system.contests.stats[stat].stats.value = Math.min(Math.floor(system.stats[combatStat].total / 10), 3);
@@ -369,15 +369,15 @@ class PTUPokemonActor extends PTUActor {
             stats[stat].base = speciesStats?.[stat] ?? 1;
         }
 
-        if (this.rollOptions.all["enhancement:hybrid-attacker"]) {
-            const equalized = Math.ceil((stats.atk.base + stats.spa.base) / 2);
+        if (this.rollOptions.all["pokeedge:hybrid-attacker"]) {
+            const equalized = Math.ceil((stats.atk.base + stats.spatk.base) / 2);
             stats.atk.base = equalized;
-            stats.spa.base = equalized;
+            stats.spatk.base = equalized;
         }
-        if (this.rollOptions.all["enhancement:hybrid-defender"]) {
-            const equalized = Math.ceil((stats.def.base + stats.spd.base) / 2);
+        if (this.rollOptions.all["pokeedge:hybrid-defender"]) {
+            const equalized = Math.ceil((stats.def.base + stats.spdef.base) / 2);
             stats.def.base = equalized;
-            stats.spd.base = equalized;
+            stats.spdef.base = equalized;
         }
 
         for (const stat of Object.keys(stats)) {
@@ -400,11 +400,11 @@ class PTUPokemonActor extends PTUActor {
 
         const evasion = {
             "physical": Math.clamp(Math.min(Math.floor(this.system.stats.def.total / 5), 6) + this.system.modifiers.evasion.physical.total, 0, evasionLimit),
-            "special": Math.clamp(Math.min(Math.floor(this.system.stats.spd.total / 5), 6) + this.system.modifiers.evasion.special.total, 0, evasionLimit),
-            "speed": Math.clamp(Math.min(Math.floor(this.system.stats.spe.total / 5), 6) + this.system.modifiers.evasion.speed.total, 0, evasionLimit)
+            "special": Math.clamp(Math.min(Math.floor(this.system.stats.spdef.total / 5), 6) + this.system.modifiers.evasion.special.total, 0, evasionLimit),
+            "speed": Math.clamp(Math.min(Math.floor(this.system.stats.spd.total / 5), 6) + this.system.modifiers.evasion.speed.total, 0, evasionLimit)
         };
 
-        if (this.rollOptions.conditions?.["immobilized"] && !this.rollOptions.all["self:types:ghost"]) evasion.speed = 0;
+        if (this.rollOptions.conditions?.["stuck"] && !this.rollOptions.all["self:types:ghost"]) evasion.speed = 0;
 
         return evasion;
     }
@@ -419,8 +419,8 @@ class PTUPokemonActor extends PTUActor {
         const capsFromSpeciesOrModifiers = [...Object.keys(this.system.modifiers.capabilities), ...Object.keys(speciesCapabilities)].filter(cap => cap !== "all")
         const movementCapabilities = capsFromSpeciesOrModifiers.filter(cap => !CONFIG.PTU.Capabilities.stringArray.includes(cap) || !CONFIG.PTU.Capabilities.numericNonMovement.includes(cap))
 
-        const speedCombatStages = this.system.stats.spe.stage.value + this.system.stats.spe.stage.mod;
-        const speCsChanges = speedCombatStages > 0 ? Math.floor(speedCombatStages / 2) : speedCombatStages < 0 ? Math.ceil(speedCombatStages / 2) : 0;
+        const speedCombatStages = this.system.stats.spd.stage.value + this.system.stats.spd.stage.mod;
+        const spdCsChanges = speedCombatStages > 0 ? Math.floor(speedCombatStages / 2) : speedCombatStages < 0 ? Math.ceil(speedCombatStages / 2) : 0;
         const omniMovementMod = Number(this.system.modifiers.capabilities.all) || 0;
         const slowedMultiplier = this.rollOptions.conditions?.["slowed"] ? 0.5 : 1
 
@@ -430,7 +430,7 @@ class PTUPokemonActor extends PTUActor {
                 const mod = this.system.modifiers?.capabilities[moveCap] ? this.system.modifiers?.capabilities[moveCap] : 0
                 const speciesCap = speciesCapabilities[moveCap] ? speciesCapabilities[moveCap] : 0
                 if(speciesCap <= 0 && mod <= 0) continue;
-                finalCapabilities[moveCap] = Math.max(1, Math.floor(slowedMultiplier * (speciesCap + speCsChanges + omniMovementMod + mod)))
+                finalCapabilities[moveCap] = Math.max(1, Math.floor(slowedMultiplier * (speciesCap + spdCsChanges + omniMovementMod + mod)))
             } else {
                 delete finalCapabilities[moveCap];
             }
@@ -456,7 +456,7 @@ class PTUPokemonActor extends PTUActor {
             finalCapabilities[cap] = speciesCapabilities[cap]
         }
 
-        if(finalCapabilities["hover"] === undefined) finalCapabilities["hover"] = 0;
+        if(finalCapabilities["levitate"] === undefined) finalCapabilities["levitate"] = 0;
         if(finalCapabilities["sky"] === undefined) finalCapabilities["sky"] = 0;
 
         return finalCapabilities;

@@ -127,27 +127,27 @@
                             <div
                                 class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 d-flex flex-row center-text justify-content-between">
                                 <div class="fb-25">
-                                    <b>Temp HP</b>
+                                    <b>Durability</b>
                                 </div>
                                 <div class="fb-35">
-                                    <b>Current HP</b>
+                                    <b>Current Health</b>
                                 </div>
                                 <div class="fb-25">
-                                    <b>Max HP</b>
+                                    <b>Max Health</b>
                                 </div>
                             </div>
                             <div class="swsh-body d-flex flex-row center-text justify-content-between">
                                 <div class="fb-25">
                                     <input name="system.tempHp.value" type="number"
-                                        value="{{actor.system.tempHp.value}}" placeholder="Temp HP" />
+                                        value="{{actor.system.tempHp.value}}" placeholder="Durability" />
                                 </div>
                                 <div class="fb-35">
                                     <input name="system.health.value" type="number"
-                                        value="{{actor.system.health.value}}" placeholder="Current HP" />
+                                        value="{{actor.system.health.value}}" placeholder="Current Health" />
                                 </div>
                                 <div class="fb-25">
                                     <input name="system.health.max" type="number" value="{{actor.system.health.max}}"
-                                        placeholder="Max HP" disabled />
+                                        placeholder="Max Health" disabled />
                                 </div>
                                 <div class="options w-100 pb-1 pt-1 mt-1">
                                     <div class="progress-bar p{{actor.system.health.percent}}" id="progressBar"></div>
@@ -658,7 +658,7 @@
                     <div class="swsh-box w-100">
                         <div class="swsh-body w-100" style="display: block;">
                             {{> "systems/ptu/static/templates/partials/item-display-partial.hbs" title=(localize
-                            "ITEM.TypeEnhancementPlural") type="enhancement" items=edges}}
+                            "ITEM.TypePokeedgePlural") type="pokeedge" items=edges}}
                         </div>
                     </div>
                 </div> --}}
@@ -837,28 +837,28 @@
                             <!-- Tick/HP Guidelines -->
                             <div
                                 class="swsh-header justify-content-center center-text ball-themes {{ballStyle}} highlight pt-2">
-                                <b>HP Guidelines</b>
+                                <b>Health Guidelines</b>
                             </div>
                             <div class="swsh-header ball-themes {{ballStyle}} highlight pb-2">
                                 <div
                                     class="d-flex flex-row w-100 hp-guidelines center-text justify-content-between align-items-center">
                                     <div class="fb-15">
-                                        <label for="1/16th">6.25%</label>
+                                        <label for="6.25%">6.25%</label>
                                     </div>
                                     <div class="fb-15">
-                                        <label for="1/10th">10%</label>
+                                        <label for="10%">10%</label>
                                     </div>
                                     <div class="fb-15">
-                                        <label for="1/8th">12.5%</label>
+                                        <label for="12.5%">12.5%</label>
                                     </div>
                                     <div class="fb-15">
-                                        <label for="3/10th">30%</label>
+                                        <label for="30%">30%</label>
                                     </div>
                                     <div class="fb-15">
-                                        <label for="1/4th">25%</label>
+                                        <label for="25%">25%</label>
                                     </div>
                                     <div class="fb-15">
-                                        <label for="1/2nd">50%</label>
+                                        <label for="50%">50%</label>
                                     </div>
                                 </div>
                             </div>
@@ -866,27 +866,27 @@
                                 <div
                                     class="d-flex w-100 mt-1 mb-1 hp-guidelines justify-content-between center-text align-items-center">
                                     <div class="fb-15">
-                                        <input disabled name="1/16th" type="number"
+                                        <input disabled name="6.25%" type="number"
                                             value="{{floor (divide actor.system.health.total 16)}}">
                                     </div>
                                     <div class="fb-15">
-                                        <input disabled name="1/10th" type="number"
+                                        <input disabled name="10%" type="number"
                                             value="{{floor (divide actor.system.health.total 10)}}">
                                     </div>
                                     <div class="fb-15">
-                                        <input disabled name="1/8th" type="number"
+                                        <input disabled name="12.5%" type="number"
                                             value="{{floor (divide actor.system.health.total 8)}}">
                                     </div>
                                     <div class="fb-15">
-                                        <input disabled name="3/10th" type="number"
+                                        <input disabled name="30%" type="number"
                                             value="{{floor (multiply actor.system.health.total (divide 3 10))}}">
                                     </div>
                                     <div class="fb-15">
-                                        <input disabled name="1/4th" type="number"
+                                        <input disabled name="25%" type="number"
                                             value="{{floor (divide actor.system.health.total 4)}}">
                                     </div>
                                     <div class="fb-15">
-                                        <input disabled name="1/2nd" type="number"
+                                        <input disabled name="50%" type="number"
                                             value="{{floor (divide actor.system.health.total 2)}}">
                                     </div>
                                 </div>
@@ -990,7 +990,7 @@
                             {{else}}
                             <div
                                 class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 justify-content-center">
-                                <b class="m-auto">{{localize "PTU.EnhancementPoints"}}</b>
+                                <b class="m-auto">{{localize "PTU.PokeedgePoints"}}</b>
                             </div>
                             <div class="swsh-body tp-box">
                                 <div class="d-flex flex-row justify-content-center w-100">
@@ -1005,7 +1005,7 @@
                             {{/if}}
                             <div class="swsh-body w-100" style="display: block;">
                                 {{> "systems/ptu/static/templates/partials/item-display-partial.hbs" title=(localize
-                                "ITEM.TypeEnhancementPlural") type="enhancement" items=edges}}
+                                "ITEM.TypePokeedgePlural") type="pokeedge" items=edges}}
                             </div>
                         </div>
 
