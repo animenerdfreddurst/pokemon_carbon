@@ -1,7 +1,7 @@
 {
   "id": "ptu",
-  "title": "Pokemon Tabletop Reunited",
-  "description": "A re-imagining of the Pokemon Tabletop United TTRPG System now made with FoundryVTT as a central pilar.",
+  "title": "Pokemon Carbon",
+  "description": "The completion of the Pokemon Tabletop United TTRPG System made for FoundryVTT.",
   "compatibility": {
     "minimum": "13.345",
     "verified": "13.350"
@@ -10,30 +10,14 @@
   "templateVersion": 2,
   "authors": [
     {
-      "name": "Ashe Eon",
-      "email": "ptu@soaringnetwork.com",
-      "url": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System"
+      "name": "Trog",
+      "url": "https://github.com/animenerdfreddurst/pokemon_carbon"
     },
     {
-      "name": "Ellam Fox"
+      "name": "npaisley"
     },
     {
-      "name": "Muhsigbokz"
-    },
-    {
-      "name": "Silverfox3853",
-      "url": "https://startplaying.games/gm/fox-the-gm"
-    },
-    {
-      "name": "TitaniumDragoonNeo"
-    },
-    {
-      "name": "Sajochi",
-      "url": "https://www.youtube.com/channel/UCiUTs4FV0HtdoziFogJAdEw"
-    },
-    {
-      "name": "UmcaraAí",
-      "url": "https://github.com/p-arth"
+      "name": "highmongrel"
     }
   ],
   "esmodules": ["src/ptr.js"],
@@ -61,101 +45,101 @@
   },
   "packs": [
     {
-      "label": "PTR Abilities",
+      "label": "Abilities",
       "type": "Item",
       "name": "abilities",
       "path": "packs/abilities.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Moves",
+      "label": "Moves",
       "type": "Item",
       "name": "moves",
       "path": "packs/moves.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Feats",
+      "label": "Feats",
       "type": "Item",
       "name": "feats",
       "path": "packs/feats.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Edges",
+      "label": "Edges",
       "type": "Item",
       "name": "edges",
       "path": "packs/edges.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Items",
+      "label": "Items",
       "type": "Item",
       "name": "items",
       "path": "packs/items.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Capabilities",
+      "label": "Capabilities",
       "type": "Item",
       "name": "capabilities",
       "path": "packs/capabilities.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Enhancements",
+      "label": "Enhancements",
       "type": "Item",
       "name": "enhancements",
       "path": "packs/enhancements.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Habitats",
+      "label": "Habitats",
       "type": "RollTable",
       "name": "habitats",
       "path": "packs/habitats.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Rolltables",
+      "label": "Rolltables",
       "type": "RollTable",
       "name": "rolltables",
       "system": "ptu"
     },
     {
-      "label": "PTR Effects",
+      "label": "Effects",
       "type": "Item",
       "name": "effects",
       "path": "packs/effects.db",
       "system": "ptu"
     },
     {
-      "label": "PTR Species",
+      "label": "Species",
       "type": "Item",
       "name": "species",
       "path": "packs/species.db",
       "system": "ptu"
     }, 
     {
-      "label": "PTR Macros",
+      "label": "Macros",
       "type": "Macro",
       "name": "macros",
       "system": "ptu"
     },
     {
-      "label": "PTR References",
+      "label": "References",
       "type": "Item",
       "name": "references",
       "system": "ptu"
     },
     {
-      "label": "PTR Spirit Actions",
+      "label": "Spirit Actions",
       "type": "Item",
       "name": "spirit-actions",
       "system": "ptu"
     },
     {
-      "label": "PTR Journals",
+      "label": "Journals",
       "type": "JournalEntry",
       "name": "journals",
       "system": "ptu"

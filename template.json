@@ -17,15 +17,15 @@
               "value": 0,
               "mod": 0
             },
-            "spa": {
+            "spatk": {
+              "value": 0,
+              "mod": 0
+            },
+            "spdef": {
               "value": 0,
               "mod": 0
             },
             "spd": {
-              "value": 0,
-              "mod": 0
-            },
-            "spe": {
               "value": 0,
               "mod": 0
             }
@@ -80,7 +80,7 @@
             "value": 0,
             "mod": 0
           },
-          "flinched_count": {
+          "flinch_count": {
             "value": 0,
             "keys": []
           },
@@ -137,7 +137,7 @@
             },
             "type": "body"
           },
-          "biochemistry": {
+          "medicineEd": {
             "value": {
               "value": 2,
               "mod": 0
@@ -149,7 +149,7 @@
             },
             "type": "mind"
           },
-          "charisma": {
+          "charm": {
             "value": {
               "value": 2,
               "mod": 0
@@ -185,7 +185,7 @@
             },
             "type": "spirit"
           },
-          "education": {
+          "generalEd": {
             "value": {
               "value": 2,
               "mod": 0
@@ -197,7 +197,7 @@
             },
             "type": "mind"
           },
-          "engineering": {
+          "techEd": {
             "value": {
               "value": 2,
               "mod": 0
@@ -221,7 +221,7 @@
             },
             "type": "mind"
           },
-          "intimidation": {
+          "intimidate": {
             "value": {
               "value": 2,
               "mod": 0
@@ -245,7 +245,7 @@
             },
             "type": "spirit"
           },
-          "occultism": {
+          "occultEd": {
             "value": {
               "value": 2,
               "mod": 0
@@ -293,7 +293,7 @@
             },
             "type": "body"
           },
-          "willpower": {
+          "focus": {
             "value": {
               "value": 2,
               "mod": 0
@@ -305,7 +305,7 @@
             },
             "type": "spirit"
           },
-          "zoology": {
+          "pokemonEd": {
             "value": {
               "value": 2,
               "mod": 0
@@ -317,6 +317,7 @@
             },
             "type": "mind"
           }
+          
         }
       },
       "stats": {
@@ -341,21 +342,21 @@
             "levelUp": 0,
             "label": "Defense"
           },
-          "spa": {
+          "spatk": {
             "value": 5,
             "mod": { "value": 0, "mod": 0 },
             "stage": { "value": 0, "mod": 0 },
             "levelUp": 0,
             "label": "Special Attack"
           },
-          "spd": {
+          "spdef": {
             "value": 5,
             "mod": { "value": 0, "mod": 0 },
             "stage": { "value": 0, "mod": 0 },
             "levelUp": 0,
             "label": "Special Defense"
           },
-          "spe": {
+          "spd": {
             "value": 5,
             "mod": { "value": 0, "mod": 0 },
             "stage": { "value": 0, "mod": 0 },
@@ -585,7 +586,7 @@
       "contestmove",
       "item",
       "capability",
-      "enhancement",
+      "pokeedge",
       "dexentry",
       "effect",
       "species",
@@ -710,7 +711,7 @@
     "capability": {
       "templates": ["base"]
     },
-    "enhancement": {
+    "pokeedge": {
       "templates": ["base"],
       "prerequisites": [],
       "cost": 0
@@ -736,9 +737,9 @@
         "hp": 0,
         "atk": 0,
         "def": 0,
-        "spa": 0,
-        "spd": 0,
-        "spe": 0
+        "spatk": 0,
+        "spdef": 0,
+        "spd": 0
       },
       "types": ["Untyped"],
       "abilities": {
@@ -764,7 +765,7 @@
         "overland": 0,
         "sky": 0,
         "swim": 0,
-        "hover": 0,
+        "levitate": 0,
         "burrow": 0,
         "highJump": 0,
         "longJump": 0,
@@ -789,7 +790,12 @@
           "modifier": 0,
           "type": "body"
         },
-        "charisma": {
+        "medicineEd": {
+          "value": 1,
+          "modifier": 0,
+          "type": "mind"
+        },
+        "charm": {
           "value": 2,
           "modifier": 0,
           "type": "spirit"
@@ -804,42 +810,22 @@
           "modifier": 0,
           "type": "spirit"
         },
-        "education": {
+        "generalEd": {
           "value": 1,
           "modifier": 0,
           "type": "mind"
         },
-        "biochemistry": {
+        "techEd": {
           "value": 1,
           "modifier": 0,
           "type": "mind"
-        },
-        "occultism": {
-          "value": 1,
-          "modifier": 0,
-          "type": "mind"
-        },
-        "zoology": {
-          "value": 1,
-          "modifier": 0,
-          "type": "mind"
-        },
-        "engineering": {
-          "value": 1,
-          "modifier": 0,
-          "type": "mind"
-        },
-        "willpower": {
-          "value": 2,
-          "modifier": 0,
-          "type": "spirit"
         },
         "guile": {
           "value": 2,
           "modifier": 0,
           "type": "mind"
         },
-        "intimidation": {
+        "intimidate": {
           "value": 2,
           "modifier": 0,
           "type": "body"
@@ -848,6 +834,11 @@
           "value": 2,
           "modifier": 0,
           "type": "spirit"
+        },
+        "occultEd": {
+          "value": 1,
+          "modifier": 0,
+          "type": "mind"
         },
         "perception": {
           "value": 2,
@@ -863,6 +854,16 @@
           "value": 2,
           "modifier": 0,
           "type": "body"
+        },
+        "focus": {
+          "value": 2,
+          "modifier": 0,
+          "type": "spirit"
+        },
+        "pokemonEd": {
+          "value": 1,
+          "modifier": 0,
+          "type": "mind"
         }
       },
       "slug": "",

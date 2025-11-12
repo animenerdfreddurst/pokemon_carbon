@@ -1,6 +1,6 @@
 export const TrainerPokemonSync = {
   listen() {
-      // On game ready, ensure all Pokemon have correct level caps
+      // On game ready, ensure all pokemon have correct level caps
       Hooks.on("ready", () => {          
           const pokemonWithTrainers = game.actors.filter(actor => 
               actor.type === "pokemon" && 
@@ -35,7 +35,7 @@ export const TrainerPokemonSync = {
               try {
                   pokemon.refreshPreparedData();
               } catch (error) {
-                  console.error(`PTU | Error updating Pokemon ${pokemon.name}:`, error);
+                  console.error(`PTU | Error updating pokemon ${pokemon.name}:`, error);
               }
           });
           
@@ -46,7 +46,7 @@ export const TrainerPokemonSync = {
           });
       });
       
-      // When Pokemon are added/removed from a trainer's party, refresh their data
+      // When pokemon are added/removed from a trainer's party, refresh their data
       Hooks.on("updateActor", (actor, updateData, options, userId) => {
           if (actor.type !== "pokemon") return;
           

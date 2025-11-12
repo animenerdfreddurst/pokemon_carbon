@@ -4,7 +4,6 @@ import { registerSettings } from "../../module/system/index.js"
 import { registerHandlebarsHelpers } from "../handlebars.js"
 import { registerSheets } from "../sheets.js"
 import { registerTemplates } from "../templates.js"
-import { insurgenceData, sageData, uraniumData } from "../config/data/fangame-species-data.js"
 import { measureDistances } from "../../module/canvas/helpers.js"
 
 
@@ -12,7 +11,7 @@ export const Init = {
     listen() {
         Hooks.on("init", () => {
             // Add your init hooks here
-            console.log("PTU System | Initializing Pokemon Tabletop Reunited System")
+            console.log("Initializing Pokemon Carbon System")
 
             // Add actor() to window
             window.actor = function () {

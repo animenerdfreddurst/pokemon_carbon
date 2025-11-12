@@ -12,7 +12,7 @@ class PTUTrainerActor extends PTUActor {
 
     /**
      * Get EXP Training data without side effects and duplicating other data effects
-     * Calculates trainer level and milestone data for Pokemon EXP Training Level Cap
+     * Calculates trainer level and milestone data for pokemon EXP Training Level Cap
      * @returns {Object} Object with level, milestones, milestoneMultiplier, and expTrainingLevelCap
      */
     getExpTrainingData() {

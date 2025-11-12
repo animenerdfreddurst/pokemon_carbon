@@ -7,7 +7,7 @@ export const Ready = {
     listen() {
         Hooks.once("ready", () => {
             /** Once the entire VTT framework is initialized, check to see if data migration needs to be performed */
-            console.log("PTU System | Starting Pokemon Tabletop Reunited System")
+            console.log("Starting Pokemon Carbon System")
 
             // Determine if system migration is required and feasible
             const currentVersion = game.settings.get("ptu", "worldSchemaVersion");

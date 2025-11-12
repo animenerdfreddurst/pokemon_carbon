@@ -417,7 +417,7 @@ class PTUPokemonTrainingSheet extends FormApplication {
                         return this.render();
                     }
                     case "training": {
-                        // Check if Pokemon is eligible for training
+                        // Check if pokemon is eligible for training
                         const currentLevel = actor.system.level.current;
                         const trainingLevelCap = actor.attributes.level.cap.training;
                         
@@ -549,7 +549,7 @@ class PTUPokemonTrainingSheet extends FormApplication {
             }
             // Checks if you can add the pokemon to the training list
             case "training": {
-                // Check if Pokemon is eligible for training
+                // Check if pokemon is eligible for training
                 const currentLevel = actor.system.level.current;
                 const trainingLevelCap = actor.attributes.level.cap.training;
                 
@@ -606,7 +606,7 @@ class PTUPokemonTrainingSheet extends FormApplication {
         Object.entries(trainingData).forEach(([key, value]) => {
             let actor = game.actors.get(key);
             
-            // Check if Pokemon is eligible for training
+            // Check if pokemon is eligible for training
             const currentLevel = actor.system.level.current;
             const trainingLevelCap = actor.attributes.level.cap.training;
             

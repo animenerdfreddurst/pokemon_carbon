@@ -1504,7 +1504,7 @@ export class NpcQuickBuildData {
         }
         if (monActorsToGenerate) {
             await CONFIG.PTU.Actor.documentClasses.pokemon.createDocuments(monActorsToGenerate).catch((err)=>{
-                ui.notifications.error("Error creating party Pokemon, some automations may not function properly; view console error log for details");
+                ui.notifications.error("Error creating party pokemon, some automations may not function properly; view console error log for details");
             });
         }
     }

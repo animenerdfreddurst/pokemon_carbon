@@ -21,20 +21,20 @@
   "TYPES.Item.reference": "Reference",
   "TYPES.Item.spiritaction": "Spirit Action",
   "ITEM": {
-    "StackSlugs": "Stack Slugs",
+    "StackSlugs": "Stack slugs",
     "AddButton": "Add",
-    "AddRulesButton": "New Rule Element",
+    "AddRulesButton": "New rule element",
     "EditButton": "Edit",
     "DeleteButton": "Delete",
     "DexEntrySeen": "Seen",
     "DexEntryOwned": "Owned",
     "Origin": "Origin",
-    "ReferenceEffect": "Linked Effect",
+    "ReferenceEffect": "Linked effect",
     "Prerequisites": "Prerequisites",
     "Tags": "Tags",
     "Frequency": "Frequency",
-    "FreeFeat": "Free Feat",
-    "FreeEdge": "Free Edge",
+    "FreeFeat": "Free feat",
+    "FreeEdge": "Free edge",
     "Effect": "Effect",
     "Type": "Type",
     "Category": "Category",
@@ -42,15 +42,15 @@
     "AC": "AC",
     "DB": "DB",
     "Bonus": "Bonus",
-    "DamageBase": "Damage Base",
-    "DamageBonus": "Damage Bonus",
-    "ContestType": "Contest Type",
+    "DamageBase": "Damage base",
+    "DamageBonus": "Damage bonus",
+    "ContestType": "Contest type",
     "Quantity": "Quantity",
     "Cost": "Cost",
     "Notes": "Notes",
     "Tier": "Tier",
-    "Class": "Class Feature of",
-    "Container": "Is a Container",
+    "Class": "Class feature of",
+    "Container": "Is a container",
     "TypeFeatPlural": "Features",
     "TypeEdgePlural": "Edges",
     "TypeAbilityPlural": "Abilities",
@@ -60,36 +60,36 @@
     "TypeCapabilityPlural": "Capabilities",
     "TypePokeedgePlural": "Enhancements",
     "TypeDexentryPlural": "Dex Entries",
-    "TypeContestMovesPlural": "Contest Moves",
+    "TypeContestMovesPlural": "Contest moves",
     "TypeSpiritActionPlural": "Spirit Actions",
     "Modifier": "Modifier",
-    "ShowInTokenPanel": "Show in Token Panel",
-    "Dice": "Base Dice",
-    "Snippet": "Effect Snippet",
+    "ShowInTokenPanel": "Show in token panel",
+    "Dice": "Base dice",
+    "Snippet": "Effect snippet",
     "Keywords": "Keywords",
     "Duration": {
       "Value": "Duration",
       "Unit": {
-        "Label": "Duration Unit",
+        "Label": "Duration unit",
         "Rounds": "Rounds",
-        "Encounter": "End of Encounter",
+        "Encounter": "End of encounter",
         "Unlimited": "Unlimited (never expires)"
       },
       "Expiry": {
-        "Label": "Expiry Timing",
-        "TurnStart": "Start of Turn",
-        "TurnEnd": "End of Turn",
-        "RoundStart": "Start of Round"
+        "Label": "Expiry timing",
+        "TurnStart": "Start of turn",
+        "TurnEnd": "End of turn",
+        "RoundStart": "Start of round"
       }
     }
   },
 
   "SPECIES.Height": "Height",
   "SPECIES.Weight": "Weight",
-  "SPECIES.SizeClass": "Size Class",
-  "SPECIES.WeightClass": "Weight Class",
-  "SPECIES.EggGroups": "Egg Groups",
-  "SPECIES.GenderRatio": "Gender Ratio",
+  "SPECIES.SizeClass": "Size class",
+  "SPECIES.WeightClass": "Weight class",
+  "SPECIES.EggGroups": "Egg groups",
+  "SPECIES.GenderRatio": "Gender ratio",
   "SPECIES.Habitats": "Habitats",
   "SPECIES.Diet": "Diet",
 
@@ -98,19 +98,19 @@
   "SPECIES.Sky": "Sky",
   "SPECIES.Levitate": "Hover",
   "SPECIES.Burrow": "Burrow",
-  "SPECIES.HighJump": "High Jump",
-  "SPECIES.LongJump": "Long Jump",
+  "SPECIES.HighJump": "High jump",
+  "SPECIES.LongJump": "Long jump",
   "SPECIES.Power": "Might",
   "SPECIES.Teleporter": "Teleporter",
   "SPECIES.Naturewalk": "Naturewalk",
-  "SPECIES.Other": "Other Capabilities",
-  "SPECIES.AbilitiesBasic": "Basic Abilities",
-  "SPECIES.AbilitiesAdvanced": "Advanced Abilities",
-  "SPECIES.AbilitiesHigh": "High Abilities",
-  "SPECIES.MovesLevel": "Level-Up Moves",
-  "SPECIES.MovesEgg": "Egg Moves",
-  "SPECIES.MovesTutor": "Tutor Moves",
-  "SPECIES.MovesMachine": "TM/HM Moves",
+  "SPECIES.Other": "Other capabilities",
+  "SPECIES.AbilitiesBasic": "Basic abilities",
+  "SPECIES.AbilitiesAdvanced": "Advanced abilities",
+  "SPECIES.AbilitiesHigh": "High abilities",
+  "SPECIES.MovesLevel": "Level-up moves",
+  "SPECIES.MovesEgg": "Egg moves",
+  "SPECIES.MovesTutor": "Tutor moves",
+  "SPECIES.MovesMachine": "TM moves",
   "SPECIES.Evolutions": "Evolutions",
 
   "SKILL.acrobatics": "Acrobatics",
@@ -131,7 +131,7 @@
   "SKILL.focus": "Willpower",
   "SKILL.pokemonEd": "Zoology",
 
-  "DIALOG.DeleteItem.Title": "Delete Confirmation",
+  "DIALOG.DeleteItem.Title": "Delete confirmation",
   "DIALOG.DeleteItem.Content": "Are you sure you want to delete: '{name}'?",
   "DIALOG.DeleteItem.Restricted": "'{name}' cannot be deleted because it is restricted by '{parentName}'.",
   "DIALOG.DeleteItem.Yes": "Yes",
@@ -139,20 +139,20 @@
 
   "RULES.Types": {
     "ActiveEffectLike": "ActiveEffect-Like",
-    "GrantItem": "Grant Item",
-    "RollOption": "Roll Option",
-    "ChoiceSet": "Choice Set",
-    "FlatModifier": "Flat Modifier",
-    "TokenImage": "Token Image",
-    "TokenName": "Token Name",
-    "TokenLight": "Token Light",
-    "TemporarySpecies": "Temporary Species",
-    "TypeOverwrite": "Type Overwrite",
-    "TempHP": "Temporary HP",
+    "GrantItem": "Grant item",
+    "RollOption": "Roll option",
+    "ChoiceSet": "Choice set",
+    "FlatModifier": "Flat modifier",
+    "TokenImage": "Token image",
+    "TokenName": "Token name",
+    "TokenLight": "Token light",
+    "TemporarySpecies": "Temporary species",
+    "TypeOverwrite": "Type overwrite",
+    "TempHP": "Durability",
     "Effectiveness": "Effectiveness",
-    "EphemeralEffect": "Ephemeral Effect",
-    "ActionPoint": "AP Consumption",
-    "ApplyEffect": "Apply Effect"
+    "EphemeralEffect": "Ephemeral effect",
+    "ActionPoint": "AP consumption",
+    "ApplyEffect": "Apply effect"
   },
   "PTU": {
     "Skills": {
@@ -174,7 +174,7 @@
       "focus": "Willpower",
       "pokemonEd": "Zoology"
     },
-    "Title": "Pokemon Tabletop Reunited",
+    "Title": "Pokemon Carbon",
 
     "TabsSkills": "Skills",
     "TabsInventory": "Inventory",
@@ -183,20 +183,20 @@
     "TabsStats": "Stats",
     "TabsMoves": "Moves",
     "TabsCapabilities": "Capabilities",
-    "TabsCombat": "Combat",
+    "TabsCombat": "Battle",
     "TabsExtra": "Extra",
     "TabsEffects": "Effects",
     "TabsNotes": "Notes",
 
     "StatsLabel": "Stats",
     "StatsBase": "Base",
-    "StatsBaseMod": "Base Mod",
-    "StatsBaseTotal": "Base Total",
+    "StatsBaseMod": "Base mod",
+    "StatsBaseTotal": "Base total",
     "StatsMod": "Mod",
-    "StatsLevelup": "Level-Up",
+    "StatsLevelup": "Level-up",
     "StatsStage": "Stage",
     "StatsTotal": "Total",
-    "StatsRemainingLevelupPoints": "Remaining Level-Up Points",
+    "StatsRemainingLevelupPoints": "Remaining level-up points",
 
     "HPTemp": "temp",
     "Typing": "Typing",
@@ -205,17 +205,17 @@
     "TypingResistances": "Resistances",
     "TypingImmunities": "Immunities",
     "Experience": "Experience",
-    "ExperienceNext": "EXP to Next Level",
+    "ExperienceNext": "Exp to next level",
     "Level": "Level",
     "Nature": "Nature",
 
-    "DamageModPhysical": "Physical Damage Mod",
-    "DamageModSpecial": "Special Damage Mod",
+    "DamageModPhysical": "Physical damage mod",
+    "DamageModSpecial": "Special damage mod",
     "MoveLabel": "Move",
     "MoveType": "Type",
     "MoveCategory": "Category",
     "MoveDb": "DB",
-    "MoveDamageRoll": "Damage Roll",
+    "MoveDamageRoll": "Damage roll",
     "MoveFrequency": "Frequency",
     "MoveAc": "AC",
     "MoveRange": "Range",
@@ -229,26 +229,26 @@
     },
 
     "CapabilityNaturewalk": "Naturewalk",
-    "CapabilityOther": "Other Capabilities",
+    "CapabilityOther": "Other capabilities",
 
-    "TutorPoints": "Tutor Points",
+    "TutorPoints": "Tutor points",
     "PokeedgePoints": "Poke Edge Points Used",
 
-    "EvasionPhysical": "Physical<br>Evasion",
-    "EvasionSpecial": "Special<br>Evasion",
-    "EvasionSpeed": "Speed<br>Evasion",
+    "EvasionPhysical": "Physical<br>evasion",
+    "EvasionSpecial": "Special<br>evasion",
+    "EvasionSpeed": "Speed<br>evasion",
     "Injuries": "Injuries",
     "Hardened": "Hardened",
-    "TotalHealth": "Total Health",
-    "IgnoringInjuries": "Ignoring Injuries",
-    "HardenedEffect0": "Injuries beyond the 5th do not lower Maximum Hit Points",
-    "HardenedEffect1": "+1 to Critical Hit and Effect Range",
-    "HardenedEffect2": "+1 Evasion and +5 Initiative",
-    "HardenedEffect3": "+5 Damage Reduction",
-    "HardenedEffect4": "Immune to Loss of Hit Points (but not damage) from all effects",
+    "TotalHealth": "Total health",
+    "IgnoringInjuries": "Ignoring injuries",
+    "HardenedEffect0": "Injuries beyond the 5th do not lower maximum health",
+    "HardenedEffect1": "+1 to critical hit and effect range",
+    "HardenedEffect2": "+1 evasion and +5 initiative",
+    "HardenedEffect3": "+5 damage reduction",
+    "HardenedEffect4": "Immune to loss of health (but not damage) from all effects",
     "HardenedEffect5": "Resist all damage one step further",
-    "InjuryEffect1": "Unable to regain Hit Points from Resting",
-    "InjuryEffect2": "Take {injuries} Damage whenever taking a Standard Action during Combat",
+    "InjuryEffect1": "Unable to regain health from resting",
+    "InjuryEffect2": "Take {injuries} damage whenever taking a standard action during battle",
     "InjuryEffect3": "Death",
     "Training": "Training",
     "TrainingTrained": "Trained",
@@ -258,13 +258,13 @@
     "TrainingFocused": "Focused Training",
     "TrainingInspired": "Inspired Training",
     "TrainingCriticalMoment": "Critical Moment",
-    "SaveCheckLabel": "Save Check Modifier",
-    "SaveCheckAction": "Make Save",
+    "SaveCheckLabel": "Save check modifier",
+    "SaveCheckAction": "Make save",
 
-    "ItemEffect": "Item Effect",
-    "HeldItems": "Held Items",
-    "FoodBuff": "Food Buff",
-    "HpGuidelines": "HP Guidelines",
+    "ItemEffect": "Item effect",
+    "HeldItems": "Held items",
+    "FoodBuff": "Food buff",
+    "HpGuidelines": "Health Guidelines",
     "16th": "6.25%",
     "10th": "10%",
     "8th": "12.5%",
@@ -275,18 +275,18 @@
     "Species": "Species",
     "Gender": "Gender",
     "Owner": "Owner",
-    "EggGroup": "Egg Group",
+    "EggGroup": "Egg group",
     "Shiny": "Shiny",
     "Loyalty": "Loyalty",
     "GmOnly": "gm only",
     "Bonus": "Bonus",
     "Initiative": "Initative",
-    "StatPoint": "Stat Point",
+    "StatPoint": "Stat point",
     "Accuracy": "Accuracy",
-    "CritRange": "Crit Range",
-    "EffectRange": "Effect Range",
+    "CritRange": "Crit range",
+    "EffectRange": "Effect range",
     "Skill": "Skill",
-    "DamageReduction": "Damage Reduction",
+    "DamageReduction": "Damage reduction",
     "Physical": "Physical",
     "Special": "Special",
     "Status": "Status",
@@ -294,16 +294,16 @@
     "EvasionPhysicalShort": "Phys",
     "EvasionSpecialShort": "Spec",
     "EvasionSpeedShort": "Spe",
-    "SkillBackground": "Skill Background",
+    "SkillBackground": "Skill background",
     "SkillBackgroundNotice": "Please note that this is purely for you to keep track!<br>the sheet doesn't automatically apply trainer skill backgrounds.",
     "SkillUp": "Skill up",
     "SkillDown": "Skill down",
     "SelectNone": "None",
     "Pokeball": "Pokeball",
-    "BossSettings": "Boss Settings",
+    "BossSettings": "Boss settings",
     "BossIs": "Is boss?",
     "BossTurns": "Turns",
-    "BossBars": "Reserve HP Bars",
+    "BossBars": "Reserve health Bars",
 
     "SkillLabel": "Skill",
     "SkillMod": "Mod",
@@ -329,18 +329,18 @@
     "EffectMode": "Mode",
     "EffectPriority": "Priority",
 
-    "ActionPoints": "Action Points",
+    "ActionPoints": "Action points",
     "MaxActionPointsShort": "Max AP",
     "LevelMilestones": "Milestones",
-    "LevelDexExp": "Dex Exp",
-    "LevelMiscExp": "Misc Exp",
+    "LevelDexExp": "Dex exp",
+    "LevelMiscExp": "Misc exp",
 
-    "LevelCap": "Level Cap",
-    "LevelCapTraining": "EXP Training Level Cap",
+    "LevelCap": "Level cap",
+    "LevelCapTraining": "Exp training level cap",
 
     "Money": "Money",
-    "ItemCategories": "Item Categories",
-    "HeldItem": "Held Item",
+    "ItemCategories": "Item categories",
+    "HeldItem": "Held item",
 
     "Age": "Age",
     "Sex": "Sex",
@@ -360,8 +360,8 @@
     "DexButtonName": "Pokedex",
     "DexButtonHintHeading": "Pokedex",
     "DexButtonHintContent": "Scan the pokemon with your pokedex",
-    "SearchButtonName": "PTR Search",
-    "SearchButtonHint": "<div class='toolclip'><h4>PTR Search</h4><p>Search the PTR Data Source for information</p></div>",
+    "SearchButtonName": "Search",
+    "SearchButtonHint": "<div class='toolclip'><h4>Search</h4><p>Search the system for information</p></div>",
     "WeatherButtonName": "Weather & Global Effects Menu",
     "WeatherButtonHintHeading": "Weather & Global Effects Menu",
     "WeatherButtonHintContent": "Set and edit ongoing weather or other global effects!",
@@ -378,26 +378,26 @@
     "AutomationTarget.MOVE": "Move",
     "AutomationTarget.HIT": "Hit",
     "AutomationTarget.ITEM": "Item",
-    "AutomationEffect.ADD_DAMAGE": "Add Damage",
-    "AutomationEffect.ADD_EFFECT": "Add Effect",
-    "AutomationEffect.REMOVE_EFFECT": "Remove Effect",
-    "AutomationEffect.ADD_EFFECTIVENESS": "Add Effectiveness",
-    "AutomationTiming.BEFORE_ROLL": "Before Roll",
-    "AutomationTiming.AFTER_ROLL": "After Roll",
-    "AutomationTiming.BEFORE_DAMAGE": "Before Damage",
-    "AutomationTiming.AFTER_DAMAGE": "After Damage",
-    "AutomationCondition.ATTACK_ROLL": "Attack Roll",
+    "AutomationEffect.ADD_DAMAGE": "Add damage",
+    "AutomationEffect.ADD_EFFECT": "Add effect",
+    "AutomationEffect.REMOVE_EFFECT": "Remove effect",
+    "AutomationEffect.ADD_EFFECTIVENESS": "Add effectiveness",
+    "AutomationTiming.BEFORE_ROLL": "Before roll",
+    "AutomationTiming.AFTER_ROLL": "After roll",
+    "AutomationTiming.BEFORE_DAMAGE": "Before damage",
+    "AutomationTiming.AFTER_DAMAGE": "After damage",
+    "AutomationCondition.ATTACK_ROLL": "Attack roll",
     "AutomationCondition.EFFECTIVENESS": "Effectiveness",
-    "AutomationCondition.ITEM_TYPE": "Item Type",
-    "AutomationCondition.MOVE_TYPE": "Move Type",
+    "AutomationCondition.ITEM_TYPE": "Item type",
+    "AutomationCondition.MOVE_TYPE": "Move type",
     "AutomationOperators.EQUALS": "Equals",
-    "AutomationOperators.NOT_EQUALS": "Not Equal",
-    "AutomationOperators.GREATER_THAN": "Greater Than",
-    "AutomationOperators.LESS_THAN": "Less Than",
-    "AutomationOperators.GREATER_THAN_OR_EQUAL": "Greater Than or Equal",
-    "AutomationOperators.LESS_THAN_OR_EQUAL": "Less Than or Equal",
+    "AutomationOperators.NOT_EQUALS": "Not equal",
+    "AutomationOperators.GREATER_THAN": "Greater than",
+    "AutomationOperators.LESS_THAN": "Less than",
+    "AutomationOperators.GREATER_THAN_OR_EQUAL": "Greater than or equal",
+    "AutomationOperators.LESS_THAN_OR_EQUAL": "Less than or equal",
     "AutomationRangeIncrease.NONE": "None",
-    "AutomationRangeIncrease.EFFECT_RANGE": "Effect Range",
+    "AutomationRangeIncrease.EFFECT_RANGE": "Effect range",
 
     "DexScan.Off": "DM has turned off the Pokedex Scan feature.",
     "DexScan.Description": "Description Only",
@@ -411,7 +411,7 @@
         "DeclineLabel": "Decline",
         "NoSelectionNotAllowed": "No selection made: {item} could not be created",
         "DragItemHere": "Drag a homebrew item here if using one instead of the above options",
-        "DragItem": "Homebrew Item"
+        "DragItem": "Homebrew item"
       },
       "Prompt": {
         "DropNotAllowed": "{badType} cannot be dropped here (must be {goodType})",
@@ -424,13 +424,13 @@
     "FolderNotFound": "Folder not found: {folder}, creating a new one",
 
     "PartySheet.NoActor": "An actor needs to be provided to the form",
-    "PartySheet.NoTrainer": "This Pokemon does not belong to any party, please assign one from a trainer's sheet.",
+    "PartySheet.NoTrainer": "This pokemon does not belong to any party, please assign one from a trainer's sheet.",
     "PartySheet.NoFolder": "The trainer needs to have its own folder in the actor's directory.",
     "PartySheet.Title": "Party Sheet",
     "PokemonTrainingSheet.NoActor": "An actor needs to be provided to the form",
     "PokemonTrainingSheet.Title": "Pokemon Training Sheet",
-    "PokemonTrainingSheet.AutoDistributeXP": "Auto Distribute XP",
-    "ExpCapAmount": "EXP Cap Amount",
+    "PokemonTrainingSheet.AutoDistributeXP": "Auto distribute exp",
+    "ExpCapAmount": "Exp cap amount",
     "DexSheet": {
       "Title": "Dex",
       "Notifications": {
@@ -446,63 +446,63 @@
     "RuleParseUnknownRule": "Rule key '{key}' is not a known rule.",
     "ClipboardNotification": "Copied '{clipText}' to the clipboard.",
 
-    "QuickPokemonGeneration": "Quick Generate Pokemon",
-    "LevelRange": "Level Range",
-    "ShinyChance": "Shiny Chance (%)",
-    "StatRandomness": "Stat Randomness (%)",
-    "PreventEvolution": "Prevent Evolution?",
+    "QuickPokemonGeneration": "Quick generate pokemon",
+    "LevelRange": "Level range",
+    "ShinyChance": "Shiny chance (%)",
+    "StatRandomness": "Stat randomness (%)",
+    "PreventEvolution": "Prevent evolution?",
     "Submit": "Submit",
 
     "ConditionFainted": "Fainted",
     "ConditionBurned": "Burned",
     "ConditionFrozen": "Frozen",
-    "ConditionParalysis": "Paralysis",
+    "ConditionParalysis": "Paralyzed",
     "ConditionPoisoned": "Poisoned",
-    "ConditionBadlyPoisoned": "Badly Poisoned",
+    "ConditionBadlyPoisoned": "Toxified",
     "ConditionConfused": "Confused",
     "ConditionCursed": "Cursed",
     "ConditionDisabled": "Disabled",
-    "ConditionFlinch": "Flinch",
-    "ConditionInfatuation": "Infatuation",
-    "ConditionRage": "Rage",
-    "ConditionSleep": "Sleep",
-    "ConditionBadSleep": "Bad Sleep",
+    "ConditionFlinch": "Flinched",
+    "ConditionInfatuation": "Infatuated",
+    "ConditionRage": "Enraged",
+    "ConditionSleep": "Asleep",
+    "ConditionBadSleep": "Haunted",
     "ConditionSuppressed": "Suppressed",
-    "ConditionBlindness": "Blindness",
-    "ConditionTotalBlindness": "Total Blindness",
+    "ConditionBlindness": "Dimmed",
+    "ConditionTotalBlindness": "Blinded",
     "ConditionSlowed": "Slowed",
-    "ConditionStuck": "Stuck",
+    "ConditionStuck": "Immobilized",
     "ConditionTrapped": "Trapped",
-    "ConditionTripped": "Tripped",
+    "ConditionTripped": "Proned",
     "ConditionVulnerable": "Vulnerable",
     "ConditionTagged": "Tagged",
     "ConditionCheered": "Cheered",
     "ConditionVortex": "Vortex",
     "ConditionSeeded": "Seeded",
-    "Unidentified": "Unidentified Pokemon",
+    "Unidentified": "Unidentified pokemon",
     "Genderless": "Genderless",
     "Male": "Male",
     "Female": "Female",
     "Nonbinary": "Nonbinary",
-    "BossBarTooltip": "The Reserve boss bars is intended to be the amount of Boss Turns - 1",
+    "BossBarTooltip": "The reserve boss bars is intended to be the amount of boss turns - 1",
 
     "LevelUpForm": {
       "Stats": "Stats",
       "Base": "Base",
-      "Level": "Level Stats",
+      "Level": "Level stats",
       "Final": "Final",
       "Current": "Current",
-      "KnownMoves": "Known Moves",
-      "AvailableMoves": "Available Moves",
+      "KnownMoves": "Known moves",
+      "AvailableMoves": "Available moves",
       "Move": "Move",
       "Keep": "Keep?",
       "Abilities": {
         "Basic": "Basic",
         "Advanced": "Advanced",
         "High": "High",
-        "Header": "New abilities gained from Level Up",
-        "Locked": "Locked until Level",
-        "Select": "Select Ability"
+        "Header": "New abilities gained from level up",
+        "Locked": "Locked until level",
+        "Select": "Select ability"
       },
       "EvolutionHint": "It appears {name} is ready to evolve. Would you like to evolve it now?"
     },
@@ -518,8 +518,8 @@
       "CouldNotFindSpecies": "Could not detect species: {species}",
       "FoundTable": "Detected Table",
       "CouldNotFindTable": "Could not detect table: {table}",
-      "Folder": "Folder to put generated Pokemon in",
-      "InvalidFolder": "Folder must support Pokemon actors",
+      "Folder": "Folder to put generated pokemon in",
+      "InvalidFolder": "Folder must support pokemon actors",
       "FoundFolder": "Detected Folder",
       "CouldNotFindFolder": "Folder {folder} not found, it will be created upon submit",
       "Submit": "Generate"
@@ -566,16 +566,16 @@
       "spatk": "Special Attack",
       "spdef": "Special Defense",
       "spd": "Speed",
-      "LevelUpPointsRemaining": "Level-Up Points Remaining"
+      "LevelUpPointsRemaining": "Level-up points remaining"
     },
 
     "Roll": {
       "Add": "Add",
-      "CriticalHit": "Critical Hit",
+      "CriticalHit": "Critical hit",
       "Fortune": "Fortune",
       "FortuneTitle": "{title} Fortune",
-      "KeepHigher": "Keep Higher",
-      "KeepLower": "Keep Lower",
+      "KeepHigher": "Keep higher",
+      "KeepLower": "Keep lower",
       "Misfortune": "Misfortune",
       "MisfortuneTitle": "{title} Misfortune",
       "Modifier": "Modifier",
@@ -590,10 +590,10 @@
     "RollModeLabel": "Roll Mode",
 
     "Action": {
-      "AttackRoll": "Accuracy Check: {move}",
-      "DamageRoll": "Damage Roll: {move}",
+      "AttackRoll": "Accuracy check: {move}",
+      "DamageRoll": "Damage roll: {move}",
       "damage-roll": "Damage Roll",
-      "attack-roll": "Accuracy Check",
+      "attack-roll": "Accuracy check",
       "AttackOutOfRange": "The target is out of range",
       "MoveWhileFrozen": "You can't use moves while frozen",
       "MoveWhileSleeping": "You can't use moves while sleeping",
@@ -631,8 +631,8 @@
       "Damage": "Damage",
       "Apply": "Apply Damage",
       "CaptureRoll": "Capture Roll",
-      "CaptureNoTarget": "You need to target a Pokemon to capture",
-      "CaptureWrongTarget": "You need to target a Pokemon to capture",
+      "CaptureNoTarget": "You need to target a pokemon to capture",
+      "CaptureWrongTarget": "You need to target a pokemon to capture",
       "Use": "Apply Effect",
       "NoTarget": "You need to target an actor before using a move"
     },
@@ -717,9 +717,9 @@
         "hp": "HP Defense",
         "atk": "ATK Defense",
         "def": "DEF Defense",
-        "spatk": "SPATK Defense",
-        "spdef": "SPDEF Defense",
-        "spd": "SPD Defense"
+        "spatk": "SPA Defense",
+        "spdef": "SPD Defense",
+        "spd": "SPE Defense"
       }
     },
     "ApplyDamage": {
@@ -731,37 +731,37 @@
       "TheTarget": "The target",
       "Revert": "Undo Damage",
       "BossBarBroken": "<actor>{actor}</actor>'s Boss HP Bar is broken! ({bars} left)",
-      "MassiveDamageInjury": "<actor>{actor}</actor> gained 1 injury from taking Massive Damage.",
-      "HpThresholdInjury": "<actor>{actor}</actor> gained 1 injury from reaching {percentage}% HP.",
-      "BossHalfBarInjury": "<actor>{actor}</actor> gained 1 injury from having lost half of its Boss HP Bars!."
+      "MassiveDamageInjury": "<actor>{actor}</actor> gained 1 injury from taking massive damage.",
+      "HpThresholdInjury": "<actor>{actor}</actor> gained 1 injury from reaching {percentage}% health.",
+      "BossHalfBarInjury": "<actor>{actor}</actor> gained 1 injury from having lost half of its boss health bars!."
     },
-    "InitiativeRoll": "{name}'s Initiative Roll",
-    "SaveCheck": "{name}'s {save} Save",
+    "InitiativeRoll": "{name}'s initiative roll",
+    "SaveCheck": "{name}'s {save} save",
 
     "Migrations": {
-      "Finished": "PTR System Migration to version {version} completed!",
+      "Finished": "Pokemon Carbon System migration to version {version} completed!",
       "OnlyGMCanUse": "Only a gamemaster can use this tool.",
       "OutsideSchemaRange": "The specified range is outside the system's schema version range (between {minimum} and {maximum}).",
-      "Starting": "Applying PTR System Migration to version {version}. Please be patient and do not close your game or shut down your server.",
+      "Starting": "Applying Pokemon Carbon System migration to version {version}. Please be patient and do not close your game or shut down your server.",
       "Summary": {
         "Documents": "Documents",
         "HelpResources": "An unexpected error was encountered while migrating some actors or items. If you would like further assistance, feel free to report an issue at the <a href=\"https://github.com/dylanpiera/foundry-Pokemon-Tabletop-United-System/issues\">system repository</a> or visit us on <a href=\"https://discord.gg/ptrfvtt\">Discord</a> for community support.",
         "Migrated": "Migrated",
         "Remigrate": "Remigrate",
-        "Title": "Migration Summary",
+        "Title": "Migration summary",
         "Total": "Total",
         "Troubleshoot": {
           "Hint": "Here you can run a remigration, which will attempt to automatically fix issues with actors and items.",
-          "Title": "System Troubleshooting",
-          "Type": "Document Type",
-          "Name": "Document Name",
+          "Title": "System troubleshooting",
+          "Type": "Document type",
+          "Name": "Document name",
           "Uuid": "Document UUID"
         }
       },
       "Progress": {
-        "Starting": "Starting Migration",
-        "Progress": "Migration Phase {phase} of {phases}: migrating document...",
-        "Completed": "Migration Completed"
+        "Starting": "Starting migration",
+        "Progress": "Migration phase {phase} of {phases}: migrating document...",
+        "Completed": "Migration completed"
       },
       "Troubleshooting": "Troubleshooting",
       "WorldNotReady": "Game world not ready: try again in a few seconds."
@@ -821,208 +821,208 @@
         "Phases": {
           "Label": "Phase",
           "ApplyAEs": "Default",
-          "BeforeDerived": "Before Derived",
-          "AfterDerived": "After Derived",
-          "BeforeRoll": "Before Roll"
+          "BeforeDerived": "Before derived",
+          "AfterDerived": "After derived",
+          "BeforeRoll": "Before roll"
         },
         "Path": "Path",
         "Even": "Even",
         "EvenHelpText": "Triggers when roll result is even."
       },
       "GrantItem": {
-        "AllowDuplicate": "Allow Duplicates",
-        "ReevaluateOnUpdate": "Reevaluate on Update",
-        "ReplaceSelf": "Replace Self"
+        "AllowDuplicate": "Allow duplicates",
+        "ReevaluateOnUpdate": "Reevaluate on update",
+        "ReplaceSelf": "Replace self"
       }
     },
     "Check": {
       "Check": "Check",
       "SkillCheck": "{skill} Check",
-      "SkillMod": "Skill Mod",
-      "SkillDice": "Skill Rank"
+      "SkillMod": "Skill mod",
+      "SkillDice": "Skill rank"
     },
     "Configure": "Configuring {name}",
 
     "Settings": {
-      "ResetChanges": "Reset Changes",
+      "ResetChanges": "Reset changes",
       "AddType": {
-        "ExistsLabel": "Edit Type",
+        "ExistsLabel": "Edit type",
         "Label": "Add Type",
         "Hint": "Please provide the name & icon for the new type.",
         "Name": {
-          "Name": "Type Name",
+          "Name": "Type name",
           "Hint": "The name of the type."
         },
         "IconImg": {
-          "Name": "Type Icon",
+          "Name": "Type icon",
           "Hint": "The icon to use for the type."
         },
         "BarImg": {
-          "Name": "Type Bar Image",
-          "Hint": "The bar image to use for the type when displaying in Chat."
+          "Name": "Type bar image",
+          "Hint": "The bar image to use for the type when displaying in chat."
         }
       },
 
       "Variant": {
         "Name": "Variant Rules",
-        "Label": "Toggle Variant Rules",
-        "Hint": "Enable and configure variant rules like 'Use Dex EXP' for the system.",
+        "Label": "Toggle variant rules",
+        "Hint": "Enable and configure variant rules like 'use dex exp' for the system.",
         "UseTutorPoints": {
-          "Name": "Use Tutor Points for Pokemon",
+          "Name": "Use Tutor Points for pokemon",
           "Hint": "Otherwise use the suggested changes in the 'GM Advice and Suggested Houserules' (see: https://pastebin.com/iDt2Mj0d)"
         },
         "UseDexExp": {
-          "Name": "Use Dex Exp for Trainers",
-          "Hint": "Whether the system should check how many pokemon are marked as 'Caught' in a Trainer's dex, and add that to their dex experience total."
+          "Name": "Use dex exp for trainers",
+          "Hint": "Whether the system should check how many pokemon are marked as 'caught' in a trainer's dex, and add that to their dex experience total."
         },
         "TrainerRevamp": {
-          "Name": "Use Trainer Revamp (max lvl 25)",
-          "Hint": "Use DataNinja's alt. Trainer Revamp ruleset, disables Dex Exp. (see: https://shorturl.at/oCDWY)"
+          "Name": "Use trainer revamp (max lvl 25)",
+          "Hint": "Use DataNinja's alt. trainer revamp ruleset, disables dex exp. (see: https://shorturl.at/oCDWY)"
         },
         "trainerAdvancement": {
-          "Name": "Trainer Advancement Track",
-          "Hint": "The Trainer Advancement Track to use for Trainer Leveling.",
-          "Original": "PTU Original Standard Progression",
-          "DataRevamp": "DataNinja's Revamped Condensed Progression",
-          "ShortTrack": "PTR Condensed Progression",
-          "PTRUpdate": "PTR Standard Progression",
-          "LongTrack": "PTR Extended Progression"
+          "Name": "Trainer advancement track",
+          "Hint": "The trainer advancement track to use for trainer leveling.",
+          "Original": "PTU original standard progression",
+          "DataRevamp": "DataNinja's revamped condensed progression",
+          "ShortTrack": "PTR condensed progression",
+          "PTRUpdate": "PTR standard progression",
+          "LongTrack": "PTR extended progression"
         },
         "SpiritPlaytest": {
-          "Name": "Enable Friendship & Spirit [Playtest]",
-          "Hint": "Enable the Friendship & Spirit Playtest ruleset. For more info see https://ptufvtt.com/Rules/Playtests/Spirit-Friendship"
+          "Name": "Enable friendship & spirit [playtest]",
+          "Hint": "Enable the friendship & spirit playtest ruleset. For more info see https://ptufvtt.com/Rules/Playtests/Spirit-Friendship"
         },
         "ImprovedStatsRework": {
-          "Name": "Enable Improved Stats Rework",
-          "Hint": "Enable the Improved Stats Rework ruleset. For more info see https://ptufvtt.com/en/Rules/Playing-The-Game/Stats#new-playtest"
+          "Name": "Enable improved stats rework",
+          "Hint": "Enable the improved stats rework ruleset. For more info see https://ptufvtt.com/en/Rules/Playing-The-Game/Stats#new-playtest"
         }
       },
       "Automation": {
         "Name": "Automation",
-        "Label": "Toggle Automation",
-        "Hint": "Enable and configure automation rules like 'Remove Expired Effects' for the system.",
+        "Label": "Toggle automation",
+        "Hint": "Enable and configure automation rules like 'remove expired effects' for the system.",
         "LevelUpScreen": {
-          "Name": "Show Level-Up Window",
-          "Hint": "Allow the level-up window to appear whenever a Pokemon levels up."
+          "Name": "Show level-up window",
+          "Hint": "Allow the level-up window to appear whenever a pokemon levels up."
         },
         "MaxEvasion": {
-            "Name": "Max Evasion",
-            "Hint": "The maximum evasion a creature can have. (Default 9)"
+            "Name": "Max evasion",
+            "Hint": "The maximum evasion a creature can have (default 9)."
         },
         "RemoveExpiredEffects": {
-          "Name": "Remove Expired Effects",
+          "Name": "Remove expired effects",
           "Hint": "Remove expired effects from actors."
         },
         "AutoExpireEffects": {
-          "Name": "Auto-Expire Effects",
+          "Name": "Auto-expire effects",
           "Hint": "Automatically expire effects when their duration is up."
         },
         "FailAttackIfOutOfRange": {
-          "Name": "Fail Attack if Out of Range",
+          "Name": "Fail attack if out of range",
           "Hint": "Automatically fail an attack if the target is out of range."
         },
         "FailAttackIfNoTarget": {
-          "Name": "Fail Attack if No Target",
+          "Name": "Fail attack if no target",
           "Hint": "Automatically fail an attack if no actor is targeted."
         },
         "FlankingDetection": {
-          "Name": "Flanking Detection",
+          "Name": "Flanking detection",
           "Hint": "Automatically apply flanking for attacks."
         },
         "AutoFaint": {
-          "Name": "Auto-Faint",
-          "Hint": "Automatically adds the fainted condition to a Pokemon when it reaches 0 HP."
+          "Name": "Auto-faint",
+          "Hint": "Automatically adds the fainted condition to a pokemon when it reaches 0 health."
         },
         "AutoFaintRecovery": {
           "Name": "Auto-Faint Recovery",
-          "Hint": "Automatically remove the fainted condition from a Pokemon when it is healed above 0 HP."
+          "Hint": "Automatically remove the fainted condition from a pokemon when it is healed above 0 health."
         },
         "MassiveDamageThreshold": {
-          "Name": "Massive Damage (%)",
-          "Hint": "The % of Max Health resulting in an Injury from Massive Damage. (A huge percentage like 10000 practically disables Injuries from this source)"
+          "Name": "Massive damage (%)",
+          "Hint": "The % of max health resulting in an injury from massive damage; a huge percentage like 10000 practically disables Injuries from this source."
         },
         "HpInjuryGateInterval": {
-          "Name": "Injury HP Interval (%)",
-          "Hint": "Down from 100% Max Health, reaching every interval of this percentage causes an injury. E.g. 50% => 50%, 0%, -50%, ... (A huge percentage like 10000 practically disables Injuries from this source)"
+          "Name": "Injury health interval (%)",
+          "Hint": "Down from 100% max health, reaching every interval of this percentage causes an injury. Ex: 100% => 50%, 0%, -50%, ... (A huge percentage like 10000 practically disables injuries from this source)"
         }
       },
       "Generation": {
         "Name": "Generation",
-        "Label": "Toggle Generation",
-        "Hint": "Enable and configure generation rules like 'Default Image Directory' for the system.",
+        "Label": "Toggle generation",
+        "Hint": "Enable and configure generation rules like 'default image directory' for the system.",
         "DefaultImageDirectory": {
-          "Name": "Default Image Directory",
-          "Hint": "The default directory to look for images in when generating a Pokemon."
+          "Name": "Default image directory",
+          "Hint": "The default directory to look for images in when generating a pokemon."
         },
         "DefaultImageExtension": {
-          "Name": "Default Image Extension",
-          "Hint": "The default extension to use when looking for images for generating a Pokemon."
+          "Name": "Default image extension",
+          "Hint": "The default extension to use when looking for images for generating a pokemon."
         },
         "DefaultTokenImageExtension": {
-          "Name": "Default Token Image Extension",
-          "Hint": "The default extension to use when looking for token images for generating a Pokemon."
+          "Name": "Default token image extension",
+          "Hint": "The default extension to use when looking for token images for generating a pokemon."
         },
         "DefaultPokemonImageNameType": {
-          "Name": "Pokemon Image Name Type",
+          "Name": "Pokemon image name type",
           "Hint": "Whether the images are based on name (checked) or dex number (unchecked)"
         },
         "DefaultDexDragInLevelMin": {
-          "Name": "Default Minimum Species Drag-In Level",
-          "Hint": "The default minimum level for a Pokemon dragged into a scene from a species item"
+          "Name": "Default minimum species drag-in level",
+          "Hint": "The default minimum level for a pokemon dragged into a scene from a species item"
         },
         "DefaultDexDragInLevelMax": {
-          "Name": "Default Maximum Species Drag-In Level",
-          "Hint": "The default maximum level for a Pokemon dragged into a scene from a species item"
+          "Name": "Default maximum species drag-in level",
+          "Hint": "The default maximum level for a pokemon dragged into a scene from a species item"
         },
         "DefaultDexDragInShinyChance": {
-          "Name": "Default Species Drag-In Shiny Chance (%)",
-          "Hint": "The default shiny chance for a Pokemon dragged into a scene from a species item"
+          "Name": "Default species drag-in shiny chance (%)",
+          "Hint": "The default shiny chance for a pokemon dragged into a scene from a species item"
         },
         "DefaultDexDragInStatRandomness": {
-          "Name": "Default Species Drag-In Stat Randomness (%)",
-          "Hint": "The default stat randomness for a Pokemon dragged into a scene from a species item"
+          "Name": "Default species drag-in stat randomness (%)",
+          "Hint": "The default stat randomness for a pokemon dragged into a scene from a species item"
         },
         "DefaultDexDragInPreventEvolution": {
-          "Name": "Default Species Drag-In Prevent Evolution",
-          "Hint": "Whether a Pokemon's evolution should be prevented during Species Drag-In Generation."
+          "Name": "Default species drag-in prevent evolution",
+          "Hint": "Whether a pokemon's evolution should be prevented during Species Drag-In Generation."
         }
       },
       "Metagame": {
         "Name": "Metagame",
-        "Label": "Limit Metagame information",
+        "Label": "Limit metagame information",
         "Hint": "Limit what kinds of metagame information is available to players.",
         "DexPermissions": {
-          "Name": "Pokedex Permissions",
-          "Hint": "The required permission for a player to be able to see a Pokedex entry"
+          "Name": "Pokedex permissions",
+          "Hint": "The required permission for a player to be able to see a pokedex entry"
         },
         "AlwaysShowCrits": {
-          "Name": "Always Show Crits",
+          "Name": "Always show crits",
           "Hint": "Always show crits in the chat even if no crit was rolled."
         },
         "AllowPlayersToEditSpecies": {
-          "Name": "Allow Players to Edit Species",
-          "Hint": "Allow players to edit the species of their Pokemon."
+          "Name": "Allow players to edit species",
+          "Hint": "Allow players to edit the species of their pokemon."
         }
       },
       "Homebrew": {
         "Name": "Homebrew",
-        "Label": "Manage Homebrew",
+        "Label": "Manage homebrew",
         "Hint": "Manage your homebrew related settings.",
         "NuclearType": {
-          "Name": "Enable Nuclear Type",
-          "Hint": "Adds Pokemon Uranium's Nuclear Type to the game based on DataNinja's Homebrew Compilation's Uranium Data."
+          "Name": "Enable Nuclear-type",
+          "Hint": "Adds Pokemon Uranium's Nuclear-type to the game based on DataNinja's Homebrew Compilation's Uranium Data."
         },
         "ShadowType": {
-          "Name": "Enable Shadow Type",
-          "Hint": "Adds Pokemon Colosseum's Shadow Type to the game based on PTR Ruleset's Shadow Type."
+          "Name": "Enable Shadow-type",
+          "Hint": "Adds Pokemon Colosseum's Shadow-type to the game based on PTR Ruleset's Shadow Type."
         }
       },
       "Type": {
-        "Name": "Custom Type Editor",
-        "Label": "Custom Type Editor",
+        "Name": "Custom type editor",
+        "Label": "Custom type editor",
         "Hint": "Modify type effectiveness and add new types to the system",
         "TypeEffectiveness": {
-          "Name": "Type Effectiveness",
+          "Name": "Type effectiveness",
           "Hint": "The effectiveness of a type against another type"
         },
         "Delete": {
@@ -1032,19 +1032,19 @@
         },
         "Submit": "Submit",
         "Reset": {
-          "Title": "Reset Type Effectiveness",
+          "Title": "Reset type effectiveness",
           "Content": "Are you sure you want to reset the type effectiveness to the default values?"
         }
       }
     },
     "Contests": {
       "Dice": "Dice",
-      "Type": "Contest Type",
-      "Stats": "From Stats",
-      "Reserve": "Reserve Dice",
-      "Poffins": "From Poffins",
+      "Type": "Contest type",
+      "Stats": "From stats",
+      "Reserve": "Reserve dice",
+      "Poffins": "From poffins",
       "Voltage": "Voltage",
-      "DiceTotal": "Dice Total",
+      "DiceTotal": "Dice total",
       "Appeal": "Appeal",
       "Cool": "Cool",
       "Tough": "Tough",
@@ -1056,27 +1056,27 @@
       "Friendship": "Friendship",
       "Spirit": "Spirit",
       "Weary": "Weary",
-      "Effects": "Passive Effects"
+      "Effects": "Passive effects"
     },
     "Broadcast": {
       "TempHP": {
-        "PluralNew": "{actor} now has {newQuantity} temporary hit points {wasAt} from {item}.",
-        "SingleNew": "{actor} now has {newQuantity} temporary hit point {wasAt} from {item}.",
+        "PluralNew": "{actor} now has {newQuantity} durability {wasAt} from {item}.",
+        "SingleNew": "{actor} now has {newQuantity} durability {wasAt} from {item}.",
         "WasAt": "(was at {oldQuantity})"
       },
       "ApplyEffect": "<actor>{source}</actor> applied {effect} to <actor>{actor}</actor>"
     },
     "Dialog": {
       "CaptureSuccess": {
-        "Title": "Capture Success",
-        "Hint": "To which trainer's party should the Pokemon be added?",
+        "Title": "The pokemon was caught!",
+        "Hint": "To which trainer's party should the pokemon be added?",
         "Trainer": {
           "Name": "Trainer",
-          "Hint": "The trainer to add the Pokemon to"
+          "Hint": "The trainer to add the pokemon to"
         },
         "PartyChoice": {
-          "Name": "Party Location",
-          "Hint": "Where in the Party should the Pokemon be added?",
+          "Name": "Party location",
+          "Hint": "Where in the party should the pokemon be added?",
           "Party": "Party",
           "Box": "Box",
           "Available": "Available"
@@ -1086,11 +1086,11 @@
         "TrainerNotFound": "An invalid trainer was selected, please try again.",
         "UserNotFound": "The selected trainer is not assigned to a user, please try again.",
         "LocationNotFound": "An invalid location was selected, please try again.",
-        "PokemonNotFound": "Unable to find the Pokemon, did you delete it?",
-        "ChatMessage": "{trainer} Caught {pokemon}! They have been added to {location}."
+        "PokemonNotFound": "Unable to find the pokemon, did you delete it?",
+        "ChatMessage": "{trainer} caught {pokemon}! They have been added to {location}."
       },
       "ContestedCheck": {
-        "Title": "{name}'s Contested {skill} Check",
+        "Title": "{name}'s contested {skill} check",
         "Hint": "Select the skill to roll",
         "Skill": "Skill to roll",
         "Submit": "Submit",
@@ -1102,20 +1102,20 @@
         "Dimensions": "Dimensions",
         "Label": "Size",
         "LinkToActorSize": {
-          "Link": "Link to Actor Size",
-          "Unlink": "Unlink from Actor Size"
+          "Link": "Link to actor size",
+          "Unlink": "Unlink from actor size"
         }
       }
     },
-    "ExpBudget": "EXP Reward:",
+    "ExpBudget": "Exp reward:",
     "TypeMatrix": {
-      "Title": "Type Chart"
+      "Title": "Type chart"
     },
     "CompendiumBrowser": {
       "Enrichment":{
         "UnknownFilterSetting": "Unknown filter \"{filterName}\" for tab {tabName}",
-        "UnknownTab": "Unknown Compendium Browser Tab \"{tabName}\"",
-        "LikelyMalformedExpressionBrowserCrashed": "The expression is likely malformed and caused the Compendium Browser to crash when trying to open."
+        "UnknownTab": "Unknown compendium browser tab \"{tabName}\"",
+        "LikelyMalformedExpressionBrowserCrashed": "The expression is likely malformed and caused the compendium browser to crash when trying to open."
       },
       "ProgressBar": {
         "LoadingComplete": "Loading complete",
@@ -1129,7 +1129,7 @@
         "Feats": "Features",
         "Items": "Items",
         "Moves": "Moves",
-        "PokeEdges": "Poke Edges",
+        "PokeEdges": "Enhancements",
         "Species": "Species",
         "Settings": "Settings"
       },
@@ -1142,12 +1142,12 @@
         "Name": "Name",
         "Class": "Class",
         "Cost": "Cost",
-        "ItemType": "Item Type",
+        "ItemType": "Item type",
         "MoveType": "Type",
         "Category": "Category",
-        "DamageBase": "Damage Base",
-        "Number": "Dex Number",
-        "HasForm": "Has Form",
+        "DamageBase": "Damage base",
+        "Number": "Dex number",
+        "HasForm": "Has form",
         "LearnableMoves": "Learnable Moves",
         "Abilities": "Obtainable Abilities",
         "Capabilities": "Obtainable Capabilities",
@@ -1158,24 +1158,24 @@
         "Title": "Search"
       },
       "Filter": {
-        "SortBy": "Sort By",
-        "ClearFilters": "Clear Filters",
+        "SortBy": "Sort by",
+        "ClearFilters": "Clear filters",
         "AndLabel": "All of above",
         "OrLabel": "Any of above"
       }
     },
     "Alliance": {
-      "Default": "Ownership Default ({alliance})",
+      "Default": "Ownership default ({alliance})",
       "Neutral": "Neutral",
       "Opposition": "Opposition",
       "Party": "Party"
     },
-    "RulebookJournalSheetName": "Rulebook Sheet"
+    "RulebookJournalSheetName": "Rulebook sheet"
   },
 
-  "physical-evasion": "Physical Evasion",
-  "special-evasion": "Special Evasion",
-  "speed-evasion": "Speed Evasion",
+  "physical-evasion": "Physical evasion",
+  "special-evasion": "Special evasion",
+  "speed-evasion": "Speed evasion",
   "vulnerable": "Vulnerable",
   "capture-dc": "Capture DC",
 
@@ -1184,12 +1184,12 @@
   "swim": "Swim",
   "levitate": "Hover",
   "burrow": "Burrow",
-  "highJump": "High Jump",
-  "longJump": "Long Jump",
+  "highJump": "High jump",
+  "longJump": "Long jump",
   "teleporter": "Teleporter",
   "power": "Might",
   "naturewalk": "Naturewalk",
-  "weightClass": "Weight Class",
+  "weightClass": "Weight class",
   "throwingRange": "Throw",
 
   "party": "Party",

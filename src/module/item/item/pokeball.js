@@ -171,7 +171,7 @@ class PokeballItem extends PTUItemItem {
                 // HP mods
                 DCModifiers.push(new PTUModifier({
                     slug: "hp-modifier",
-                    label: "HP Modifier",
+                    label: "Health Modifier",
                     modifier: (() => {
                         const health = target.actor?.system?.health;
                         if (!health) return 0;
