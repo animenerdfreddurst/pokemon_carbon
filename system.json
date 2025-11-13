@@ -59,7 +59,7 @@
       "system": "ptu"
     },
     {
-      "label": "Feats",
+      "label": "Features",
       "type": "Item",
       "name": "feats",
       "path": "packs/feats.db",
