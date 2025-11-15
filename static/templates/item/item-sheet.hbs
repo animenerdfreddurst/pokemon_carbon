@@ -51,12 +51,6 @@
                                         disabled
                                     />
                                 </span>
-                                <span class="d-flex justify-content-between" style="flex: 0 0 50%;">
-                                    Cost 
-                                    <span class="fb-80" style="font-weight: normal;">
-                                        {{{itemCost}}}
-                                    </span>
-                                </span>
                                 <span style="flex: 0 0 50%;">
                                     Frequency 
                                     <input
@@ -78,7 +72,13 @@
                                         disabled
                                     />
                                 </span>
-                                <span>
+                                <span class="d-flex justify-content-between" style="flex: 0 0 50%;">
+                                    Cost 
+                                    <span class="fb-80" style="font-weight: normal;">
+                                        {{{itemCost}}}
+                                    </span>
+                                </span>
+                                <span style="flex: 0 0 50%;">
                                     AC 
                                     <input
                                         class="ml-1 mr-1"
@@ -167,6 +167,10 @@
                 <input class="ml-1 mr-1" name="system.range" type="text" value="{{item.system.range}}" placeholder="{{localize "ITEM.Range"}}"/>
             </div>
             <div class="item-row">
+                <label for="system.cost">{{localize "ITEM.Cost"}}</label>
+                <input class="ml-1 mr-1" name="system.cost" type="text" value="{{item.system.cost}}" placeholder="{{localize "ITEM.Cost"}}"/>
+            </div>
+            <div class="item-row">
                 <label for="system.ac">{{localize "ITEM.AC"}}</label>
                 <input class="ml-1 mr-1" name="system.ac" type="text" value="{{item.system.ac}}" placeholder="0"/>
             </div>
@@ -181,10 +185,6 @@
             <div class="item-row">
                 <label for="system.quantity">{{localize "ITEM.Quantity"}}</label>
                 <input class="ml-1 mr-1" name="system.quantity" type="text" value="{{item.system.quantity}}" placeholder="{{localize "ITEM.Quantity"}}"/>
-            </div>
-            <div class="item-row">
-                <label for="system.cost">{{localize "ITEM.Cost"}}</label>
-                <input class="ml-1 mr-1" name="system.cost" type="text" value="{{item.system.cost}}" placeholder="{{localize "ITEM.Cost"}}"/>
             </div>
             <div class="item-row">
                 <label for="system.category">{{localize "ITEM.Category"}}</label>
