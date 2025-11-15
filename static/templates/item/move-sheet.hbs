@@ -48,30 +48,44 @@
                                 </div>
                             </div>
                             <div class="move-other-info mt-2">
+                                <span style="flex: 0 0 100%;">
+                                    Prerequisites 
+                                    <input 
+                                        type="text" 
+                                        class="ptu-tagify system-prerequisites" 
+                                        name="" 
+                                        value="{{json item.system.prerequisites}}" 
+                                        data-dtype="JSON"
+                                        disabled
+                                    />
+                                </span>
+                                <span>
+                                    Frequency 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.frequency}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%;">
+                                    Range 
+                                    <input
+                                        class="ml-2"
+                                        type="text"
+                                        value="{{item.system.range}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
                                 <span>
                                     AC 
                                     <input
                                         class="ml-1 mr-1"
                                         type="text"
                                         value="{{item.system.ac}}"
-                                        disabled
-                                    />
-                                </span>
-                                <span>
-                                    FREQ 
-                                    <input
-                                        class="ml-1 mr-1"
-                                        type="text"
-                                        value="{{item.system.frequency}}"
-                                        disabled
-                                    />
-                                </span>
-                                <span style="flex: 0 0 100%;">
-                                    RANGE 
-                                    <input
-                                        class="ml-1 mr-1"
-                                        type="text"
-                                        value="{{item.system.range}}"
                                         disabled
                                     />
                                 </span>
@@ -100,23 +114,34 @@
                                         
                                     {{/if}}
                                 </span>
-                                <span style="flex: 0 0 100%;">
-                                    CONTEST 
-                                    <input
-                                        class="ml-1 mr-1"
-                                        type="text"
-                                        value="{{item.system.contestType}}"
-                                        disabled
-                                    />
-                                </span>
                                 <span class="d-flex justify-content-between" style="flex: 0 0 100%">
-                                    KEYWORDS 
+                                    Keywords 
                                     <input 
                                         type="text" 
                                         class="ptu-tagify system-keywords" 
                                         name="" 
                                         value="{{json item.system.keywords}}" 
                                         data-dtype="JSON"
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%;">
+                                    Trigger 
+                                    <input
+                                        class="ml-2"
+                                        name=""
+                                        type="text"
+                                        value="{{item.system.trigger}}"
+                                        placeholder=""
+                                        disabled
+                                    />
+                                </span>
+                                <span style="flex: 0 0 100%;">
+                                    Contest 
+                                    <input
+                                        class="ml-1 mr-1"
+                                        type="text"
+                                        value="{{item.system.contestType}}"
                                         disabled
                                     />
                                 </span>
@@ -147,6 +172,10 @@
                 </div>
             </div>
             <div class="item-row">
+                <label for="system.prerequisites">{{localize "ITEM.Prerequisites"}}</label>
+                <input type="text" class="ptu-tagify system-prerequisites" name="system.prerequisites" value="{{json item.system.prerequisites}}" data-dtype="JSON"/>
+            </div>
+            <div class="item-row">
                 <label for="system.frequency">{{localize "ITEM.Frequency"}}</label>
                 <input class="ml-1 mr-1" name="system.frequency" type="text" value="{{item.system.frequency}}" placeholder="{{localize "ITEM.Frequency"}}"/>
             </div>
@@ -171,6 +200,10 @@
             <div class="item-row">
                 <label for="system.keywords">{{localize "ITEM.Keywords"}}</label>
                 <input type="text" class="ptu-tagify system-keywords" name="system.keywords" value="{{json item.system.keywords}}" data-dtype="JSON"/>
+            </div>
+            <div class="item-row">
+                <label for="system.trigger">{{localize "ITEM.Trigger"}}</label>
+                <input class="ml-1 mr-1" name="system.trigger" type="text" value="{{item.system.trigger}}" placeholder="{{localize "ITEM.Trigger"}}"/>
             </div>
             <div class="item-row">
                 <label for="system.contestType">{{localize "ITEM.ContestType"}}</label>

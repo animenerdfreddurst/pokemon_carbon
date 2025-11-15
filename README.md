@@ -20,14 +20,14 @@ https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/sy
 
 ## Links & Recommendations
 - [Quick Insert](https://gitlab.com/fvtt-modules-lab/quick-insert) is borderline necessary to use as a GM, and honestly should just be baseline in Foundry. Get this.
-- ***OTHER RECOMMENDED MODULES HERE***
-- ***COMMODUS ARCHIPELAGO WORLD HERE***
-- ***DRIVE LINK TO CARBON DOCS HERE***
+- **OTHER RECOMMENDED MODULES HERE**
+- **COMMODUS ARCHIPELAGO WORLD HERE**
+- **DRIVE LINK TO CARBON DOCS HERE**
 
 ## Special Thanks
 * [cswendrowski](https://github.com/cswendrowski) for starting Foundry
 * https://www.theworldofpokemon.com/ for their amazing pokedex entries 
-* The amazing people and their amazing feedback, over at the [PTR Dev Server](https://discord.gg/ptrfvtt)
+* Fuck the so-called "devs" that worked on the Foundry deployments of PTU and PTR. They are incompetent fuckwits and do not deserve any credit, given that they abandoned their repos without completing them multiple times, all in the name of their enormous fucking egos. Additionally, what they did complete was barely better than AI and resulted in hundreds of hours of extra work from myself and others. If any of you jackasses are reading this, never code again; you are not good at it and you never will be, which was plain as day even to me. You have a total and complete non-understanding of the purpose of these projects, which is to create something others can use, not to make yourselves feel special.
 * npaisley for doing a lot of the backend stuff; I am not a coder in any capacity, and having to work with abandonware was a daunting task that I could never have completed without their support.
 
 ## Copyright

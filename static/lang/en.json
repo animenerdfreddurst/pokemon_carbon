@@ -51,6 +51,8 @@
     "Tier": "Tier",
     "Class": "Class feature of",
     "Container": "Is a container",
+    "Trigger": "Trigger",
+    "Slots": "Slots",
     "TypeFeatPlural": "Features",
     "TypeEdgePlural": "Edges",
     "TypeAbilityPlural": "Abilities",
