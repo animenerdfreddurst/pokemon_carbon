@@ -265,6 +265,7 @@
 
     "ItemEffect": "Item effect",
     "HeldItems": "Held items",
+    "ConsumedItems": "Consumed items",
     "FoodBuff": "Food buff",
     "HpGuidelines": "Health Guidelines",
     "16th": "6.25%",
@@ -340,7 +341,7 @@
     "LevelCap": "Level cap",
     "LevelCapTraining": "Exp training level cap",
 
-    "Money": "Money",
+    "Money": "Currs",
     "ItemCategories": "Item categories",
     "HeldItem": "Held item",
 

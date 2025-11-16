@@ -58,7 +58,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 
 		// Setup Item Columns
 		if (this.actor.getFlag("ptu", "itemColumns") === undefined) {
-			const columns = { one: ["Key", "Medical", "Misc"], two: ["Pokemon Items", "PokeBalls", "TMs", "Money"], available: ["Equipment", "Food"] };
+			const columns = { one: ["Culinary items", "Medicinal items", "Poke balls", "Training items"], two: ["Equipment", "Training items", "Money"], available: [] };
 			this.actor.setFlag("ptu", "itemColumns", columns)
 			data.columns = columns;
 		}
@@ -133,14 +133,12 @@ export class PTUCharacterSheet extends PTUActorSheet {
 		const edges = [];
 		const items = [];
 		const items_categorized = {
-			"Key": [],
-			"Medical": [],
-			"Food": [],
+			"Culinary items": [],
 			"Equipment": [],
-			"Pokemon Items": [],
-			"PokeBalls": [],
-			"TMs": [],
-			"Misc": []
+			"Medicinal items": [],
+			"Poke balls": [],
+			"Training items": [],
+			"Travel items": []
 		};
 		const abilities = [];
 		const capabilities = [];

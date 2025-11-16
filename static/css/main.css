@@ -4290,7 +4290,7 @@ a.content-link img {
   flex: 0 0 50%;
   align-self: center;
   background: whitesmoke;
-  border-radius: 50%;
+  /* border-radius: 50%; removed for aesthetics */
   border: 2px solid whitesmoke;
   max-height: 225px;
 }
