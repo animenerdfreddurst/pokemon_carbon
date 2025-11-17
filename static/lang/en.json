@@ -340,7 +340,8 @@
     "MaxActionPointsShort": "Max AP",
     "LevelMilestones": "Milestones",
     "LevelDexExp": "Dex exp",
-    "LevelMiscExp": "Misc exp",
+    "LevelMiscExp": "Trainer exp",
+    "LevelExpBank": "Exp bank",
 
     "LevelCap": "Level cap",
     "LevelCapTraining": "Exp training level cap",

@@ -88,65 +88,128 @@
                                 <input class="fb-85" name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
                             </div>
                             <div class="swsh-body">
-                                    <div class="d-flex w-100 align-items-center center-text justify-content-center"
-                                        style="gap: 8px;">
-                                        <div class="fb-15">
-                                            <label for="system.level.current"><b>{{localize "PTU.Level"}}</b>:</label>
-                                        </div>
-                                        <div class="fb-15">
-                                            <input class="p-0" type="text" name="system.level.current"
-                                                value="{{actor.system.level.current}}" data-dtype="Number" disabled />
+                                <div class="d-flex w-100 align-items-center center-text justify-content-center"
+                                    style="gap: 8px;">
+                                    <div class="fb-15">
+                                        <label for="system.level.current"><b>{{localize "PTU.Level"}}</b>:</label>
+                                    </div>
+                                    <div class="fb-15">
+                                        <input class="p-0" type="text" name="system.level.current"
+                                        value="{{actor.system.level.current}}" data-dtype="Number" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                <div class="d-flex flexrow w-100 mt-1 mb-1 align-items-center center-text justify-content-evenly">
+                                    <div class="fb-33 center-text">
+                                        <label for="system.species"><b>{{localize "PTU.Species"}}</b></label>
+                                    </div>
+                                    <div class="fb-33 center-text">
+                                        <label for="system.egggroup"><b>{{localize "PTU.EggGroup"}}</b></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swsh-body">
+                                <div class="d-flex flexrow pt-1 pb-1 align-items-center justify-content-evenly center-text">
+                                    <div class="fb-33 center-text pl-2 pr-2" style="align-self; center;">
+                                        {{#if actor.species}}
+                                        <span class="species linked-item">@UUID[{{actor.species.uuid}}]</span>
+                                        {{else}}
+                                        <input type="text" name="system.species" value="{{actor.system.species}}"
+                                        data-dtype="String" disabled />
+                                        {{/if}}
+                                    </div>
+                                    <div class="fb-33 center-text pl-2 pr-2">
+                                        <input type="text" name="system.egggroup" value="{{actor.system.egggroup}}"
+                                        data-dtype="String" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                <div class="d-flex flexrow w-100 mt-1 mb-1 align-items-center center-text justify-content-between">
+                                    <div class="fb-45">
+                                        <label for="system.level.exp"><b>{{localize "PTU.Experience"}}</b></label>
+                                    </div>
+                                    <div class="fb-45">
+                                        <label for="till-level-up"><b>{{localize "PTU.ExperienceNext"}}</b></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swsh-body">
+                                <div class="d-flex flexrow pt-1 align-items-center justify-content-between center-text">
+                                    <div class="fb-45">
+                                        <input type="text" name="system.level.exp"
+                                            value="{{actor.system.level.exp}}" data-dtype="Number" />
+                                    </div>
+                                    <div class="fb-10">
+                                        <span style="font-size: 20px;"> / </span>
+                                    </div>
+                                    <div class="fb-45">
+                                        <input type="text" name="till-level-up"
+                                        value="{{actor.system.level.expTillNextLevel}}" data-dtype="Number"
+                                        disabled />
+                                    </div>
+                                    <div class="options fb-100 pb-1 pt-1 mt-1">
+                                        <div class="progress-bar p{{actor.system.level.percent}}" id="progressBar">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight">
-                                    <div class="d-flex w-100 mt-1 mb-1 align-items-center center-text justify-content-between">
-                                        <div class="fb-45">
-                                            <label for="system.level.exp"><b>{{localize "PTU.Experience"}}</b></label>
-                                        </div>
-                                        <div class="fb-45">
-                                            <label for="till-level-up"><b>{{localize "PTU.ExperienceNext"}}</b></label>
-                                        </div>
+                            </div>
+                            <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                <div class="d-flex flexrow w-100 mt-1 mb-1 align-items-center justify-content-center center-text">
+                                    <div class="fb-48">
+                                        <label for="system.nature.value"><b>{{localize "PTU.Nature"}}</b></label>
+                                    </div>
+                                    <div class="fb-20">
+                                        <label for="system.owner"><b>{{localize "PTU.Shiny"}}</b></label>
+                                    </div>
+                                    <div class="fb-30">
+                                        <label for="system.gender"><b>{{localize "PTU.Gender"}}</b></label>
                                     </div>
                                 </div>
-                                <div class="swsh-body">
-                                    <div
-                                        class="d-flex flexrow pt-1 align-items-center justify-content-between center-text">
-                                        <div class="fb-45">
-                                            <input type="text" name="system.level.exp"
-                                                value="{{actor.system.level.exp}}" data-dtype="Number" />
-                                        </div>
-                                        <div class="fb-10">
-                                            <span style="font-size: 20px;"> / </span>
-                                        </div>
-                                        <div class="fb-45">
-                                            <input type="text" name="till-level-up"
-                                                value="{{actor.system.level.expTillNextLevel}}" data-dtype="Number"
-                                                disabled />
-                                        </div>
-                                        <div class="options fb-100 pb-1 pt-1 mt-1">
-                                            <div class="progress-bar p{{actor.system.level.percent}}" id="progressBar">
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="swsh-body">
+                                <div class="d-flex flexrow pt-1 pb-1 align-items-center justify-content-center center-text">
+                                    <div class="fb-48">
+                                        <select name="system.nature.value" class="w-100">
+                                            {{selectOptions natures selected=actor.system.nature.value labelAttr="value"}}
+                                        </select>
+                                    </div>
+                                    <div class="fb-20">
+                                        <input name="system.shiny" type="checkbox" {{checked actor.system.shiny}} />
+                                    </div>
+                                    <div class="fb-30">
+                                        <input type="text" name="system.gender" value="{{actor.system.gender}}"
+                                        data-dtype="String" />
                                     </div>
                                 </div>
-                                <div class="swsh-header ball-themes {{ballStyle}} highlight">
-                                    <div class="d-flex w-100 mt-1 mb-1 align-items-center justify-content-center center-text">
-                                        <div class="fb-45">
-                                            <label for="system.nature.value"><b>{{localize "PTU.Nature"}}</b></label>
-                                        </div>
+                            </div>
+                            <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                <div class="d-flex flexrow w-100 mt-1 mb-1 align-items-center center-text justify-content-between">
+                                    <div class="fb-66% pr-1">
+                                        <label for="system.pokeball"><b>{{localize "PTU.Pokeball"}}</b></label>
                                     </div>
-                                </div>
-                                <div class="swsh-body">
-                                    <div
-                                        class="d-flex w-100 pt-1 pb-1 align-items-center justify-content-center center-text">
-                                        <div class="fb-45">
-                                            <select name="system.nature.value" class="w-100">
-                                                {{selectOptions natures selected=actor.system.nature.value labelAttr="value"}}
-                                            </select>
-                                        </div>
+                                    {{#if (isGm)}}
+                                    <div class="fb-33% pl-1">
+                                        <label for="system.loyalty"><b>{{localize "PTU.Loyalty"}}</b></label>
                                     </div>
+                                    {{/if}}
                                 </div>
+                            </div>
+                            <div class="swsh-body">
+                                <div class="d-flex flexrow pt-1 pb-1 align-items-center justify-content-evenly center-text">
+                                    <div class="fb-66% pr-1">
+                                        <input type="text" name="system.pokeball" value="{{actor.system.pokeball}}"
+                                        data-dtype="String" />
+                                    </div>
+                                    {{#if (isGm)}}
+                                    <div class="fb-33% pl-1">
+                                        <input type="text" name="system.loyalty" value="{{actor.system.loyalty}}"
+                                        data-dtype="String" />
+                                    </div>
+                                    {{/if}}
+                                </div>
+                            </div>
                         </div>
                         <div class="mt-auto mb-auto">
                             <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
@@ -1221,63 +1284,9 @@
                     </div>
                 </div>
 
+                <!-- Right Col -->
                 <div class="fb-48">
-                    <!-- Species + Gender + Owner -->
-                    <div class="swsh-box mb-2 w-100">
-                        <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-evenly">
-                            <div class="fb-33 center-text">
-                                <label for="system.species"><b>{{localize "PTU.Species"}}</b></label>
-                            </div>
-                            <div class="fb-33 center-text">
-                                <label for="system.gender"><b>{{localize "PTU.Gender"}}</b></label>
-                            </div>
-                        </div>
-                        <div class="swsh-body mt-1 mb-1 justify-content-evenly">
-                            <div class="fb-33 center-text pl-2 pr-2" style="align-self: center;">
-                                {{#if actor.species}}
-                                <span class="species linked-item">@UUID[{{actor.species.uuid}}]</span>
-                                {{else}}
-                                <input type="text" name="system.species" value="{{actor.system.species}}"
-                                    data-dtype="String" disabled />
-                                {{/if}}
-                            </div>
-                            <div class="fb-33 center-text pl-2 pr-2">
-                                <input type="text" name="system.gender" value="{{actor.system.gender}}"
-                                    data-dtype="String" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Egg Group -->
-                    <div class="swsh-box mb-2 w-100">
-                        <div
-                            class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-evenly">
-                            <div class="fb-33">
-                                <label for="system.egggroup"><b>{{localize "PTU.EggGroup"}}</b></label>
-                            </div>
-                            <div class="fb-33">
-                                <label for="system.owner"><b>{{localize "PTU.Shiny"}}</b></label>
-                            </div>
-                            <div class="fb-33">
-                                <label for="system.pokeball"><b>{{localize "PTU.Pokeball"}}</b></label>
-                            </div>
-                        </div>
-                        <div class="swsh-body mt-1 mb-1 justify-content-evenly">
-                            <div class="fb-33 center-text pl-2 pr-2">
-                                <input type="text" name="system.egggroup" value="{{actor.system.egggroup}}"
-                                    data-dtype="String" disabled />
-                            </div>
-                            <div class="fb-33 center-text pl-2 pr-2">
-                                <input name="system.shiny" type="checkbox" {{checked actor.system.shiny}} />
-                            </div>
-                            <div class="fb-33 center-text">
-                                <input type="text" name="system.pokeball" value="{{actor.system.pokeball}}"
-                                    data-dtype="String" />
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     <!-- Skill Background -->
                     <div class="swsh-box mb-2 w-100">
                         <div

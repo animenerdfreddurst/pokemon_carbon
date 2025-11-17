@@ -120,12 +120,12 @@
                                         </div>
                                         {{else}}
                                         <div class="fb-45">
-                                            <label for="system.level.milestones"><b>{{localize
-                                                "PTU.LevelMilestones"}}</b></label>
-                                        </div>
-                                        <div class="fb-45">
                                             <label for="system.level.miscexp"><b>{{localize
                                                 "PTU.LevelMiscExp"}}</b></label>
+                                        </div>
+                                        <div class="fb-45">
+                                            <label for="system.level.milestones"><b>{{localize
+                                                "PTU.LevelExpBank"}}</b></label>
                                         </div>
                                         {{/if}}
                                     </div>
@@ -148,12 +148,12 @@
                                             </div>
                                             {{else}}
                                             <div class="fb-45">
-                                                <input type="number" name="system.level.milestones"
-                                                    value="{{actor.system.level.milestones}}" data-dtype="Number"/>
-                                            </div>
-                                            <div class="fb-45">
                                                 <input type="number" name="system.level.miscexp"
                                                     value="{{actor.system.level.miscexp}}" data-dtype="Number"/>
+                                            </div>
+                                            <div class="fb-45">
+                                                <input type="number" name="system.level.milestones"
+                                                    value="{{actor.system.level.milestones}}" data-dtype="Number"/> <!-- Repurpose milestones into exp bank -->
                                             </div>
                                             {{/if}}
                                         </div>
