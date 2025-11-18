@@ -347,6 +347,7 @@
     "LevelCapTraining": "Exp training level cap",
 
     "Money": "Currs",
+    "NetWorth": "Net worth",
     "ItemCategories": "Item categories",
     "HeldItem": "Held item",
 
@@ -354,7 +355,7 @@
     "Sex": "Sex",
     "Height": "Height",
     "Weight": "Weight",
-    "PhysicalDescription": "Physical Description",
+    "PhysicalDescription": "Physical description",
     "Background": "Background",
     "Personality": "Personality",
     "Goals": "Goals",
