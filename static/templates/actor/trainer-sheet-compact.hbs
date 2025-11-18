@@ -702,6 +702,13 @@
                                     {{/unless}}
                                     {{/if}}
                                 {{/each}}
+                                <div class="fb-35">
+                                    <label class="pl-1" for="system.size.weightClass">{{localize "weightClass"}}</label>
+                                </div>
+                                <div class="fb-15 p-1 center-text">
+                                    <input type="number" name="system.size.weightClass"
+                                    value="{{actor.species.system.size.weightClass}}" disabled /> <!-- need to get a calculation for WC based on value entered in weight-->
+                                </div>
                             </div>
 
                             <!-- Other Capabilities -->
@@ -1054,30 +1061,18 @@
                     <!-- Bio -->
                     <div class="swsh-box mb-2 w-100">
                         <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-between">
-                            <div class="fb-25 center-text">
-                                <label for="system.age"><b>{{localize "PTU.Age"}}</b></label>
-                            </div>
-                            <div class="fb-25 center-text">
-                                <label for="system.sex"><b>{{localize "PTU.Sex"}}</b></label>
-                            </div>
-                            <div class="fb-25 center-text">
+                            <div class="fb-48 center-text">
                                 <label for="system.height"><b>{{localize "PTU.Height"}}</b></label>
                             </div>
-                            <div class="fb-25 center-text">
+                            <div class="fb-48 center-text">
                                 <label for="system.weight"><b>{{localize "PTU.Weight"}}</b></label>
                             </div>
                         </div>
                         <div class="swsh-body mt-1 mb-1 justify-content-between">
-                            <div class="fb-25 center-text pl-2 pr-2">
-                                <input type="number" name="system.age" value="{{actor.system.age}}" data-dtype="String" />
-                            </div>
-                            <div class="fb-25 center-text pl-2 pr-2">
-                                <input type="text" name="system.sex" value="{{actor.system.sex}}" data-dtype="String" />
-                            </div>
-                            <div class="fb-25 center-text pl-2 pr-2">
+                            <div class="fb-48 center-text pl-2 pr-2">
                                 <input type="text" name="system.height" value="{{actor.system.height}}" data-dtype="String" />
                             </div>
-                            <div class="fb-25 center-text pl-2 pr-2">
+                            <div class="fb-48 center-text pl-2 pr-2">
                                 <input type="text" name="system.weight" value="{{actor.system.weight}}" data-dtype="String" />
                             </div>
                         </div>
@@ -1106,30 +1101,6 @@
                         </div>
                         <div class="swsh-body bio mt-1 mb-1">
                             {{editor actor.system.biography.personality target="system.biography.personality" button=true owner=owner editable=editable}}
-                        </div>
-                    </div>
-                    <div class="swsh-box mb-2 w-100">
-                        <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
-                            <label for="system.biography.goals"><b>{{localize "PTU.Goals"}}</b></label>
-                        </div>
-                        <div class="swsh-body bio mt-1 mb-1">
-                            {{editor actor.system.biography.goals target="system.biography.goals" button=true owner=owner editable=editable}}
-                        </div>
-                    </div>
-                    <div class="swsh-box mb-2 w-100">
-                        <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
-                            <label for="system.biography.dreams"><b>{{localize "PTU.Dreams"}}</b></label>
-                        </div>
-                        <div class="swsh-body bio mt-1 mb-1">
-                            {{editor actor.system.biography.dreams target="system.biography.dreams" button=true owner=owner editable=editable}}
-                        </div>
-                    </div>
-                    <div class="swsh-box mb-2 w-100">
-                        <div class="swsh-header ball-themes {{ballStyle}} highlight pt-2 pb-2 center-text justify-content-center">
-                            <label for="system.biography.obsessions"><b>{{localize "PTU.Obsessions"}}</b></label>
-                        </div>
-                        <div class="swsh-body bio mt-1 mb-1">
-                            {{editor actor.system.biography.obsessions target="system.biography.obsessions" button=true owner=owner editable=editable}}
                         </div>
                     </div>
 
