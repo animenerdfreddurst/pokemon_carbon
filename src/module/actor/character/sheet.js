@@ -58,7 +58,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 
 		// Setup Item Columns
 		if (this.actor.getFlag("ptu", "itemColumns") === undefined) {
-			const columns = { one: ["Culinary items", "Medicinal items", "Poke balls", "Training items"], two: ["Equipment", "Training items", "Money"], available: [] };
+			const columns = { one: ["Culinary items", "Medicinal items", "Poke balls", "Training items"], two: ["Equipment", "Travel items", "Money"], available: [] };
 			this.actor.setFlag("ptu", "itemColumns", columns)
 			data.columns = columns;
 		}
@@ -152,7 +152,7 @@ export class PTUCharacterSheet extends PTUActorSheet {
 			if (item.type == 'item') {
 				let cat = item.system.category;
 				if (cat === undefined || cat == "") {
-					cat = "Misc";
+					cat = "Travel items";
 				}
 				if (!(items_categorized[cat])) {
 					//Category needs handling

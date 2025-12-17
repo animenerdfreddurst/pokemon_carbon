@@ -39,7 +39,7 @@
                     <div class="move-info-row">
                         <div class="move-info-col">
                             <div class="move-other-info mt-2">
-                                <span style="flex: 0 0 50%">
+                                <span style="flex: 0 0 100%">
                                     Frequency 
                                     <input
                                         class="ml-2"
@@ -50,7 +50,7 @@
                                         disabled
                                     />
                                 </span>
-                                <span style="flex: 0 0 50%">
+                                <span style="flex: 0 0 100%">
                                     Range 
                                     <input
                                         class="ml-2"
@@ -83,17 +83,6 @@
                                         disabled
                                     />
                                 </span>
-                                <span style="flex: 0 0 100%">
-                                    Trigger 
-                                    <input
-                                        class="ml-2"
-                                        name=""
-                                        type="text"
-                                        value="{{item.system.trigger}}"
-                                        placeholder=""
-                                        disabled
-                                    />
-                                </span>
                             </div>
                         </div>
                     </div>
@@ -119,10 +108,6 @@
             <div class="item-row">
                 <label for="system.keywords">{{localize "ITEM.Keywords"}}</label>
                 <input type="text" class="ptu-tagify system-keywords" name="system.keywords" value="{{json item.system.keywords}}" data-dtype="JSON"/>
-            </div>
-            <div class="item-row">
-                <label for="system.trigger">{{localize "ITEM.Trigger"}}</label>
-                <input class="ml-1 mr-1" name="system.trigger" type="text" value="{{item.system.trigger}}" placeholder="0"/>
             </div>
             <div class="item-row">
                 <label for="system.effect">{{localize "ITEM.Effect"}}</label>

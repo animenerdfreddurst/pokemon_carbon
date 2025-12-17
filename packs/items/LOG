@@ -1,7 +1,22 @@
-2025/11/24-12:50:23.830635 7651e09fa6c0 Recovering log #1677
-2025/11/24-12:50:23.840421 7651e09fa6c0 Delete type=3 #1675
-2025/11/24-12:50:23.840430 7651e09fa6c0 Delete type=0 #1677
-2025/11/24-13:36:56.235283 764f1bbff6c0 Level-0 table #1683: started
-2025/11/24-13:36:56.235287 764f1bbff6c0 Level-0 table #1683: 0 bytes OK
-2025/11/24-13:36:56.238431 764f1bbff6c0 Delete type=0 #1681
-2025/11/24-13:36:56.254183 764f1bbff6c0 Manual compaction at level-0 from '!folders!51iMGEyBqj57Ri1X' @ 72057594037927935 : 1 .. '!items!zwuNF6cJs843IqJj' @ 0 : 0; will stop at (end)
+2025/12/16-12:11:43.937934 709e957bd6c0 Recovering log #1838
+2025/12/16-12:11:43.940023 709e957bd6c0 Level-0 table #1841: started
+2025/12/16-12:11:43.948014 709e957bd6c0 Level-0 table #1841: 734131 bytes OK
+2025/12/16-12:11:43.961576 709e957bd6c0 Delete type=3 #1836
+2025/12/16-12:11:43.961584 709e957bd6c0 Delete type=0 #1838
+2025/12/16-12:13:39.165971 709bf63ff6c0 Compacting 1@0 + 1@1 files
+2025/12/16-12:13:39.176383 709bf63ff6c0 Generated table #1843@0: 758 keys, 393888 bytes
+2025/12/16-12:13:39.176391 709bf63ff6c0 Compacted 1@0 + 1@1 files => 393888 bytes
+2025/12/16-12:13:39.181436 709bf63ff6c0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/12/16-12:13:39.181464 709bf63ff6c0 Delete type=2 #1839
+2025/12/16-12:13:39.181517 709bf63ff6c0 Delete type=2 #1841
+2025/12/16-14:04:31.912394 709bf63ff6c0 Level-0 table #1845: started
+2025/12/16-14:04:31.917096 709bf63ff6c0 Level-0 table #1845: 233445 bytes OK
+2025/12/16-14:04:31.922357 709bf63ff6c0 Delete type=0 #1842
+2025/12/16-14:04:31.955415 709bf63ff6c0 Manual compaction at level-0 from '!folders!1ZI6B5tKVp7pkVx5' @ 72057594037927935 : 1 .. '!items!zwuNF6cJs843IqJj' @ 0 : 0; will stop at '!items!zSmw6LaCvKSj4mNd' @ 24979 : 1
+2025/12/16-14:04:31.955417 709bf63ff6c0 Compacting 1@0 + 1@1 files
+2025/12/16-14:04:31.962855 709bf63ff6c0 Generated table #1846@0: 758 keys, 399954 bytes
+2025/12/16-14:04:31.962858 709bf63ff6c0 Compacted 1@0 + 1@1 files => 399954 bytes
+2025/12/16-14:04:31.969692 709bf63ff6c0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/12/16-14:04:31.969735 709bf63ff6c0 Delete type=2 #1843
+2025/12/16-14:04:31.969796 709bf63ff6c0 Delete type=2 #1845
+2025/12/16-14:04:31.969825 709bf63ff6c0 Manual compaction at level-0 from '!items!zSmw6LaCvKSj4mNd' @ 24979 : 1 .. '!items!zwuNF6cJs843IqJj' @ 0 : 0; will stop at (end)

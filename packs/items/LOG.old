@@ -1,14 +1,12 @@
-2025/11/23-17:52:52.752172 73c52dfbe6c0 Recovering log #1673
-2025/11/23-17:52:52.758425 73c52dfbe6c0 Delete type=0 #1673
-2025/11/23-17:52:52.758432 73c52dfbe6c0 Delete type=3 #1671
-2025/11/24-00:09:39.842994 73c28dfff6c0 Level-0 table #1678: started
-2025/11/24-00:09:39.845735 73c28dfff6c0 Level-0 table #1678: 9304 bytes OK
-2025/11/24-00:09:39.849987 73c28dfff6c0 Delete type=0 #1676
-2025/11/24-00:09:39.855330 73c28dfff6c0 Manual compaction at level-0 from '!folders!51iMGEyBqj57Ri1X' @ 72057594037927935 : 1 .. '!items!zwuNF6cJs843IqJj' @ 0 : 0; will stop at '!items!vabigvqHJ9OqFM0V' @ 19099 : 1
-2025/11/24-00:09:39.855331 73c28dfff6c0 Compacting 1@0 + 1@1 files
-2025/11/24-00:09:39.861658 73c28dfff6c0 Generated table #1679@0: 712 keys, 348323 bytes
-2025/11/24-00:09:39.861662 73c28dfff6c0 Compacted 1@0 + 1@1 files => 348323 bytes
-2025/11/24-00:09:39.868113 73c28dfff6c0 compacted to: files[ 0 1 0 0 0 0 0 ]
-2025/11/24-00:09:39.868152 73c28dfff6c0 Delete type=2 #1306
-2025/11/24-00:09:39.868184 73c28dfff6c0 Delete type=2 #1678
-2025/11/24-00:09:39.894019 73c28dfff6c0 Manual compaction at level-0 from '!items!vabigvqHJ9OqFM0V' @ 19099 : 1 .. '!items!zwuNF6cJs843IqJj' @ 0 : 0; will stop at (end)
+2025/12/15-19:28:10.936082 70c7c7fff6c0 Recovering log #1835
+2025/12/15-19:28:10.936097 70c7c7fff6c0 Level-0 table #1837: started
+2025/12/15-19:28:10.938309 70c7c7fff6c0 Level-0 table #1837: 1400 bytes OK
+2025/12/15-19:28:10.944330 70c7c7fff6c0 Delete type=0 #1835
+2025/12/15-19:28:10.944342 70c7c7fff6c0 Delete type=3 #1833
+2025/12/15-19:31:24.514379 70c527fff6c0 Compacting 2@0 + 1@1 files
+2025/12/15-19:31:24.525110 70c527fff6c0 Generated table #1839@0: 762 keys, 398595 bytes
+2025/12/15-19:31:24.525118 70c527fff6c0 Compacted 2@0 + 1@1 files => 398595 bytes
+2025/12/15-19:31:24.531615 70c527fff6c0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/12/15-19:31:24.531645 70c527fff6c0 Delete type=2 #1837
+2025/12/15-19:31:24.531685 70c527fff6c0 Delete type=2 #1834
+2025/12/15-19:31:24.531722 70c527fff6c0 Delete type=2 #1832
