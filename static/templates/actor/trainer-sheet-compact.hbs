@@ -22,7 +22,7 @@
     <main class="sheet-body h-100">
         <!-- Stats Tab -->
         <div class="tab details stats h-100" data-group="primary" data-tab="stats">
-            <div class="d-flex justify-content-between flex-row h-100">
+            <div class="d-flex flex-row justify-content-between h-100">
                 <!-- Left Col -->
                 <div class="d-flex skills">
                     <!-- Skills -->
@@ -158,9 +158,11 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="mb-2">
                             <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
                         </div>
+
                         <!-- Bio -->
                         <div class="swsh-box mb-2">
                             <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 center-text justify-content-between">
@@ -1091,22 +1093,6 @@
 
                     <!-- Bio -->
                         <div class="swsh-box mb-2">
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 center-text justify-content-between">
-                                <div class="fb-48 center-text">
-                                    <label for="system.height"><b>{{localize "PTU.Height"}}</b></label>
-                                </div>
-                                <div class="fb-48 center-text">
-                                    <label for="system.weight"><b>{{localize "PTU.Weight"}}</b></label>
-                                </div>
-                            </div>
-                            <div class="swsh-body mt-1 mb-1 justify-content-between">
-                                <div class="fb-48 center-text pl-1 pr-1">
-                                    <input type="text" name="system.height" value="{{actor.system.height}}" data-dtype="String" />
-                                </div>
-                                <div class="fb-48 center-text pl-1 pr-1">
-                                    <input type="text" name="system.weight" value="{{actor.system.weight}}" data-dtype="String" />
-                                </div>
-                            </div>
                             <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 center-text justify-content-center">
                                 <label for="system.biography.physicalDescription"><b>{{localize "PTU.PhysicalDescription"}}</b></label>
                             </div>

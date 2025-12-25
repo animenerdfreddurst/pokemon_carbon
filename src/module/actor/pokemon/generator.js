@@ -347,17 +347,29 @@ export class PokemonGenerator {
         if (shinyChance == 0) return this.shiny = false;
         return this.shiny = Math.random() < shinyChance;
     }
-
+// HEY RETARDS, YOU FORGOT LIKE 10 DIFFERENT SPECIES
     prepareForm() {
         //unown
-        const unown_types = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "Qu"];
+        const unown_types = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "?"];
         if (this.species.system.number === 201) return this.form = this.species.system.form = unown_types[Math.floor(Math.random() * unown_types.length)];
 
         //toxtricity
         const lowKeyNatures = ["lonely", "bold", "relaxed", "timid", "serious", "modest", "mild", "quiet", "bashful", "calm", "gentle", "careful"]
-        if (this.species.system.number === 849 && lowKeyNatures.includes(this.nature.toLowerCase())) return this.form = this.species.system.form = "LowKey";
+        if (this.species.system.number === 849 && lowKeyNatures.includes(this.nature.toLowerCase())) return this.form = this.species.system.form = "lowkey";
 
-        return this.form = this.species?.system?.form;
+        //flabebe
+
+        //floette
+
+        //florges
+
+        //alcremie
+
+        //shellos
+
+        //gastrodon
+
+         return this.form = this.species?.system?.form;
     }
 
     static isEvolutionRestricted(stage, { gender } = {}) {

@@ -1,3 +1,26 @@
-2025/12/15-19:28:11.020482 70c7c7fff6c0 Recovering log #2104
-2025/12/15-19:28:11.033583 70c7c7fff6c0 Delete type=0 #2104
-2025/12/15-19:28:11.033590 70c7c7fff6c0 Delete type=3 #2103
+2025/12/24-19:17:24.393594 79f8b77fe6c0 Recovering log #2197
+2025/12/24-19:17:24.400016 79f8b77fe6c0 Delete type=0 #2197
+2025/12/24-19:17:24.400023 79f8b77fe6c0 Delete type=3 #2195
+2025/12/24-19:19:23.224888 79f8b53ff6c0 Compacting 1@0 + 2@1 files
+2025/12/24-19:19:23.247019 79f8b53ff6c0 Generated table #2200@0: 461 keys, 2117642 bytes
+2025/12/24-19:19:23.267355 79f8b53ff6c0 Generated table #2201@0: 460 keys, 2115738 bytes
+2025/12/24-19:19:23.267366 79f8b53ff6c0 Compacted 1@0 + 2@1 files => 4233380 bytes
+2025/12/24-19:19:23.277776 79f8b53ff6c0 compacted to: files[ 0 3 0 0 0 0 0 ]
+2025/12/24-19:19:23.277859 79f8b53ff6c0 Delete type=2 #1962
+2025/12/24-19:19:23.278012 79f8b53ff6c0 Delete type=2 #1542
+2025/12/24-19:19:23.278089 79f8b53ff6c0 Delete type=2 #2196
+2025/12/24-20:31:23.413797 79f8b53ff6c0 Level-0 table #2203: started
+2025/12/24-20:31:23.417375 79f8b53ff6c0 Level-0 table #2203: 17971 bytes OK
+2025/12/24-20:31:23.422395 79f8b53ff6c0 Delete type=0 #2199
+2025/12/24-20:31:23.438379 79f8b53ff6c0 Manual compaction at level-0 from '!folders!irSNiCnUnI7il9mJ' @ 72057594037927935 : 1 .. '!items!zyXhWVwTmu553jFn' @ 0 : 0; will stop at '!items!vRjYExRexBENhq2H' @ 57723 : 1
+2025/12/24-20:31:23.438381 79f8b53ff6c0 Compacting 1@0 + 3@1 files
+2025/12/24-20:31:23.455354 79f8b53ff6c0 Generated table #2204@0: 461 keys, 2118716 bytes
+2025/12/24-20:31:23.472098 79f8b53ff6c0 Generated table #2205@0: 460 keys, 2118075 bytes
+2025/12/24-20:31:23.479447 79f8b53ff6c0 Generated table #2206@0: 111 keys, 507433 bytes
+2025/12/24-20:31:23.479452 79f8b53ff6c0 Compacted 1@0 + 3@1 files => 4744224 bytes
+2025/12/24-20:31:23.486105 79f8b53ff6c0 compacted to: files[ 0 3 0 0 0 0 0 ]
+2025/12/24-20:31:23.486187 79f8b53ff6c0 Delete type=2 #2201
+2025/12/24-20:31:23.486357 79f8b53ff6c0 Delete type=2 #2203
+2025/12/24-20:31:23.486382 79f8b53ff6c0 Delete type=2 #1543
+2025/12/24-20:31:23.486455 79f8b53ff6c0 Delete type=2 #2200
+2025/12/24-20:31:23.500478 79f8b53ff6c0 Manual compaction at level-0 from '!items!vRjYExRexBENhq2H' @ 57723 : 1 .. '!items!zyXhWVwTmu553jFn' @ 0 : 0; will stop at (end)
