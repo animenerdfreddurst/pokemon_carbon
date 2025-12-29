@@ -30,6 +30,9 @@ https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/sy
 * Fuck the so-called "devs" that worked on the Foundry deployments of PTU and PTR. They are incompetent fuckwits and do not deserve any credit, given that they abandoned their repos without completing them multiple times, all in the name of their enormous fucking egos. Additionally, what they did complete was barely better than AI and resulted in hundreds of hours of extra work from myself and others. If any of you jackasses are reading this, never code again; you are not good at it and you never will be, which was plain as day even to me. You have a total and complete non-understanding of the purpose of these projects, which is to create something others can use, not to make yourselves feel special.
 * npaisley for doing a lot of the backend stuff; I am not a coder in any capacity, and having to work with abandonware was a daunting task that I could never have completed without their support.
 
+## Disclaimer
+Some of the item images used have been created by Gen AI. Deal with it. I'm not an artist, I don't have access to artists who can create images in the style of existing Pokemon item images, and I wanted to see whether it was any good; spoilers: I hate it, and think it isn't anywhere close to being a viable public-facing tool, but I started with it and want consistency.
+
 ## Copyright
 Pokémon © 2002-2025 Pokémon. © 1995-2025 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo.
 No copyright or trademark infringement is intended in using Pokémon content for the Pokemon Carbon for FoundryVTT System.

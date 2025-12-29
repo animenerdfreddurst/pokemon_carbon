@@ -347,10 +347,10 @@ export class PokemonGenerator {
         if (shinyChance == 0) return this.shiny = false;
         return this.shiny = Math.random() < shinyChance;
     }
-// HEY RETARDS, YOU FORGOT LIKE 10 DIFFERENT SPECIES
+// HEY RETARDS, YOU FORGOT 7 DIFFERENT SPECIES
     prepareForm() {
         //unown
-        const unown_types = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "?"];
+        const unown_types = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "Qu"];
         if (this.species.system.number === 201) return this.form = this.species.system.form = unown_types[Math.floor(Math.random() * unown_types.length)];
 
         //toxtricity
@@ -358,16 +358,32 @@ export class PokemonGenerator {
         if (this.species.system.number === 849 && lowKeyNatures.includes(this.nature.toLowerCase())) return this.form = this.species.system.form = "lowkey";
 
         //flabebe
+        const flabebe_colors = ["red", "blue", "orange", "yellow", "white"];
+        if (this.species.system.number === 669) return this.form = this.species.system.form = flabebe_colors[Math.floor(Math.random() * flabebe_colors.length)];
 
         //floette
+        const floette_colors = ["red", "blue", "orange", "yellow", "white"];
+        if (this.species.system.number === 670) return this.form = this.species.system.form = floette_colors[Math.floor(Math.random() * floette_colors.length)];
 
         //florges
+        const florges_colors = ["red", "blue", "orange", "yellow", "white"];
+        if (this.species.system.number === 671) return this.form = this.species.system.form = florges_colors[Math.floor(Math.random() * florges_colors.length)];
 
         //alcremie
+        const alcremie_combos = ["berries_caramelswirl", "berries_lemoncream", "berries_matchacream", "berries_mintcream", "berries_rainbowswirl", "berries_rubycream", "berries_rubyswirl", "berries_saltedcream", "berries_vanillacream", "clover_caramelswirl", "clover_lemoncream", "clover_matchacream", "clover_mintcream", "clover_rainbowswirl", "clover_rubycream", "clover_rubyswirl", "clover_saltedcream", "clover_vanillacream", "flower_caramelswirl", "flower_lemoncream", "flower_matchacream", "flower_mintcream", "flower_rainbowswirl", "flower_rubycream", "flower_rubyswirl", "flower_saltedcream", "flower_vanillacream", "love_caramelswirl", "love_lemoncream", "love_matchacream", "love_mintcream", "love_rainbowswirl", "love_rubycream", "love_rubyswirl", "love_saltedcream", "love_vanillacream", "ribbon_caramelswirl", "ribbon_lemoncream", "ribbon_matchacream", "ribbon_mintcream", "ribbon_rainbowswirl", "ribbon_rubycream", "ribbon_rubyswirl", "ribbon_saltedcream", "ribbon_vanillacream", "star_caramelswirl", "star_lemoncream", "star_matchacream", "star_mintcream", "star_rainbowswirl", "star_rubycream", "star_rubyswirl", "star_saltedcream", "star_vanillacream", "strawberry_caramelswirl", "strawberry_lemoncream", "strawberry_matchacream", "strawberry_mintcream", "strawberry_rainbowswirl", "strawberry_rubycream", "strawberry_rubyswirl", "strawberry_saltedcream", "strawberry_vanillacream"];
+        if (this.species.system.number === 869) return this.form = this.species.system.form = alcremie_combos[Math.floor(Math.random() * alcremie_combos.length)];
 
         //shellos
+        const shellos_forms = ["west", "east"];
+        if (this.species.system.number === 422) return this.form = this.species.system.form = shellos_forms[Math.floor(Math.random() * shellos_forms.length)];
 
         //gastrodon
+        const gastrodon_forms = ["west", "east"];
+        if (this.species.system.number === 423) return this.form = this.species.system.form = gastrodon_forms[Math.floor(Math.random() * gastrodon_forms.length)];
+
+        //minior
+        const minior_cores = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+        if (this.species.system.number === 774) return this.form = this.species.system.form = minior_cores[Math.floor(Math.random() * minior_cores.length)];
 
          return this.form = this.species?.system?.form;
     }
