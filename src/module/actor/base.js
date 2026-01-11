@@ -469,7 +469,7 @@ class PTUActor extends Actor {
         if(data.type === 'character') {
             if(!data.items.some(i => i.name.endsWith("Training"))) {
                 // Grant lvl 1 training
-                fromUuid('Compendium.ptu.effects.Item.fm0TZUuQK0uRhkJA').then((effect) => {
+                fromUuid('Compendium.ptu.edges.Item.xiZydXM8sex5CP7O').then((effect) => {
                     this.createEmbeddedDocuments('Item', [effect.toObject()]);
                 });
             }
