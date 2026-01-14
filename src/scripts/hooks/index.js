@@ -30,7 +30,7 @@ export const PtuHooks = {
             TagifySheets,
             PokeDollarEnricher,
             RenderChatMessage,
-            TrainerPokemonSync
+            TrainerPokemonSync            
         ]
         for(const listener of listeners) listener.listen();
     }
