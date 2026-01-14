@@ -1,5 +1,5 @@
 import { PTUSkills, PTUActor } from "../index.js";
-import { calculateEvasions, calculatePTStatTotal, calculateOldStatTotal, calculateStatTotal } from "../helpers.js";
+import { calculateEvasions, calculateStatTotal } from "../helpers.js";
 import { calculateTrainerCapabilities } from "./capabilities.js";
 import { PTUModifier } from "../modifiers.js";
 import { sluggify } from "../../../util/misc.js";

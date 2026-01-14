@@ -67414,20 +67414,20 @@ export const pokemonData = [
             [
                 2,
                 "Wormadam - Plant Cloak",
-                "Null",
-                "Null"
+                20,
+                "Female"
             ],
             [
                 2,
                 "Wormadam - Trash Cloak",
-                "Null",
-                "Null"
+                20,
+                "Female"
             ],
             [
                 2,
                 "Wormadam - Sandy Cloak",
-                "Null",
-                "Null"
+                20,
+                "Female"
             ],
             [
                 2,
@@ -67575,8 +67575,8 @@ export const pokemonData = [
             [
                 2,
                 "Wormadam - Plant Cloak",
-                "Null",
-                "Null"
+                20,
+                "Female"
             ]
         ],
         "Height":0.5,
@@ -67793,8 +67793,8 @@ export const pokemonData = [
             [
                 2,
                 "Wormadam - Sandy Cloak",
-                "Null",
-                "Null"
+                20,
+                "Female"
             ]
         ],
         "Height":0.5,
@@ -68009,8 +68009,8 @@ export const pokemonData = [
             [
                 2,
                 "Wormadam - Trash Cloak",
-                "Null",
-                "Null"
+                20,
+                "Female"
             ]
         ],
         "Height":0.5,

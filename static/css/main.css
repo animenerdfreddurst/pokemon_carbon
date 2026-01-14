@@ -5458,6 +5458,16 @@ a.content-link img {
   display: flex;
   flex-wrap: wrap;
 }
+.ptu.sheet.gen8 .swsh-box .swsh-body.bio {
+  display: block !important;
+}
+.ptu.sheet.gen8 .swsh-box .swsh-body.bio .editor {
+  height: auto;
+}
+.ptu.sheet.gen8 .swsh-box .swsh-body.bio .editor-content {
+  height: auto;
+  min-height: 35px;
+}
 .ptu.sheet.gen8 .swsh-box .swsh-body.dark-body {
   background: #b3b3b3;
 }
