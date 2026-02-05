@@ -26,7 +26,7 @@ export const pokeballStyles = {
       highlight: "#76315d",
       bandColor: "#222224"
     },
-    "Premier Ball": {
+    "default": {
       backgroundColor: "#fffafa",
       gradientColors: "#fffafa, #fffafa",
       topLightColor: "#FFFFFF",
@@ -115,7 +115,7 @@ export const pokeballStyles = {
         highlight: "",
         bandColor: "#2F6DB7"
     },
-    "default": {
+    "Basic ball": {
         backgroundColor: "#C42835",
         gradientColors: "#ECDBEB, #DFFFFE",
         topLightColor: "#E33242",

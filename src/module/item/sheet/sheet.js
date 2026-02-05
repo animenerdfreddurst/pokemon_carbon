@@ -39,7 +39,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
             const cost = parseInt(this.item.system.cost);
             if(!cost) return this.item.system.cost || "-";
 
-            return foundry.applications.ux.TextEditor.implementation.enrichHTML(`@Poke[${this.item.uuid} noname]`, {async: true})
+            return foundry.applications.ux.TextEditor.implementation.enrichHTML(`@Currs[${this.item.uuid} noname]`, {async: true})
         })();
 
         const rules = this.item.toObject().system.rules ?? [];
@@ -90,7 +90,7 @@ class PTUItemSheet extends foundry.appv1.sheets.ItemSheet {
     async _onDrop(event) {
         const data = JSON.parse(event.dataTransfer.getData('text/plain'));
 
-        if(data.type === "pokedollar" && this.item.type === "item") {
+        if(data.type === "currs" && this.item.type === "item") {
             const amount = parseInt(data.data.amount);
             if(!amount) return;
 

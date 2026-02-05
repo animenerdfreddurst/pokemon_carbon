@@ -92,7 +92,7 @@ function calculateStatTotal({
         const sub = value.total + value.mod.value + value.mod.mod;
 
         if (ignoreStages) {
-            value.total = sub;
+            value.total = Math.max(sub, 1);
             continue;
         }
 
@@ -109,6 +109,9 @@ function calculateStatTotal({
                 value.total = Math.ceil(sub * stage * 0.1 + sub);
             }
         }
+
+        // Clamp final total to minimum 1
+        value.total = Math.max(value.total, 1);
     }
 
     return {

@@ -1087,20 +1087,20 @@
 .dice-checks.dialog section .check-modifiers-content.skill {
   background: linear-gradient(45deg, #c3eaec, #b7ffdb);
 }
-a.pokedollar.cost {
+a.currs.cost {
   color: #ff5a68;
 }
-a.pokedollar.cost span::before {
+a.currs.cost span::before {
   filter: invert(46%) sepia(46%) saturate(1698%) hue-rotate(321deg)
     brightness(102%) contrast(101%);
 }
-a.pokedollar span {
+a.currs span {
   position: relative;
   padding-left: 10px;
 }
-a.pokedollar span::before {
+a.currs span::before {
   content: "";
-  background: url(/systems/ptu/static/css/images/Pokemon_Dollar_sign.svg);
+  background: url(/systems/ptu/static/css/images/generic-currency-sign-icon.svg);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -6611,7 +6611,6 @@ main.sheet-body
   height: 100%;
   flex-grow: 1;
   padding: 0.25rem;
-  white-space: pre-line;
 }
 .sheet.item section form.item-sheet .sheet-body .move-effect textarea {
   width: 100%;
@@ -6873,7 +6872,6 @@ main.sheet-body
   margin: 0;
   padding: 0;
   word-break: break-word;
-  white-space: pre-line;
 }
 .sheet.item.species .capabilities {
   flex-direction: column;

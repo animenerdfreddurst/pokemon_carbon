@@ -17883,7 +17883,7 @@ export const pokemonData = [
         ],
         "Capabilities":{
             "Overland":2,
-            "Sky":9,
+            "Sky":8,
             "Swim":2,
             "Hover":0,
             "Burrow":0,
@@ -18232,7 +18232,7 @@ export const pokemonData = [
         ],
         "Capabilities":{
             "Overland":2,
-            "Sky":9,
+            "Sky":8,
             "Swim":2,
             "Hover":0,
             "Burrow":0,

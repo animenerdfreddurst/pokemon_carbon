@@ -58,6 +58,7 @@
     "TypeAbilityPlural": "Abilities",
     "TypeMovePlural": "Moves",
     "TypeStrugglePlural": "Manevuers",
+    "TypeInheritance": "Inheritance List",
     "TypeItemPlural": "Items",
     "TypeCapabilityPlural": "Capabilities",
     "TypePokeedgePlural": "Enhancements",
@@ -207,7 +208,7 @@
     "TypingResistances": "Resistances",
     "TypingImmunities": "Immunities",
     "Experience": "Experience",
-    "ExperienceNext": "Exp to next level",
+    "ExperienceNext": "Next level",
     "Level": "Level",
     "Nature": "Nature",
 
@@ -358,9 +359,7 @@
     "PhysicalDescription": "Physical description",
     "Background": "Background",
     "Personality": "Personality",
-    "Goals": "Goals",
-    "Dreams": "Dreams",
-    "Obsessions": "Obsessions",
+    "GMInfo": "GM Info",
     "Notes": "Notes",
 
     "WeatherLabel": "Weather & Global Effects",

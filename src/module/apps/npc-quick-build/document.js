@@ -1415,19 +1415,14 @@ export class NpcQuickBuildData {
             // do choice-set assignments
             if ((iobj?.system?.rules ?? []).length > 0) {
                 const choiceSets = iobj.system.rules.filter(r => r.key == "ChoiceSet");
-                if (choiceSets?.length == 0) continue;
-                // iobj.flags.ptu ??= {}
-                // iobj.flags.ptu.rulesSelections ??= {}
                 for (const [idx, choiceSet] of choiceSets.entries()) {
                     const label = item.label ?? item.name;
                     const key = `${label}-${idx}`.replaceAll(".", "-");
-                    choiceSet.selection = this.trainer.subSelectables[key].selected;
+                    choiceSet.selection = this.trainer.subSelectables[key]?.selected ?? null;
                 }
             }
             items.push(iobj);
         }
-
-        const trainingItem = (await fromUuid(chooseFrom(["Compendium.ptu.feats.Item.TQ6scoBM3iZKMuZT", "Compendium.ptu.feats.Item.MolTHMn3UrNiIZ3h", "Compendium.ptu.feats.Item.FLSt79Zix8j69T07", "Compendium.ptu.feats.Item.WfLcIrUmRwblAaYr"]))).toObject();
 
         const trainerData = {
             name: this.trainer.name || "Unnamed Trainer",
@@ -1447,7 +1442,6 @@ export class NpcQuickBuildData {
                 sex: this.trainer.sex.length > 0 ? this.trainer.sex[0].label : "",
             },
             // items,
-            items: [trainingItem],
             folder: mainFolder?._id ?? null,
         };
 

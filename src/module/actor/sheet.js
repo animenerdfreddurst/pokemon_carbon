@@ -148,7 +148,7 @@ class PTUActorSheet extends foundry.appv1.sheets.ActorSheet {
         if (allowed === false) return;
 
         // Case 1 - Money
-        if (data.type === "pokedollar") {
+        if (data.type === "currs") {
             const amount = parseInt(data.data.amount);
             if (!amount) return ui.notifications.error("Invalid amount of money dropped");
 

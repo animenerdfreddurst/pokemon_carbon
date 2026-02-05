@@ -48,7 +48,8 @@
                                         mod=skill.value.mod
                                         total=skill.value.total
                                         modOrigins=(getProperty ../actor.origins (concat "system.skills." key ".value.mod"))
-                                        flipped=(gt 8 @index)}}
+                                        flipped=(gt 8 @index)
+                                        disabled=true}}
                                 </div>
                                 <div
                                     class="skill {{key}} fb-20 align-self-center bgcolor skill--{{skill.rank}} center-text center-self">
@@ -87,100 +88,104 @@
                 <!-- Right Col -->
                 <div class="d-flex other fb-48" style="flex: 0 0 48%;">
                     <div class="d-flex align-items-center flex-column h-100">
-                        <div class="swsh-box mb-2">
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 d-flex flex-row" style="justify-content: center;">
-                                <input class="fb-85" name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
-                            </div>
-                            <div class="swsh-body">
-                                <div class="d-flex w-100 align-items-center center-text justify-content-center">
-                                   <div class="fb-15">
-                                        <label for="system.level.current"><b>{{localize "PTU.Level"}}</b>:</label>
+                        <div class="d-flex flex-row justify-content-between w-100">
+                            <div style="flex: 0 0 48%;">
+                                <div class="swsh-box mb-2">
+                                    <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 d-flex flex-row" style="justify-content: center;">
+                                        <input class="fb-98" name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
                                     </div>
-                                    <div class="fb-15">
-                                        <input class="p-0" type="text" name="system.level.current"
-                                            value="{{actor.system.level.current}}" data-dtype="Number" disabled />
+                                    <div class="swsh-body">
+                                        <div class="d-flex w-100 align-items-center center-text justify-content-between">
+                                            <div class="fb-48">
+                                                <label for="system.level.current"><b>{{localize "PTU.Level"}}</b>:</label>
+                                            </div>
+                                            <div class="fb-48">
+                                                <input class="p-0" type="text" name="system.level.current"
+                                                value="{{actor.system.level.current}}" data-dtype="Number" disabled />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swsh-header ball-themes {{ballStyle}} highlight">
+                                        <div class="d-flex w-100 mt-1 mb-1 align-items-center center-text justify-content-between">
+                                            {{#if (is true (getGameSetting "variant.useDexExp"))}}
+                                            <div class="fb-30">
+                                                <label for="system.level.milestones"><b>{{localize
+                                                "PTU.LevelMilestones"}}</b></label>
+                                            </div>
+                                            <div class="fb-30">
+                                                <label for="system.level.dexexp"><b>{{localize "PTU.LevelDexExp"}}</b></label>
+                                            </div>
+                                            <div class="fb-30">
+                                                <label for="system.level.miscexp"><b>{{localize
+                                                "PTU.LevelMiscExp"}}</b></label>
+                                            </div>
+                                            {{else}}
+                                            <div class="fb-45">
+                                                <label for="system.level.miscexp"><b>{{localize
+                                                "PTU.LevelMiscExp"}}</b></label>
+                                            </div>  
+                                            <div class="fb-45">
+                                                <label for="system.level.milestones"><b>{{localize
+                                                "PTU.LevelExpBank"}}</b></label>
+                                            </div>
+                                            {{/if}}
+                                        </div>
+                                    </div>
+                                    <div class="swsh-body">
+                                        <div class="options w-100 d-flex">
+                                            <div class="d-flex w-100 pt-1 pb-1 align-items-center justify-content-between center-text">
+                                                {{#if (is true (getGameSetting "variant.useDexExp"))}}
+                                                <div class="fb-30">
+                                                    <input type="number" name="system.level.milestones"
+                                                    value="{{actor.system.level.milestones}}" data-dtype="Number" />
+                                                </div>
+                                                <div class="fb-30">
+                                                    <input type="number" name="system.level.dexexp"
+                                                    value="{{actor.system.level.dexexp}}" data-dtype="Number" disabled />
+                                                </div>
+                                                <div class="fb-30">
+                                                    <input type="number" name="system.level.miscexp"
+                                                    value="{{actor.system.level.miscexp}}" data-dtype="Number" />
+                                                </div>  
+                                                {{else}}
+                                                <div class="fb-45">
+                                                    <input type="number" name="system.level.miscexp"
+                                                    value="{{actor.system.level.miscexp}}" data-dtype="Number"/>    
+                                                </div>
+                                                <div class="fb-45">
+                                                    <input type="number" name="system.level.expbank"
+                                                    value="{{actor.system.level.expbank}}" data-dtype="Number"/>
+                                                </div>
+                                                {{/if}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 center-text justify-content-between">
+                                        <div class="fb-48 center-text">
+                                            <label for="system.height"><b>{{localize "PTU.Height"}}</b></label>
+                                        </div>
+                                        <div class="fb-48 center-text">
+                                            <label for="system.weight"><b>{{localize "PTU.Weight"}}</b></label>
+                                        </div>
+                                    </div>
+                                    <div class="swsh-body mt-1 mb-1 justify-content-between">
+                                        <div class="fb-48 center-text pl-1 pr-1">
+                                            <input type="text" name="system.height" value="{{actor.system.height}}" data-dtype="String" />
+                                        </div>
+                                        <div class="fb-48 center-text pl-1 pr-1">
+                                            <input type="text" name="system.weight" value="{{actor.system.weight}}" data-dtype="String" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight">
-                                <div class="d-flex w-100 mt-1 mb-1 align-items-center center-text justify-content-between">
-                                    {{#if (is true (getGameSetting "variant.useDexExp"))}}
-                                    <div class="fb-30">
-                                        <label for="system.level.milestones"><b>{{localize
-                                        "PTU.LevelMilestones"}}</b></label>
-                                    </div>
-                                    <div class="fb-30">
-                                        <label for="system.level.dexexp"><b>{{localize "PTU.LevelDexExp"}}</b></label>
-                                    </div>
-                                    <div class="fb-30">
-                                        <label for="system.level.miscexp"><b>{{localize
-                                        "PTU.LevelMiscExp"}}</b></label>
-                                    </div>
-                                    {{else}}
-                                    <div class="fb-45">
-                                        <label for="system.level.miscexp"><b>{{localize
-                                        "PTU.LevelMiscExp"}}</b></label>
-                                    </div>
-                                    <div class="fb-45">
-                                        <label for="system.level.milestones"><b>{{localize
-                                        "PTU.LevelExpBank"}}</b></label>
-                                    </div>
-                                    {{/if}}
-                                </div>
+
+                            <div class="mb-2" style="flex: 0 0 48%;">
+                                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
                             </div>
-                            <div class="swsh-body">
-                                <div class="options w-100 d-flex">
-                                    <div class="d-flex w-100 pt-1 pb-1 align-items-center justify-content-between center-text">
-                                        {{#if (is true (getGameSetting "variant.useDexExp"))}}
-                                        <div class="fb-30">
-                                            <input type="number" name="system.level.milestones"
-                                            value="{{actor.system.level.milestones}}" data-dtype="Number" />
-                                        </div>
-                                        <div class="fb-30">
-                                            <input type="number" name="system.level.dexexp"
-                                            value="{{actor.system.level.dexexp}}" data-dtype="Number" disabled />
-                                        </div>
-                                        <div class="fb-30">
-                                            <input type="number" name="system.level.miscexp"
-                                            value="{{actor.system.level.miscexp}}" data-dtype="Number" />
-                                        </div>
-                                        {{else}}
-                                        <div class="fb-45">
-                                            <input type="number" name="system.level.miscexp"
-                                            value="{{actor.system.level.miscexp}}" data-dtype="Number"/>
-                                        </div>
-                                        <div class="fb-45">
-                                            <input type="number" name="system.level.milestones"
-                                            value="{{actor.system.level.milestones}}" data-dtype="Number"/> <!-- Repurpose milestones into exp bank -->
-                                        </div>
-                                        {{/if}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-2">
-                            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
                         </div>
 
                         <!-- Bio -->
-                        <div class="swsh-box mb-2">
-                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 center-text justify-content-between">
-                                <div class="fb-48 center-text">
-                                    <label for="system.height"><b>{{localize "PTU.Height"}}</b></label>
-                                </div>
-                                <div class="fb-48 center-text">
-                                    <label for="system.weight"><b>{{localize "PTU.Weight"}}</b></label>
-                                </div>
-                            </div>
-                            <div class="swsh-body mt-1 mb-1 justify-content-between">
-                                <div class="fb-48 center-text pl-1 pr-1">
-                                    <input type="text" name="system.height" value="{{actor.system.height}}" data-dtype="String" />
-                                </div>
-                                <div class="fb-48 center-text pl-1 pr-1">
-                                    <input type="text" name="system.weight" value="{{actor.system.weight}}" data-dtype="String" />
-                                </div>
-                            </div>
+                        <div class="swsh-box mb-2" style="text-align: center; word-break: keep-all;">
                             <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 center-text justify-content-center">
                                 <label for="system.biography.physicalDescription"><b>{{localize "PTU.PhysicalDescription"}}</b></label>
                             </div>
@@ -191,7 +196,7 @@
                                     button=true owner=owner editable=editable}}
                                 {{else}}
                                 <div class="editor-placeholder">
-                                    Describe various things about your trainer, especially those that may not be visible in the image you chose. Things like scars, exact height, birthmarks, old injuries, etc.
+                                    Describe various things about your trainer, especially those that may not be visible in the image you chose. Things like age, birthmarks, old injuries, etc. belong here. Further description of any accessories or any special equipment that may not be visible in your image also go here.
                                 </div>
                                 {{editor ""
                                 target="system.biography.physicalDescription"
@@ -208,7 +213,7 @@
                                     button=true owner=owner editable=editable}}
                                 {{else}}
                                 <div class="editor-placeholder">
-                                    Describe your trainer's history; this could include their childhood, family life, significant events, frienships/enmities, or even what drove them to start on this journey.
+                                    Describe your trainer's history; this could include their where they were born/grew up, their childhood experiences, their family life, any significant formative events (positive or negative), frienships/enmities, or even what drove them to start on this journey.
                                 </div>
                                 {{editor ""
                                 target="system.biography.background"
@@ -225,13 +230,32 @@
                                     button=true owner=owner editable=editable}}
                                 {{else}}
                                 <div class="editor-placeholder">
-                                    Describe the aspects of your trainer's personality. Maybe they are quick to anger and quick to forgive, maybe they have a soft spot for kids, or maybe they are afraid of bugs.
+                                    Describe the aspects of your trainer's personality. Maybe they are quick to anger and quick to forgive, maybe they have a soft spot for kids, or maybe they are afraid of bugs. Whatever they like, disklike, think, believe, or feel goes here; note that this can and likely will change over time.
                                 </div>
                                 {{editor ""
                                 target="system.biography.personality"
                                 button=true owner=owner editable=editable}}
                                 {{/if}}
                             </div>
+                            {{#if (isGm)}}
+                            <div class="swsh-header ball-themes {{ballStyle}} highlight pt-1 pb-1 center-text justify-content-center">
+                                <label for="system.biography.gminfo"><b>{{localize "PTU.GMInfo"}}</b></label>
+                            </div>
+                            <div class="swsh-body bio mt-1 mb-1">
+                                {{#if actor.system.biography.gminfo}}
+                                    {{editor actor.system.biography.gminfo
+                                    target="system.biography.gminfo"
+                                    button=true owner=owner editable=editable}}
+                                {{else}}
+                                <div class="editor-placeholder">
+                                    Spot for GM-only info like trainer experience conditions, rival info, plans for the future, etc.
+                                </div>
+                                {{editor ""
+                                target="system.biography.gminfo"
+                                button=true owner=owner editable=editable}}
+                                {{/if}}
+                            </div>
+                            {{/if}}
                         </div>
                     </div>
                 </div>

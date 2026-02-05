@@ -211,7 +211,7 @@
             {{#unless (is view "entry")}}
                 <div class="move-row mt-auto" style="min-height: 275px;">
                     <div class="move-effect">
-                        <textarea disabled>{{item.system.dexentry}}</textarea>
+                        {{editor item.system.dexentry target="system.dexentry" button=true editable=true}}
                     </div>
                 </div>
             {{/unless}}
