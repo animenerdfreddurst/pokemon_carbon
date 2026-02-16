@@ -35,7 +35,18 @@ class PTUSkillCheck extends PTUDiceCheck {
         /** @type {PTUDiceModifier[]} */
         const diceModifiers = [
             new PTUDiceModifier({
-                diceNumber: Math.clamp(this.actor.system.skills[this.skill]?.value?.total ?? 1, 1, 6),
+                diceNumber: (() => {
+                    const skillTotal = this.actor.system.skills[this.skill]?.value?.total ?? 1;
+                    const validRanks = [1, 2, 3, 4, 5, 6, 8];
+                    if (!validRanks.includes(skillTotal)) {
+                        // Clamp to nearest valid rank
+                        const closest = validRanks.reduce((c, rank) => 
+                            Math.abs(rank - skillTotal) < Math.abs(c - skillTotal) ? rank : c
+                        );
+                        return Math.max(1, closest);
+                    }
+                    return Math.max(1, skillTotal);
+                })(),
                 dieSize: 6,
                 label: game.i18n.format("PTU.Check.SkillDice", { skill: this.skillLabel })
             })

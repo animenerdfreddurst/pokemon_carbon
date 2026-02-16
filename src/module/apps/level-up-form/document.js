@@ -254,6 +254,7 @@ class LevelUpData {
         const results = calculateStatTotal({
             level: actualLevel,
             actorStats: actualStats,
+            baseStatModifier: this.pokemon.system.modifiers.baseStats,
             nature: this.pokemon.nature,
             isTrainer: false,
             twistedPower: this.pokemon.rollOptions.all["self:ability:twisted-power"]

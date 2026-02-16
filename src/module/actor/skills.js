@@ -54,9 +54,20 @@ class PTUSkills {
         const diceModifiers = [];
 
         if (skill) {
+            const skillTotal = actor.system.skills[skill]?.value?.total ?? 1;
+            const validRanks = [1, 2, 3, 4, 5, 6, 8];
+            let diceNumber = 1;
+            if (!validRanks.includes(skillTotal)) {
+                // Clamp to nearest valid rank
+                const closest = validRanks.reduce((c, rank) => 
+                    Math.abs(rank - skillTotal) < Math.abs(c - skillTotal) ? rank : c
+                );
+                diceNumber = Math.max(1, closest);
+            } else {
+                diceNumber = Math.max(1, skillTotal);
+            }
             const skillDiceModifier = new PTUDiceModifier({
-                diceNumber: actor.system.skills[skill]?.value?.total ?? 1,
-                dieSize: 6,
+                diceNumber: diceNumber,
                 label: game.i18n.format("PTU.Check.SkillDice", { skill: Handlebars.helpers.capitalize(skill) })
             });
             diceModifiers.push(skillDiceModifier);

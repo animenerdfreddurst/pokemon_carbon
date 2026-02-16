@@ -1,6 +1,22 @@
 import { PokemonGenerator } from "../../actor/pokemon/generator.js";
 import { SpeciesGeneratorData } from "./document.js";
 
+/**
+ * Generate a level using normal distribution with bounds
+ * @param {number} centerLevel - Center level (mean)
+ * @param {number} minLevel - Minimum level (hard bound)
+ * @param {number} maxLevel - Maximum level (hard bound)
+ * @returns {number} Generated level clamped to [minLevel, maxLevel]
+ */
+function generateLevelFromNormalDistribution(centerLevel, minLevel, maxLevel) {
+    const variance = Math.max(1, (maxLevel - minLevel) / 12);
+    const u1 = Math.random();
+    const u2 = Math.random();
+    const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+    const level = centerLevel + z * variance;
+    return Math.clamp(Math.round(level), minLevel, maxLevel);
+}
+
 export class PTUSpeciesMassGenerator extends FormApplication {
     /** @override */
     static get defaultOptions() {
@@ -29,7 +45,12 @@ export class PTUSpeciesMassGenerator extends FormApplication {
 
         return {
             ...data,
-            data: this.data,
+            data: {
+                ...this.data,
+                levelDefault: 10,
+                levelMinBound: game.settings.get("ptu", "generation.defaultDexDragInLevelMin"),
+                levelMaxBound: game.settings.get("ptu", "generation.defaultDexDragInLevelMax"),
+            }
         }
     }
 
@@ -75,8 +96,7 @@ export class PTUSpeciesMassGenerator extends FormApplication {
             this.data.folderField.updated = true;
         }
 
-        this.data.level.min = formData["level.min"];
-        this.data.level.max = formData["level.max"];
+        this.data.level.center = Number(formData["level.center"]) || 10;
 
         return this.render(true);
     }
@@ -136,17 +156,24 @@ export class PTUSpeciesMassGenerator extends FormApplication {
     }
 
     async generate(data) {
-        const { species, table, amount, level } = data;
+        const { species, table, amount } = data;
         let folder = data.folder;
         const monsToGenerate = [];
 
-        const shinyChance = game.settings.get("ptu", "generation.defaultDexDragInShinyChance") > 1 ? game.settings.get("ptu", "generation.defaultDexDragInShinyChance") / 100 : game.settings.get("ptu", "generation.defaultDexDragInShinyChance");
+        // Get settings
+        let shinyChance = game.settings.get("ptu", "generation.defaultDexDragInShinyChance") ?? 0;
+        shinyChance = shinyChance / 100;
+        shinyChance = Math.clamp(shinyChance, 0, 1);
+
+        const minLevel = game.settings.get("ptu", "generation.defaultDexDragInLevelMin");
+        const maxLevel = game.settings.get("ptu", "generation.defaultDexDragInLevelMax");
 
         if (species) {
             for (let i = 0; i < amount; i++) {
+                const centerLevel = Number(data.level?.center ?? 10) || 10;  // Fall back to 10 if not set
                 const mon = {
                     species: species,
-                    level: level.min == level.max ? level.min : Math.floor(Math.random() * (level.max - level.min + 1)) + level.min,
+                    level: generateLevelFromNormalDistribution(centerLevel, minLevel, maxLevel),
                     shiny: Math.random() < shinyChance,
                     folder
                 }
@@ -158,15 +185,12 @@ export class PTUSpeciesMassGenerator extends FormApplication {
             for (const result of results) {
                 let species = null;
                 
-                // Handle Foundry VTT v13 table result structure
                 if (result.type === "document" || result.type === "compendium") {
-                    // Use documentUuid for both document and compendium types in v13
                     if (result.documentUuid) {
                         species = await fromUuid(result.documentUuid);
                     }
                 }
                 
-                // Fallback for older table result structures
                 if (!species) {
                     switch (result.type) {
                         case CONST.TABLE_RESULT_TYPES?.DOCUMENT: {
@@ -180,15 +204,15 @@ export class PTUSpeciesMassGenerator extends FormApplication {
                     }
                 }
                 
-                // Check if species was found
                 if (!species) {
                     console.error("Species not found for result:", result);
                     continue;
                 }
                 
+                const centerLevel = Number(data.level?.center ?? 10) || 10;
                 const mon = {
                     species,
-                    level: level.min == level.max ? level.min : Math.floor(Math.random() * (level.max - level.min + 1)) + level.min,
+                    level: generateLevelFromNormalDistribution(centerLevel, minLevel, maxLevel),
                     shiny: Math.random() < shinyChance,
                     folder
                 }

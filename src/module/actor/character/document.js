@@ -133,6 +133,12 @@ class PTUTrainerActor extends PTUActor {
         for (let [key, skill] of Object.entries(system.skills)) {
             skill["slug"] = key;
             skill["value"]["total"] = skill["value"]["value"] + skill["value"]["mod"];
+            const validRanks = [1, 2, 3, 4, 5, 6, 8];
+            skill["value"]["total"] = validRanks.includes(skill["value"]["total"]) 
+                ? skill["value"]["total"] 
+                : validRanks.reduce((closest, rank) => 
+                    Math.abs(rank - skill["value"]["total"]) < Math.abs(closest - skill["value"]["total"]) ? rank : closest
+                );
             skill["rank"] = PTUSkills.getRankSlug(skill["value"]["total"]);
             skill["modifier"]["total"] = skill["modifier"]["value"] + skill["modifier"]["mod"] + (system.modifiers.skillBonus?.total ?? 0);
             this.attributes.skills[key] = this.prepareSkill(key);//PTUSkills.calculate({ actor: this, context: { skill: key, options: [] } });
@@ -190,6 +196,7 @@ class PTUTrainerActor extends PTUActor {
         const result = calculateStatTotal({
             level: ["data-revamp", "short-track"].includes(game.settings.get("ptu", "variant.trainerAdvancement")) ? actualLevel * 2 : (game.settings.get("ptu", "variant.trainerAdvancement") === "long-track" ? actualLevel * 0.5 : actualLevel),
             actorStats: system.stats,
+            baseStatModifier: system.modifiers.baseStats,
             nature: null,
             isTrainer: true,
             twistedPower: this.rollOptions.all["self:ability:twisted-power"],
@@ -337,7 +344,7 @@ class PTUTrainerActor extends PTUActor {
             if (stat === "hp") stats[stat].base = 10;
             else stats[stat].base = 5;
 
-            stats[stat].value = stats[stat].base + this.system.modifiers?.baseStats?.[stat]?.total ?? 0;
+            stats[stat].value = Math.max(1, stats[stat].base + (this.system.modifiers?.baseStats?.[stat]?.total ?? 0));
         }
 
         return stats;

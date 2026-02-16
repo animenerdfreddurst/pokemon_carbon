@@ -43,7 +43,7 @@ function calcBaseStats(stats, speciesData, nature, baseStatModifier) {
         }
 
         value.base = base;
-        value.value = base + (baseStatModifier?.[key]?.total ?? 0);
+        value.value = Math.max(1, base + (baseStatModifier?.[key]?.total ?? 0));
     }
 
     return newStats;
@@ -92,27 +92,24 @@ function calculateStatTotal({
         const sub = value.total + value.mod.value + value.mod.mod;
 
         if (ignoreStages) {
-            value.total = Math.max(sub, 1);
+            value.total = Math.max(1, sub);
             continue;
-        }
+       }
 
-        const stage =
-            (value.stage?.value ?? 0) +
-            (value.stage?.mod ?? 0);
+        const stage = (value.stage?.value ?? 0) + (value.stage?.mod ?? 0);
 
         if (stage > 0) {
-            value.total = Math.floor(sub * stage * 0.2 + sub);
+            value.total = Math.max(1, Math.floor(sub * stage * 0.2 + sub));
         } else {
             if (key === "hp") {
-                value.total = sub;
+                value.total = Math.max(1, sub);
             } else {
-                value.total = Math.ceil(sub * stage * 0.1 + sub);
+                value.total = Math.max(1, Math.ceil(sub * stage * 0.1 + sub));
             }
         }
 
-        // Clamp final total to minimum 1
-        value.total = Math.max(value.total, 1);
-    }
+            value.total = Math.max(1, value.total);
+        }
 
     return {
         pointsSpend: levelUpPointsSpend,

@@ -1,6 +1,22 @@
 import { PokemonGenerator } from "../../actor/pokemon/generator.js";
 import { PTUSpecies } from "../../item/index.js";
 
+/**
+ * Generate a level using normal distribution with bounds
+ * @param {number} centerLevel - Center level (mean)
+ * @param {number} minLevel - Minimum level (hard bound)
+ * @param {number} maxLevel - Maximum level (hard bound)
+ * @returns {number} Generated level clamped to [minLevel, maxLevel]
+ */
+function generateLevelFromNormalDistribution(centerLevel, minLevel, maxLevel) {
+    const variance = Math.max(1, (maxLevel - minLevel) / 12);
+    const u1 = Math.random();
+    const u2 = Math.random();
+    const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+    const level = centerLevel + z * variance;
+    return Math.clamp(Math.round(level), minLevel, maxLevel);
+}
+
 export class PTUSpeciesDragOptionsPrompt extends FormApplication {
     /** @override */
     static get defaultOptions() {
@@ -32,10 +48,11 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
 
         return {
             ...data,
-            levelMinDefault: game.settings.get("ptu", "generation.defaultDexDragInLevelMin"),
-            levelMaxDefault: game.settings.get("ptu", "generation.defaultDexDragInLevelMax"),
-            shinyChanceDefault: shinyChanceDefault > 1 ? shinyChanceDefault : shinyChanceDefault, //old version: shinyChanceDefault: shinyChanceDefault > 1 ? shinyChanceDefault / 100 : shinyChanceDefault,
-            statRandomnessDefault: statRandomnessDefault > 1 ? statRandomnessDefault : statRandomnessDefault, //old version: statRandomnessDefault: statRandomnessDefault > 1 ? statRandomnessDefault / 100 : statRandomnessDefault,
+            levelDefault: 10,
+            levelMinBound: game.settings.get("ptu", "generation.defaultDexDragInLevelMin"),
+            levelMaxBound: game.settings.get("ptu", "generation.defaultDexDragInLevelMax"),
+            shinyChanceDefault: shinyChanceDefault,
+            statRandomnessDefault: statRandomnessDefault,
             preventDefault: game.settings.get("ptu", "generation.defaultDexDragInPreventEvolution"),
             species: this.species.name
         }
@@ -54,12 +71,17 @@ export class PTUSpeciesDragOptionsPrompt extends FormApplication {
     async _updateObject(event, formData) {
         event.preventDefault();
 
+        const centerLevel = Number(formData["level"]);
+        const minLevel = game.settings.get("ptu", "generation.defaultDexDragInLevelMin");
+        const maxLevel = game.settings.get("ptu", "generation.defaultDexDragInLevelMax");
+        const generatedLevel = generateLevelFromNormalDistribution(centerLevel, minLevel, maxLevel);
+
         const generator = new PokemonGenerator(this.species, { x: this.x, y: this.y })
         await generator.prepare({
-            minLevel: formData["level.min"],
-            maxLevel: formData["level.max"],
-            shinyChance: formData["shiny-chance"],
-            statRandomness: formData["stat-randomness"],
+            minLevel: generatedLevel,
+            maxLevel: generatedLevel,
+            shinyChance: formData["shiny-chance"] / 100,
+            statRandomness: formData["stat-randomness"] / 100,
             preventEvolution: formData["prevent-evolution"],
             saveDefault: false
         })

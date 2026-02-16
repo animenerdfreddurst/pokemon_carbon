@@ -211,6 +211,7 @@ class PTUPokemonActor extends PTUActor {
         const result = calculateStatTotal({
             level: actualLevel,
             actorStats: system.stats,
+            baseStatModifier: system.modifiers.baseStats,
             nature: system.nature.value,
             isTrainer: false,
             twistedPower: this.rollOptions.all["self:ability:twisted-power"],
@@ -268,8 +269,13 @@ class PTUPokemonActor extends PTUActor {
             system.skills[key].slug = key;
             system.skills[key]["value"]["value"] = skill["value"]
             system.skills[key]["value"]["total"] = skill["value"] + system.skills[key]["value"]["mod"];
-            system.skills[key]["modifier"]["value"] = skill["modifier"]
             system.skills[key]["modifier"]["total"] = skill["modifier"] + system.skills[key]["modifier"]["mod"] + (system.modifiers.skillBonus?.total ?? 0);
+            const validRanks = [1, 2, 3, 4, 5, 6, 8];
+            system.skills[key]["value"]["total"] = validRanks.includes(system.skills[key]["value"]["total"]) 
+                ? system.skills[key]["value"]["total"] 
+                : validRanks.reduce((closest, rank) => 
+                    Math.abs(rank - system.skills[key]["value"]["total"]) < Math.abs(closest - system.skills[key]["value"]["total"]) ? rank : closest
+                );
             system.skills[key]["rank"] = PTUSkills.getRankSlug(system.skills[key]["value"]["total"]);
             this.attributes.skills[key] = this.prepareSkill(key);// PTUSkills.calculate({actor: this, context: {skill: key, options: []}})
         }
@@ -381,11 +387,11 @@ class PTUPokemonActor extends PTUActor {
         }
 
         for (const stat of Object.keys(stats)) {
-            stats[stat].value = stats[stat].base + this.system.modifiers?.baseStats?.[stat]?.total ?? 0;
+            stats[stat].value = Math.max(1, stats[stat].base + (this.system.modifiers?.baseStats?.[stat]?.total ?? 0));
         }
 
-        return stats;
-    }
+    return stats;
+}
 
     _calcEvasion() {
         if (this.rollOptions.conditions?.["vulnerable"]) {
