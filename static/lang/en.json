@@ -518,7 +518,7 @@
     "MassGenerator": {
       "Title": "Mass Generator",
       "Amount": "Amount to Generate",
-      "Level": "Level Range",
+      "Level": "Average Level",
       "PokemonSelect": "Generate by Species or RollTable?",
       "Species": "Species",
       "HabitatTable": "Table",
