@@ -31,7 +31,7 @@ https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/sy
 * npaisley for doing a lot of the backend stuff; I am not a coder in any capacity, and having to work with abandonware was a daunting task that I could never have completed without their support.
 
 ## Disclaimer
-Some of the item images used have been created by Gen AI. Deal with it. I'm not an artist, I don't have access to artists who can create images in the style of existing Pokemon item images, and I wanted to see whether it was any good; spoilers: I hate it, and think it isn't anywhere close to being a viable public-facing tool, but I started with it and want consistency.
+Some of the item images used have been created by Gen AI. Deal with it. I'm not an artist, I don't have access to artists who can create images in the style of existing Pokemon item images, and I wanted to see whether it was any good; spoilers: I hate it, and think it isn't anywhere close to being a viable public-facing tool, but I started with it and want consistency. Similarly, I have used GitHub Copilot for some of the coding as I am not a coder and have limited resources and time.
 
 ## Copyright
 Pokémon © 2002-2025 Pokémon. © 1995-2025 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo.
