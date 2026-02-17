@@ -196,5 +196,5 @@
   "background": "systems/ptu/static/images/banner.webp",
   "url": "https://github.com/animenerdfreddurst/pokemon_carbon",  
   "manifest": "https://raw.githubusercontent.com/animenerdfreddurst/pokemon_carbon/master/system.json",
-  "download": "https://github.com/animenerdfreddurst/pokemon_carbon/archive/refs/heads/master.zip",
+  "download": "https://github.com/animenerdfreddurst/pokemon_carbon/archive/refs/heads/master.zip"
 }
