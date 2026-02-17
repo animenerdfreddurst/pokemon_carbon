@@ -1,5 +1,7 @@
 {
   "id": "ptu",
+  "type": "system",
+  "root": "systems/ptu",
   "title": "Pokemon Carbon",
   "description": "The completion of the Pokemon Tabletop United TTRPG System made for FoundryVTT.",
   "compatibility": {
@@ -193,6 +195,6 @@
   ],
   "background": "systems/ptu/static/images/banner.webp",
   "url": "https://github.com/animenerdfreddurst/pokemon_carbon",  
-  "manifest": "https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/system.json",
-  "download": "https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/system.zip"
+  "manifest": "https://raw.githubusercontent.com/animenerdfreddurst/pokemon_carbon/master/system.json",
+  "download": "https://github.com/animenerdfreddurst/pokemon_carbon/archive/refs/heads/master.zip",
 }
