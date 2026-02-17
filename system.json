@@ -192,8 +192,7 @@
     }
   ],
   "background": "systems/ptu/static/images/banner.webp",
-  "url": "https://github.com/pokemon-tabletop-reunited/ptr1e",  
-  "manifest": "https://github.com/pokemon-tabletop-reunited/ptr1e/releases/latest/download/system.json",
-  "changelog": "https://github.com/pokemon-tabletop-reunited/ptr1e/raw/master/changelog.md",
-  "download": "https://github.com/pokemon-tabletop-reunited/ptr1e/releases/latest/download/system.zip"
+  "url": "https://github.com/animenerdfreddurst/pokemon_carbon",  
+  "manifest": "https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/system.json",
+  "download": "https://github.com/animenerdfreddurst/pokemon_carbon/releases/latest/download/system.zip"
 }
